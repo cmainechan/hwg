@@ -152,5 +152,16 @@
     ],
     "translit": "shabah",
     "gloss": "take captive"
+  },
+  {
+    "id": "chalaq",
+    "image": "assets/chalaq.png",
+    "letters": [
+      "ח",
+      "ל",
+      "ק"
+    ],
+    "translit": "chalaq",
+    "gloss": "divide"
   }
 ]
