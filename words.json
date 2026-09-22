@@ -9,9 +9,23 @@
   {
     "id": "arak",
     "image": "assets/arak.png",
-    "letters": ["ע", "ר", "ן"],
+    "letters": ["ע", "ר", "ך"],
     "translit": "arak",
     "gloss": "arrange"
+  },
+    {
+    "id": "barach",
+    "image": "assets/barach.png",
+    "letters": ["ב", "ר", "ח"],
+    "translit": "barach",
+    "gloss": "flee"
+  },
+    {
+    "id": "shaar",
+    "image": "assets/shaar.png",
+    "letters": ["ש", "א", "ר"],
+    "translit": "shaar",
+    "gloss": "remain"
   },
   {
     "id": "tul",
