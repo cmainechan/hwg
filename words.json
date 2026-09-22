@@ -1,0 +1,23 @@
+[
+  {
+    "id": "kelev",
+    "image": "assets/kelev.png",
+    "letters": ["כ", "ל", "ב"],
+    "translit": "kelev",
+    "gloss": "dog"
+  },
+  {
+    "id": "melekh",
+    "image": "assets/melekh.png",
+    "letters": ["מ", "ל", "ך"],
+    "translit": "melekh",
+    "gloss": "king"
+  },
+  {
+    "id": "shalom",
+    "image": "assets/shalom.png",
+    "letters": ["ש", "ל", "ם"],
+    "translit": "shalom",
+    "gloss": "peace / well-being"
+  }
+]
