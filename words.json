@@ -1,23 +1,23 @@
 [
   {
-    "id": "kelev",
-    "image": "assets/kelev.png",
-    "letters": ["כ", "ל", "ב"],
-    "translit": "kelev",
-    "gloss": "dog"
+    "id": "aman",
+    "image": "assets/aman.png",
+    "letters": ["א", "מ", "ן"],
+    "translit": "aman",
+    "gloss": "believe"
   },
   {
-    "id": "melekh",
-    "image": "assets/melekh.png",
-    "letters": ["מ", "ל", "ך"],
-    "translit": "melekh",
-    "gloss": "king"
+    "id": "arak",
+    "image": "assets/arak.png",
+    "letters": ["ע", "ר", "ן"],
+    "translit": "arak",
+    "gloss": "arrange"
   },
   {
-    "id": "shalom",
-    "image": "assets/shalom.png",
-    "letters": ["ש", "ל", "ם"],
-    "translit": "shalom",
-    "gloss": "peace / well-being"
+    "id": "tul",
+    "image": "assets/tul.png",
+    "letters": ["ט", "וּ", "ל"],
+    "translit": "tul",
+    "gloss": "hurl"
   }
 ]
