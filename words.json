@@ -163,5 +163,38 @@
     ],
     "translit": "chalaq",
     "gloss": "divide"
+  },
+  {
+    "id": "matar",
+    "image": "assets/matar.png",
+    "letters": [
+      "מ",
+      "ט",
+      "ר"
+    ],
+    "translit": "matar",
+    "gloss": "cause to rain"
+  },
+  {
+    "id": "rachaph",
+    "image": "assets/rachaph.png",
+    "letters": [
+      "ר",
+      "ח",
+      "ף"
+    ],
+    "translit": "rachaph",
+    "gloss": "hover"
+  },
+  {
+    "id": "dasha",
+    "image": "assets/dasha.png",
+    "letters": [
+      "ד",
+      "ש",
+      "א"
+    ],
+    "translit": "dasha",
+    "gloss": "sprout"
   }
 ]
