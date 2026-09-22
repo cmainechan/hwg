@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hebrew Word Builder</title>
+<style>
+  :root { --border:#ccc; --good:#1a7f37; --bad:#cf222e; --accent:#f6f8fa; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  h1 { font-size: 1.4rem; margin-bottom: 1.5rem; }
+  .layout { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .flashcard, .assembly { flex: 1 1 320px; }
+  .flashcard img {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  .assembled {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    min-height: 4.5rem;
+  }
+  .bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .bank button {
+    font-size: 1.8rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--accent);
+    cursor: pointer;
+  }
+  .bank button:hover { background: #e8ebef; }
+  .controls { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  .controls button, .feedback button {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+  }
+  .controls button:disabled { opacity: 0.5; cursor: default; }
+  .feedback { padding: 1rem; border-radius: 10px; margin-bottom: 1rem; }
+  .feedback.correct { background: #dafbe1; color: var(--good); }
+  .feedback.wrong { background: #ffebe9; color: var(--bad); }
+  .feedback button { background: white; margin-top: 0.5rem; width: 100%; }
+</style>
+</head>
+<body>
+
+<h1>Hebrew Word Builder</h1>
+
+<div class="layout">
+  <div class="flashcard">
+    <img id="flashcard-img" src="" alt="flashcard">
+  </div>
+
+  <div class="assembly">
+    <div class="assembled" id="assembled"></div>
+    <div class="bank" id="bank"></div>
+    <div class="controls">
+      <button id="undo-btn">↩ Undo</button>
+      <button id="reset-btn">🔄 Reset word</button>
+    </div>
+    <div id="feedback"></div>
+  </div>
+</div>
+
+<script>
+// ---------- Config ----------
+const DISTRACTOR_COUNT = 1; // set to 0 to disable distractor letters
+
+// ---------- State ----------
+let WORDS = [];
+let ALL_LETTERS = [];
+let wordIndex = 0;
+let pool = [];
+let assembled = [];
+let status = null; // null | "correct" | "wrong"
+
+// ---------- Helpers ----------
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function sample(arr, n) {
+  return shuffle(arr).slice(0, n);
+}
+
+function newRound(index) {
+  wordIndex = index;
+  const word = WORDS[wordIndex];
+  let p = [...word.letters];
+  if (DISTRACTOR_COUNT > 0) {
+    const candidates = ALL_LETTERS.filter(l => !word.letters.includes(l));
+    p = p.concat(sample(candidates, Math.min(DISTRACTOR_COUNT, candidates.length)));
+  }
+  pool = shuffle(p);
+  assembled = [];
+  status = null;
+  render();
+}
+
+// ---------- Rendering ----------
+function render() {
+  const word = WORDS[wordIndex];
+
+  document.getElementById("flashcard-img").src = word.image;
+  document.getElementById("flashcard-img").alt = word.id;
+
+  // Assembled slots (right-to-left)
+  const slots = [...assembled];
+  while (slots.length < word.letters.length) slots.push("_");
+  document.getElementById("assembled").textContent = slots.join(" ");
+
+  // Letter bank
+  const bank = document.getElementById("bank");
+  bank.innerHTML = "";
+  pool.forEach((letter, i) => {
+    const btn = document.createElement("button");
+    btn.textContent = letter;
+    btn.disabled = status === "correct";
+    btn.onclick = () => {
+      assembled.push(letter);
+      pool.splice(i, 1);
+      if (assembled.length === word.letters.length) {
+        status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
+      }
+      render();
+    };
+    bank.appendChild(btn);
+  });
+
+  // Undo / reset
+  document.getElementById("undo-btn").disabled = assembled.length === 0;
+
+  // Feedback
+  const feedback = document.getElementById("feedback");
+  feedback.innerHTML = "";
+  if (status === "correct") {
+    feedback.className = "feedback correct";
+    feedback.innerHTML = `✅ Correct! <strong>${word.translit}</strong> — ${word.gloss}`;
+    const nextBtn = document.createElement("button");
+    nextBtn.textContent = "Next card ▶";
+    nextBtn.onclick = () => newRound((wordIndex + 1) % WORDS.length);
+    feedback.appendChild(nextBtn);
+  } else if (status === "wrong") {
+    feedback.className = "feedback wrong";
+    feedback.innerHTML = `❌ Not quite — try again.`;
+    const retryBtn = document.createElement("button");
+    retryBtn.textContent = "Try again";
+    retryBtn.onclick = () => newRound(wordIndex);
+    feedback.appendChild(retryBtn);
+  } else {
+    feedback.className = "";
+  }
+}
+
+function arraysEqual(a, b) {
+  return a.length === b.length && a.every((v, i) => v === b[i]);
+}
+
+document.getElementById("undo-btn").onclick = () => {
+  if (assembled.length === 0) return;
+  const last = assembled.pop();
+  pool.push(last);
+  status = null;
+  render();
+};
+
+document.getElementById("reset-btn").onclick = () => newRound(wordIndex);
+
+// ---------- Boot ----------
+fetch("words.json")
+  .then(r => r.json())
+  .then(data => {
+    WORDS = data;
+    ALL_LETTERS = [...new Set(WORDS.flatMap(w => w.letters))];
+    newRound(0);
+  })
+  .catch(err => {
+    document.body.innerHTML =
+      "<p style='color:red'>Could not load words.json. Make sure it's in the same folder as this page and that you're viewing this via a web server (e.g. GitHub Pages), not by double-clicking the file.</p>";
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
