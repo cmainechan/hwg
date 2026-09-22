@@ -114,10 +114,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 0.75rem;
     padding: 1.1rem 1rem 0.9rem;
     background: linear-gradient(180deg, rgba(20, 30, 26, 0) 0%, rgba(18, 28, 24, 0.6) 35%, rgba(14, 22, 19, 0.93) 100%);
     color: #f6f1e0;
@@ -125,6 +121,7 @@
     transform: translateY(6px);
     pointer-events: none;
     transition: opacity 0.35s ease, transform 0.35s ease;
+    z-index: 2;
   }
   .card-banner.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
   .banner-word {
@@ -137,25 +134,34 @@
   .banner-caption { font-size: 0.9rem; color: #e6dcc0; }
   .banner-gloss { font-style: italic; }
   .banner-translit { opacity: 0.8; margin-left: 0.45rem; }
-  .banner-next {
-    flex-shrink: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.3rem;
+    height: 2.3rem;
+    border: none;
     border-radius: 50%;
-    border: 1px solid rgba(246, 241, 224, 0.45);
-    background: rgba(255, 255, 255, 0.08);
-    color: #f6f1e0;
-    font-size: 1.15rem;
-    cursor: pointer;
+    background: rgba(30, 24, 18, 0.3);
+    color: #fbf7ec;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.15s ease, transform 0.15s ease;
+    cursor: pointer;
+    opacity: 0.55;
+    z-index: 3;
+    transition: opacity 0.2s ease, background 0.2s ease, transform 0.2s ease;
   }
-  .banner-next:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(3px);
+  .nav-btn svg { width: 1.1rem; height: 1.1rem; }
+  .nav-btn:hover:not(:disabled) {
+    opacity: 1;
+    background: rgba(30, 24, 18, 0.55);
   }
+  .nav-btn:active:not(:disabled) { transform: translateY(-50%) scale(0.92); }
+  .nav-btn:disabled { opacity: 0.15; cursor: default; }
+  .nav-prev { left: 0.6rem; }
+  .nav-next { right: 0.6rem; }
 
   .assembled {
     direction: rtl;
@@ -319,6 +325,7 @@
     .shell { padding: 1.4rem 1.1rem 1.8rem; }
     .assembled { font-size: 2.2rem; }
     .bank button { width: 2.3rem; height: 2.3rem; font-size: 1.35rem; }
+    .nav-btn { width: 2rem; height: 2rem; }
   }
 </style>
 </head>
@@ -343,15 +350,18 @@
       <div class="flashcard-card">
         <div class="image-wrap">
           <img id="flashcard-img" src="" alt="flashcard">
+          <button id="prev-btn" class="nav-btn nav-prev" aria-label="Previous card" title="Previous card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button id="next-btn" class="nav-btn nav-next" aria-label="Next card" title="Next card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
           <div class="card-banner" id="card-banner">
-            <div>
-              <div class="banner-word" id="banner-word"></div>
-              <div class="banner-caption">
-                <span class="banner-gloss" id="banner-gloss"></span>
-                <span class="banner-translit" id="banner-translit"></span>
-              </div>
+            <div class="banner-word" id="banner-word"></div>
+            <div class="banner-caption">
+              <span class="banner-gloss" id="banner-gloss"></span>
+              <span class="banner-translit" id="banner-translit"></span>
             </div>
-            <button class="banner-next" id="next-btn" aria-label="Next card" title="Next card">→</button>
           </div>
         </div>
       </div>
@@ -439,6 +449,10 @@ function render() {
     status === "wrong" ? " is-wrong" : ""
   );
 
+  // Prev/next navigation — always available, independent of solve status
+  document.getElementById("prev-btn").disabled = WORDS.length <= 1;
+  document.getElementById("next-btn").disabled = WORDS.length <= 1;
+
   // Letter keyboard — fixed aleph-bet order, always all 27 keys,
   // never removed or reordered, so duplicate letters just work.
   const solved = status === "correct" || status === "revealed";
@@ -502,6 +516,7 @@ document.getElementById("undo-btn").onclick = () => {
 };
 
 document.getElementById("reset-btn").onclick = () => newRound(wordIndex);
+document.getElementById("prev-btn").onclick = () => newRound((wordIndex - 1 + WORDS.length) % WORDS.length);
 document.getElementById("next-btn").onclick = () => newRound((wordIndex + 1) % WORDS.length);
 document.getElementById("reveal-btn").onclick = () => {
   const word = WORDS[wordIndex];
