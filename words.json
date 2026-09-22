@@ -2,36 +2,133 @@
   {
     "id": "aman",
     "image": "assets/aman.png",
-    "letters": ["א", "מ", "ן"],
+    "letters": [
+      "א",
+      "מ",
+      "ן"
+    ],
     "translit": "aman",
     "gloss": "believe"
   },
   {
     "id": "arak",
     "image": "assets/arak.png",
-    "letters": ["ע", "ר", "ך"],
+    "letters": [
+      "ע",
+      "ר",
+      "ך"
+    ],
     "translit": "arak",
     "gloss": "arrange"
   },
-    {
+  {
     "id": "barach",
     "image": "assets/barach.png",
-    "letters": ["ב", "ר", "ח"],
+    "letters": [
+      "ב",
+      "ר",
+      "ח"
+    ],
     "translit": "barach",
     "gloss": "flee"
   },
-    {
+  {
+    "id": "chabar",
+    "image": "assets/chabar.png",
+    "letters": [
+      "ח",
+      "ב",
+      "ר"
+    ],
+    "translit": "chabar",
+    "gloss": "unite"
+  },
+  {
+    "id": "chathar",
+    "image": "assets/chathar.png",
+    "letters": [
+      "ח",
+      "ת",
+      "ר"
+    ],
+    "translit": "chathar",
+    "gloss": "dig"
+  },
+  {
+    "id": "marad",
+    "image": "assets/marad.png",
+    "letters": [
+      "מ",
+      "ר",
+      "ד"
+    ],
+    "translit": "marad",
+    "gloss": "rebel"
+  },
+  {
+    "id": "radam",
+    "image": "assets/radam.png",
+    "letters": [
+      "ר",
+      "ד",
+      "ם"
+    ],
+    "translit": "radam",
+    "gloss": "sleep deeply"
+  },
+  {
+    "id": "saar",
+    "image": "assets/saar.png",
+    "letters": [
+      "ס",
+      "ע",
+      "ר"
+    ],
+    "translit": "saar",
+    "gloss": "storm"
+  },
+  {
     "id": "shaar",
     "image": "assets/shaar.png",
-    "letters": ["ש", "א", "ר"],
+    "letters": [
+      "ש",
+      "א",
+      "ר"
+    ],
     "translit": "shaar",
     "gloss": "remain"
   },
   {
+    "id": "shakan",
+    "image": "assets/shakan.png",
+    "letters": [
+      "ש",
+      "כ",
+      "ן"
+    ],
+    "translit": "shakan",
+    "gloss": "dwell"
+  },
+  {
     "id": "tul",
     "image": "assets/tul.png",
-    "letters": ["ט", "וּ", "ל"],
+    "letters": [
+      "ט",
+      "ו",
+      "ל"
+    ],
     "translit": "tul",
     "gloss": "hurl"
+  },
+  {
+    "id": "zaak",
+    "image": "assets/zaak.png",
+    "letters": [
+      "ז",
+      "ע",
+      "ק"
+    ],
+    "translit": "zaak",
+    "gloss": "cry out"
   }
 ]
