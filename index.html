@@ -88,8 +88,10 @@
 
 <script>
 // ---------- Config ----------
-// The 22 letters of the Hebrew alphabet, plus the 5 final (sofit) forms
-// (ך ם ן ף ץ) so any word using a final letter is always completable.
+// Fixed aleph-bet order, sofit forms placed right after their base letter.
+// This is a persistent keyboard: keys are never removed or shuffled, so
+// words with a repeated letter (e.g. two lameds) work with no special
+// handling — the student just presses that key twice.
 const FULL_ALPHABET = [
   "א", "ב", "ג", "ד", "ה", "ו", "ז", "ח", "ט", "י",
   "כ", "ך", "ל", "מ", "ם", "נ", "ן", "ס", "ע",
@@ -99,23 +101,11 @@ const FULL_ALPHABET = [
 // ---------- State ----------
 let WORDS = [];
 let wordIndex = 0;
-let pool = [];
 let assembled = [];
 let status = null; // null | "correct" | "wrong"
 
-// ---------- Helpers ----------
-function shuffle(arr) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 function newRound(index) {
   wordIndex = index;
-  pool = shuffle(FULL_ALPHABET);
   assembled = [];
   status = null;
   render();
@@ -133,16 +123,17 @@ function render() {
   while (slots.length < word.letters.length) slots.push("_");
   document.getElementById("assembled").textContent = slots.join(" ");
 
-  // Letter bank
+  // Letter keyboard — fixed aleph-bet order, always all 27 keys,
+  // never removed or reordered, so duplicate letters just work.
+  const isFull = assembled.length >= word.letters.length;
   const bank = document.getElementById("bank");
   bank.innerHTML = "";
-  pool.forEach((letter, i) => {
+  FULL_ALPHABET.forEach(letter => {
     const btn = document.createElement("button");
     btn.textContent = letter;
-    btn.disabled = status === "correct";
+    btn.disabled = status === "correct" || isFull;
     btn.onclick = () => {
       assembled.push(letter);
-      pool.splice(i, 1);
       if (assembled.length === word.letters.length) {
         status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
       }
@@ -182,8 +173,7 @@ function arraysEqual(a, b) {
 
 document.getElementById("undo-btn").onclick = () => {
   if (assembled.length === 0) return;
-  const last = assembled.pop();
-  pool.push(last);
+  assembled.pop();
   status = null;
   render();
 };
