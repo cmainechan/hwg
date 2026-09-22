@@ -79,6 +79,7 @@ def convert(csv_path: Path, json_path: Path) -> None:
 
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(words, f, ensure_ascii=False, indent=2)
+        f.write("\n")
 
     print(f"Wrote {len(words)} word(s) to {json_path}")
 

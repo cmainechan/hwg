@@ -77,17 +77,6 @@
     "gloss": "sleep deeply"
   },
   {
-    "id": "ruq",
-    "image": "assets/ruq.png",
-    "letters": [
-      "ר",
-      "ו",
-      "ק"
-    ],
-    "translit": "ruq",
-    "gloss": "sleep deeply"
-  },
-  {
     "id": "saar",
     "image": "assets/saar.png",
     "letters": [
@@ -107,17 +96,6 @@
       "ר"
     ],
     "translit": "shaar",
-    "gloss": "remain"
-  },
-  {
-    "id": "shabar",
-    "image": "assets/shabar.png",
-    "letters": [
-      "ש",
-      "ב",
-      "ה"
-    ],
-    "translit": "shabar",
     "gloss": "remain"
   },
   {
@@ -152,5 +130,27 @@
     ],
     "translit": "zaak",
     "gloss": "cry out"
+  },
+  {
+    "id": "ruq",
+    "image": "assets/ruq.png",
+    "letters": [
+      "ר",
+      "ו",
+      "ק"
+    ],
+    "translit": "ruq",
+    "gloss": "empty"
+  },
+  {
+    "id": "shabah",
+    "image": "assets/shabah.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ה"
+    ],
+    "translit": "shabah",
+    "gloss": "take captive"
   }
 ]
