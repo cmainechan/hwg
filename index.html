@@ -93,13 +93,66 @@
     padding: 1rem;
     box-shadow: 0 4px 14px rgba(43, 36, 32, 0.06);
   }
-  .flashcard-card img {
+  .image-wrap {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #faf7f0;
+  }
+  .image-wrap img {
     width: 100%;
     display: block;
-    border-radius: 10px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     background: #faf7f0;
+  }
+
+  .card-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 1.1rem 1rem 0.9rem;
+    background: linear-gradient(180deg, rgba(20, 30, 26, 0) 0%, rgba(18, 28, 24, 0.6) 35%, rgba(14, 22, 19, 0.93) 100%);
+    color: #f6f1e0;
+    opacity: 0;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .card-banner.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .banner-word {
+    font-family: "Times New Roman", Times, serif;
+    direction: rtl;
+    font-size: 2rem;
+    line-height: 1.15;
+    margin-bottom: 0.25rem;
+  }
+  .banner-caption { font-size: 0.9rem; color: #e6dcc0; }
+  .banner-gloss { font-style: italic; }
+  .banner-translit { opacity: 0.8; margin-left: 0.45rem; }
+  .banner-next {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(246, 241, 224, 0.45);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f6f1e0;
+    font-size: 1.15rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .banner-next:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(3px);
   }
 
   .assembled {
@@ -191,7 +244,7 @@
   .controls button:disabled { opacity: 0.45; cursor: default; }
 
   .feedback {
-    padding: 1rem 1.1rem;
+    padding: 0.85rem 1rem;
     border-radius: 12px;
     margin-bottom: 0;
     opacity: 0;
@@ -199,18 +252,17 @@
     transition: opacity 0.25s ease, transform 0.25s ease;
   }
   .feedback.show { opacity: 1; transform: translateY(0); }
-  .feedback.correct { background: var(--good-bg); color: var(--good); }
   .feedback.wrong { background: var(--bad-bg); color: var(--bad); }
-  .feedback p { margin: 0 0 0.6rem; font-size: 1rem; }
+  .feedback p { margin: 0 0 0.5rem; font-size: 0.95rem; }
   .feedback button {
     background: white;
     border: 1px solid currentColor;
     color: inherit;
     width: 100%;
-    padding: 0.55rem;
+    padding: 0.5rem;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   @media (max-width: 640px) {
@@ -239,7 +291,19 @@
   <div class="layout">
     <div class="flashcard">
       <div class="flashcard-card">
-        <img id="flashcard-img" src="" alt="flashcard">
+        <div class="image-wrap">
+          <img id="flashcard-img" src="" alt="flashcard">
+          <div class="card-banner" id="card-banner">
+            <div>
+              <div class="banner-word" id="banner-word"></div>
+              <div class="banner-caption">
+                <span class="banner-gloss" id="banner-gloss"></span>
+                <span class="banner-translit" id="banner-translit"></span>
+              </div>
+            </div>
+            <button class="banner-next" id="next-btn" aria-label="Next card" title="Next card">→</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -274,6 +338,15 @@ let WORDS = [];
 let wordIndex = 0;
 let assembled = [];
 let status = null; // null | "correct" | "wrong"
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
 
 function newRound(index) {
   wordIndex = index;
@@ -325,18 +398,22 @@ function render() {
   // Undo / reset
   document.getElementById("undo-btn").disabled = assembled.length === 0;
 
-  // Feedback
+  // Image banner — word, gloss, transliteration, shown only once correct
+  const banner = document.getElementById("card-banner");
+  if (status === "correct") {
+    document.getElementById("banner-word").textContent = word.letters.join("");
+    document.getElementById("banner-gloss").textContent = word.gloss;
+    document.getElementById("banner-translit").textContent = `/ ${word.translit} /`;
+    banner.classList.add("show");
+  } else {
+    banner.classList.remove("show");
+  }
+
+  // Feedback — only used for the "wrong" case now; correct feedback lives
+  // in the image banner above instead.
   const feedback = document.getElementById("feedback");
   feedback.innerHTML = "";
-  if (status === "correct") {
-    feedback.className = "feedback correct show";
-    feedback.innerHTML =
-      `<p>✅ Correct! <strong>${word.translit}</strong> — ${word.gloss}</p>`;
-    const nextBtn = document.createElement("button");
-    nextBtn.textContent = "Next card ▶";
-    nextBtn.onclick = () => newRound((wordIndex + 1) % WORDS.length);
-    feedback.appendChild(nextBtn);
-  } else if (status === "wrong") {
+  if (status === "wrong") {
     feedback.className = "feedback wrong show";
     feedback.innerHTML = `<p>❌ Not quite — try again.</p>`;
     const retryBtn = document.createElement("button");
@@ -360,12 +437,14 @@ document.getElementById("undo-btn").onclick = () => {
 };
 
 document.getElementById("reset-btn").onclick = () => newRound(wordIndex);
+document.getElementById("next-btn").onclick = () => newRound((wordIndex + 1) % WORDS.length);
 
 // ---------- Boot ----------
 fetch("words.json")
   .then(r => r.json())
   .then(data => {
-    WORDS = data;
+    // Shuffle the deck order each time the page loads.
+    WORDS = shuffle(data);
     newRound(0);
   })
   .catch(err => {
