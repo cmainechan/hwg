@@ -19,6 +19,7 @@
     --good-bg: #e6f4ea;
     --bad: #b3261e;
     --bad-bg: #fbe9e7;
+    --accent-bg: #eaf0f6;
   }
 
   * { box-sizing: border-box; }
@@ -174,6 +175,10 @@
     border-color: var(--good);
     background: var(--good-bg);
   }
+  .assembled.is-revealed {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+  }
   .assembled.is-wrong {
     border-color: var(--bad);
     background: var(--bad-bg);
@@ -312,6 +317,7 @@
       <div class="bank" id="bank"></div>
       <div class="controls">
         <button id="undo-btn">↩ Undo</button>
+        <button id="reveal-btn">💡 Show answer</button>
         <button id="reset-btn">🔄 Reset word</button>
       </div>
       <div id="feedback" class="feedback"></div>
@@ -373,18 +379,22 @@ function render() {
   while (slots.length < word.letters.length) slots.push("_");
   const assembledEl = document.getElementById("assembled");
   assembledEl.textContent = slots.join(" ");
-  assembledEl.className = "assembled" +
-    (status === "correct" ? " is-correct" : status === "wrong" ? " is-wrong" : "");
+  assembledEl.className = "assembled" + (
+    status === "correct" ? " is-correct" :
+    status === "revealed" ? " is-revealed" :
+    status === "wrong" ? " is-wrong" : ""
+  );
 
   // Letter keyboard — fixed aleph-bet order, always all 27 keys,
   // never removed or reordered, so duplicate letters just work.
+  const solved = status === "correct" || status === "revealed";
   const isFull = assembled.length >= word.letters.length;
   const bank = document.getElementById("bank");
   bank.innerHTML = "";
   FULL_ALPHABET.forEach(letter => {
     const btn = document.createElement("button");
     btn.textContent = letter;
-    btn.disabled = status === "correct" || isFull;
+    btn.disabled = solved || isFull;
     btn.onclick = () => {
       assembled.push(letter);
       if (assembled.length === word.letters.length) {
@@ -395,12 +405,13 @@ function render() {
     bank.appendChild(btn);
   });
 
-  // Undo / reset
+  // Undo / reset / reveal
   document.getElementById("undo-btn").disabled = assembled.length === 0;
+  document.getElementById("reveal-btn").disabled = solved;
 
-  // Image banner — word, gloss, transliteration, shown only once correct
+  // Image banner — word, gloss, transliteration, shown once correct or revealed
   const banner = document.getElementById("card-banner");
-  if (status === "correct") {
+  if (solved) {
     document.getElementById("banner-word").textContent = word.letters.join("");
     document.getElementById("banner-gloss").textContent = word.gloss;
     document.getElementById("banner-translit").textContent = `/ ${word.translit} /`;
@@ -438,6 +449,12 @@ document.getElementById("undo-btn").onclick = () => {
 
 document.getElementById("reset-btn").onclick = () => newRound(wordIndex);
 document.getElementById("next-btn").onclick = () => newRound((wordIndex + 1) % WORDS.length);
+document.getElementById("reveal-btn").onclick = () => {
+  const word = WORDS[wordIndex];
+  assembled = [...word.letters];
+  status = "revealed";
+  render();
+};
 
 // ---------- Boot ----------
 fetch("words.json")
