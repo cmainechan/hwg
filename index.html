@@ -191,6 +191,14 @@
     background: var(--bad-bg);
     animation: shake 0.4s ease;
   }
+  /* Letters that don't match the answer at their position. The underline
+     means it doesn't rely on colour alone. */
+  .assembled .slot-wrong {
+    color: var(--bad);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.35rem;
+  }
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20% { transform: translateX(-6px); }
@@ -438,11 +446,22 @@ function render() {
   document.getElementById("progress-fill").style.width =
     `${((wordIndex + 1) / WORDS.length) * 100}%`;
 
-  // Assembled slots (right-to-left)
+  // Assembled slots (right-to-left). One span per slot so that, on a wrong
+  // attempt, each letter that doesn't match the answer at that position
+  // can be marked in red.
   const slots = [...assembled];
   while (slots.length < word.letters.length) slots.push("_");
   const assembledEl = document.getElementById("assembled");
-  assembledEl.textContent = slots.join(" ");
+  assembledEl.innerHTML = "";
+  slots.forEach((letter, i) => {
+    if (i > 0) assembledEl.appendChild(document.createTextNode(" "));
+    const span = document.createElement("span");
+    span.textContent = letter;
+    if (status === "wrong" && letter !== word.letters[i]) {
+      span.className = "slot-wrong";
+    }
+    assembledEl.appendChild(span);
+  });
   assembledEl.className = "assembled" + (
     status === "correct" ? " is-correct" :
     status === "revealed" ? " is-revealed" :
