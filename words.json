@@ -308,5 +308,61 @@
     "letters": ["ל", "ק", "ח"],
     "translit": "laqah",
     "gloss": "take"
+  },
+    {
+    "id": "shamah",
+    "image": "assets/shamah.png",
+    "letters": ["ש", "מ", "ע"],
+    "translit": "shamah",
+    "gloss": "hear"
+  },
+  {
+    "id": "nasa",
+    "image": "assets/nasa.png",
+    "letters": ["נ", "ש", "א"],
+    "translit": "nasa",
+    "gloss": "lift"
+  },
+  {
+    "id": "raah",
+    "image": "assets/raah.png",
+    "letters": ["ר", "א", "ה"],
+    "translit": "raah",
+    "gloss": "see"
+  },
+  {
+    "id": "shuv",
+    "image": "assets/shuv.png",
+    "letters": ["ש", "ו", "ב"],
+    "translit": "shuv",
+    "gloss": "turn, return"
+  },
+  {
+    "id": "yashav",
+    "image": "assets/yashav.png",
+    "letters": ["י", "ש", "ב"],
+    "translit": "yashav",
+    "gloss": "sit"
+  },
+  {
+    "id": "avar",
+    "image": "assets/avar.png",
+    "letters": ["ע", "ב", "ר"],
+    "translit": "avar",
+    "gloss": "pass, cross"
+  },
+  {
+    "id": "shalah",
+    "image": "assets/shalah.png",
+    "letters": ["ש", "ל", "ח"],
+    "translit": "shalah",
+    "gloss": "send"
+  },
+  {
+    "id": "shamar",
+    "image": "assets/shamar.png",
+    "letters": ["ש", "מ", "ר"],
+    "translit": "shamar",
+    "gloss": "guard"
   }
 ]
