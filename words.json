@@ -548,5 +548,16 @@
     ],
     "translit": "asaf",
     "gloss": "gather"
+  },
+  {
+    "id": "nasa2",
+    "image": "assets/nasa2.png",
+    "letters": [
+      "נ",
+      "ס",
+      "ע"
+    ],
+    "translit": "nasa",
+    "gloss": "set out"
   }
 ]
