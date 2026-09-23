@@ -197,192 +197,300 @@
     "translit": "dasha",
     "gloss": "sprout"
   },
-    {
+  {
+    "id": "yatsar",
+    "image": "assets/yatsar.png",
+    "letters": [
+      "י",
+      "צ",
+      "ר"
+    ],
+    "translit": "yatsar",
+    "gloss": "form"
+  },
+  {
     "id": "asah",
     "image": "assets/asah.png",
-    "letters": ["ע", "ש", "ה"],
+    "letters": [
+      "ע",
+      "ש",
+      "ה"
+    ],
     "translit": "asah",
     "gloss": "do, make"
   },
   {
     "id": "matsa",
     "image": "assets/matsa.png",
-    "letters": ["מ", "צ", "א"],
+    "letters": [
+      "מ",
+      "צ",
+      "א"
+    ],
     "translit": "matsa",
     "gloss": "find"
   },
   {
-    "id": "yatsar",
-    "image": "assets/yatsar.png",
-    "letters": ["י", "צ", "ר"],
-    "translit": "yatsar",
-    "gloss": "form"
-  },
-  {
     "id": "ahav",
     "image": "assets/ahav.png",
-    "letters": ["א", "ה", "ב"],
+    "letters": [
+      "א",
+      "ה",
+      "ב"
+    ],
     "translit": "ahav",
     "gloss": "love"
   },
   {
     "id": "amar",
     "image": "assets/amar.png",
-    "letters": ["א", "מ", "ר"],
+    "letters": [
+      "א",
+      "מ",
+      "ר"
+    ],
     "translit": "amar",
     "gloss": "say"
   },
   {
     "id": "shir",
     "image": "assets/shir.png",
-    "letters": ["ש", "י", "ר"],
+    "letters": [
+      "ש",
+      "י",
+      "ר"
+    ],
     "translit": "shir",
     "gloss": "sing"
   },
   {
     "id": "male",
     "image": "assets/male.png",
-    "letters": ["מ", "ל", "א"],
+    "letters": [
+      "מ",
+      "ל",
+      "א"
+    ],
     "translit": "male",
     "gloss": "fill"
   },
   {
     "id": "baqash",
     "image": "assets/baqash.png",
-    "letters": ["ב", "ק", "ש"],
+    "letters": [
+      "ב",
+      "ק",
+      "ש"
+    ],
     "translit": "baqash",
     "gloss": "seek"
   },
-    {
+  {
     "id": "akhal",
     "image": "assets/akhal.png",
-    "letters": ["א", "כ", "ל"],
+    "letters": [
+      "א",
+      "כ",
+      "ל"
+    ],
     "translit": "akhal",
     "gloss": "eat"
   },
   {
     "id": "shatah",
     "image": "assets/shatah.png",
-    "letters": ["ש", "ת", "ה"],
+    "letters": [
+      "ש",
+      "ת",
+      "ה"
+    ],
     "translit": "shatah",
     "gloss": "drink"
   },
   {
     "id": "yarad",
     "image": "assets/yarad.png",
-    "letters": ["י", "ר", "ד"],
+    "letters": [
+      "י",
+      "ר",
+      "ד"
+    ],
     "translit": "yarad",
     "gloss": "go down"
   },
   {
     "id": "alah",
     "image": "assets/alah.png",
-    "letters": ["ע", "ל", "ה"],
+    "letters": [
+      "ע",
+      "ל",
+      "ה"
+    ],
     "translit": "alah",
     "gloss": "go up"
   },
   {
     "id": "shakav",
     "image": "assets/shakav.png",
-    "letters": ["ש", "כ", "ב"],
+    "letters": [
+      "ש",
+      "כ",
+      "ב"
+    ],
     "translit": "shakav",
     "gloss": "lie down"
   },
   {
     "id": "patah",
     "image": "assets/patah.png",
-    "letters": ["פ", "ת", "ח"],
+    "letters": [
+      "פ",
+      "ת",
+      "ח"
+    ],
     "translit": "patah",
     "gloss": "open"
   },
   {
     "id": "lavash",
     "image": "assets/lavash.png",
-    "letters": ["ל", "ב", "ש"],
+    "letters": [
+      "ל",
+      "ב",
+      "ש"
+    ],
     "translit": "lavash",
     "gloss": "wear"
   },
   {
     "id": "laqah",
     "image": "assets/laqah.png",
-    "letters": ["ל", "ק", "ח"],
+    "letters": [
+      "ל",
+      "ק",
+      "ח"
+    ],
     "translit": "laqah",
     "gloss": "take"
   },
-    {
+  {
     "id": "shamah",
     "image": "assets/shamah.png",
-    "letters": ["ש", "מ", "ע"],
+    "letters": [
+      "ש",
+      "מ",
+      "ע"
+    ],
     "translit": "shamah",
     "gloss": "hear"
   },
   {
     "id": "nasa",
     "image": "assets/nasa.png",
-    "letters": ["נ", "ש", "א"],
+    "letters": [
+      "נ",
+      "ש",
+      "א"
+    ],
     "translit": "nasa",
     "gloss": "lift"
   },
   {
     "id": "raah",
     "image": "assets/raah.png",
-    "letters": ["ר", "א", "ה"],
+    "letters": [
+      "ר",
+      "א",
+      "ה"
+    ],
     "translit": "raah",
     "gloss": "see"
   },
   {
     "id": "shuv",
     "image": "assets/shuv.png",
-    "letters": ["ש", "ו", "ב"],
+    "letters": [
+      "ש",
+      "ו",
+      "ב"
+    ],
     "translit": "shuv",
     "gloss": "turn, return"
   },
   {
     "id": "yashav",
     "image": "assets/yashav.png",
-    "letters": ["י", "ש", "ב"],
+    "letters": [
+      "י",
+      "ש",
+      "ב"
+    ],
     "translit": "yashav",
     "gloss": "sit"
   },
   {
     "id": "avar",
     "image": "assets/avar.png",
-    "letters": ["ע", "ב", "ר"],
+    "letters": [
+      "ע",
+      "ב",
+      "ר"
+    ],
     "translit": "avar",
     "gloss": "pass, cross"
   },
   {
     "id": "shalah",
     "image": "assets/shalah.png",
-    "letters": ["ש", "ל", "ח"],
+    "letters": [
+      "ש",
+      "ל",
+      "ח"
+    ],
     "translit": "shalah",
     "gloss": "send"
   },
   {
     "id": "shamar",
     "image": "assets/shamar.png",
-    "letters": ["ש", "מ", "ר"],
+    "letters": [
+      "ש",
+      "מ",
+      "ר"
+    ],
     "translit": "shamar",
     "gloss": "guard"
   },
-    {
+  {
     "id": "banah",
     "image": "assets/banah.png",
-    "letters": ["ב", "נ", "ה"],
+    "letters": [
+      "ב",
+      "נ",
+      "ה"
+    ],
     "translit": "banah",
     "gloss": "build"
   },
   {
     "id": "yasha",
     "image": "assets/yasha.png",
-    "letters": ["י", "ש", "ע"],
+    "letters": [
+      "י",
+      "ש",
+      "ע"
+    ],
     "translit": "yasha",
     "gloss": "save"
   },
   {
     "id": "hanah",
     "image": "assets/hanah.png",
-    "letters": ["ח", "נ", "ה"],
+    "letters": [
+      "ח",
+      "נ",
+      "ה"
+    ],
     "translit": "hanah",
     "gloss": "camp"
   }
