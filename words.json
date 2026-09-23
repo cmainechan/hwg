@@ -196,5 +196,61 @@
     ],
     "translit": "dasha",
     "gloss": "sprout"
+  },
+    {
+    "id": "asah",
+    "image": "assets/asah.png",
+    "letters": ["ע", "ש", "ה"],
+    "translit": "asah",
+    "gloss": "do, make"
+  },
+  {
+    "id": "matsa",
+    "image": "assets/matsa.png",
+    "letters": ["מ", "צ", "א"],
+    "translit": "matsa",
+    "gloss": "find"
+  },
+  {
+    "id": "yatsar",
+    "image": "assets/yatsar.png",
+    "letters": ["י", "צ", "ר"],
+    "translit": "yatsar",
+    "gloss": "form"
+  },
+  {
+    "id": "ahav",
+    "image": "assets/ahav.png",
+    "letters": ["א", "ה", "ב"],
+    "translit": "ahav",
+    "gloss": "love"
+  },
+  {
+    "id": "amar",
+    "image": "assets/amar.png",
+    "letters": ["א", "מ", "ר"],
+    "translit": "amar",
+    "gloss": "say"
+  },
+  {
+    "id": "shir",
+    "image": "assets/shir.png",
+    "letters": ["ש", "י", "ר"],
+    "translit": "shir",
+    "gloss": "sing"
+  },
+  {
+    "id": "male",
+    "image": "assets/male.png",
+    "letters": ["מ", "ל", "א"],
+    "translit": "male",
+    "gloss": "fill"
+  },
+  {
+    "id": "baqash",
+    "image": "assets/baqash.png",
+    "letters": ["ב", "ק", "ש"],
+    "translit": "baqash",
+    "gloss": "seek"
   }
 ]
