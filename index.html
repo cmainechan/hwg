@@ -301,28 +301,6 @@
     color: var(--ink);
   }
 
-  .feedback {
-    padding: 0.85rem 1rem;
-    border-radius: 12px;
-    margin-bottom: 0;
-    opacity: 0;
-    transform: translateY(-4px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
-  .feedback.show { opacity: 1; transform: translateY(0); }
-  .feedback.wrong { background: var(--bad-bg); color: var(--bad); }
-  .feedback p { margin: 0 0 0.5rem; font-size: 0.95rem; }
-  .feedback button {
-    background: white;
-    border: 1px solid currentColor;
-    color: inherit;
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 0.9rem;
-  }
-
   @media (max-width: 640px) {
     .shell { padding: 1.4rem 1.1rem 1.8rem; }
     .assembled { font-size: 2.2rem; }
@@ -386,7 +364,6 @@
           <span>Reset</span>
         </button>
       </div>
-      <div id="feedback" class="feedback"></div>
     </div>
   </div>
 </div>
@@ -499,21 +476,6 @@ function render() {
     banner.classList.add("show");
   } else {
     banner.classList.remove("show");
-  }
-
-  // Feedback — only used for the "wrong" case now; correct feedback lives
-  // in the image banner above instead.
-  const feedback = document.getElementById("feedback");
-  feedback.innerHTML = "";
-  if (status === "wrong") {
-    feedback.className = "feedback wrong show";
-    feedback.innerHTML = `<p>❌ Not quite — try again.</p>`;
-    const retryBtn = document.createElement("button");
-    retryBtn.textContent = "Try again";
-    retryBtn.onclick = () => newRound(wordIndex);
-    feedback.appendChild(retryBtn);
-  } else {
-    feedback.className = "feedback";
   }
 }
 
