@@ -364,5 +364,26 @@
     "letters": ["ש", "מ", "ר"],
     "translit": "shamar",
     "gloss": "guard"
+  },
+    {
+    "id": "banah",
+    "image": "assets/banah.png",
+    "letters": ["ב", "נ", "ה"],
+    "translit": "banah",
+    "gloss": "build"
+  },
+  {
+    "id": "yasha",
+    "image": "assets/yasha.png",
+    "letters": ["י", "ש", "ע"],
+    "translit": "yasha",
+    "gloss": "save"
+  },
+  {
+    "id": "hanah",
+    "image": "assets/hanah.png",
+    "letters": ["ח", "נ", "ה"],
+    "translit": "hanah",
+    "gloss": "camp"
   }
 ]
