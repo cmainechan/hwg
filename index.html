@@ -191,14 +191,8 @@
     background: var(--bad-bg);
     animation: shake 0.4s ease;
   }
-  /* Letters that don't match the answer at their position. The underline
-     means it doesn't rely on colour alone. */
-  .assembled .slot-wrong {
-    color: var(--bad);
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 0.35rem;
-  }
+  /* Letters that don't match the answer at their position. */
+  .assembled .slot-wrong { color: var(--bad); }
   @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20% { transform: translateX(-6px); }
