@@ -493,5 +493,60 @@
     ],
     "translit": "hanah",
     "gloss": "camp"
+  },
+  {
+    "id": "halakh",
+    "image": "assets/halakh.png",
+    "letters": [
+      "ה",
+      "ל",
+      "ך"
+    ],
+    "translit": "halakh",
+    "gloss": "go, walk"
+  },
+  {
+    "id": "natan",
+    "image": "assets/natan.png",
+    "letters": [
+      "נ",
+      "ת",
+      "ן"
+    ],
+    "translit": "natan",
+    "gloss": "give, set"
+  },
+  {
+    "id": "qum",
+    "image": "assets/qum.png",
+    "letters": [
+      "ק",
+      "ו",
+      "ם"
+    ],
+    "translit": "qum",
+    "gloss": "rise"
+  },
+  {
+    "id": "nagad",
+    "image": "assets/nagad.png",
+    "letters": [
+      "נ",
+      "ג",
+      "ד"
+    ],
+    "translit": "nagad",
+    "gloss": "tell"
+  },
+  {
+    "id": "asaf",
+    "image": "assets/asaf.png",
+    "letters": [
+      "א",
+      "ס",
+      "ף"
+    ],
+    "translit": "asaf",
+    "gloss": "gather"
   }
 ]
