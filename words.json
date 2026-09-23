@@ -252,5 +252,61 @@
     "letters": ["ב", "ק", "ש"],
     "translit": "baqash",
     "gloss": "seek"
+  },
+    {
+    "id": "akhal",
+    "image": "assets/akhal.png",
+    "letters": ["א", "כ", "ל"],
+    "translit": "akhal",
+    "gloss": "eat"
+  },
+  {
+    "id": "shatah",
+    "image": "assets/shatah.png",
+    "letters": ["ש", "ת", "ה"],
+    "translit": "shatah",
+    "gloss": "drink"
+  },
+  {
+    "id": "yarad",
+    "image": "assets/yarad.png",
+    "letters": ["י", "ר", "ד"],
+    "translit": "yarad",
+    "gloss": "go down"
+  },
+  {
+    "id": "alah",
+    "image": "assets/alah.png",
+    "letters": ["ע", "ל", "ה"],
+    "translit": "alah",
+    "gloss": "go up"
+  },
+  {
+    "id": "shakav",
+    "image": "assets/shakav.png",
+    "letters": ["ש", "כ", "ב"],
+    "translit": "shakav",
+    "gloss": "lie down"
+  },
+  {
+    "id": "patah",
+    "image": "assets/patah.png",
+    "letters": ["פ", "ת", "ח"],
+    "translit": "patah",
+    "gloss": "open"
+  },
+  {
+    "id": "lavash",
+    "image": "assets/lavash.png",
+    "letters": ["ל", "ב", "ש"],
+    "translit": "lavash",
+    "gloss": "wear"
+  },
+  {
+    "id": "laqah",
+    "image": "assets/laqah.png",
+    "letters": ["ל", "ק", "ח"],
+    "translit": "laqah",
+    "gloss": "take"
   }
 ]
