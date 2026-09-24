@@ -834,5 +834,49 @@
     ],
     "translit": "tsivah",
     "gloss": "command"
+  },
+  {
+    "id": "gadal",
+    "image": "assets/gadal.png",
+    "letters": [
+      "ג",
+      "ד",
+      "ל"
+    ],
+    "translit": "gadal",
+    "gloss": "be great"
+  },
+  {
+    "id": "raa",
+    "image": "assets/raa.png",
+    "letters": [
+      "ר",
+      "ע",
+      "ע"
+    ],
+    "translit": "raa",
+    "gloss": "do evil"
+  },
+  {
+    "id": "lacham",
+    "image": "assets/lacham.png",
+    "letters": [
+      "ל",
+      "ח",
+      "ם"
+    ],
+    "translit": "lacham",
+    "gloss": "fight"
+  },
+  {
+    "id": "sane",
+    "image": "assets/sane.png",
+    "letters": [
+      "ש",
+      "נ",
+      "א"
+    ],
+    "translit": "sane",
+    "gloss": "hate"
   }
 ]
