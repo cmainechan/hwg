@@ -559,5 +559,60 @@
     ],
     "translit": "nasa",
     "gloss": "set out"
+  },
+  {
+    "id": "savav",
+    "image": "assets/savav.png",
+    "letters": [
+      "ס",
+      "ב",
+      "ב"
+    ],
+    "translit": "savav",
+    "gloss": "go around"
+  },
+  {
+    "id": "nus",
+    "image": "assets/nus.png",
+    "letters": [
+      "נ",
+      "ו",
+      "ס"
+    ],
+    "translit": "nus",
+    "gloss": "flee"
+  },
+  {
+    "id": "kisah",
+    "image": "assets/kisah.png",
+    "letters": [
+      "כ",
+      "ס",
+      "ה"
+    ],
+    "translit": "kisah",
+    "gloss": "cover"
+  },
+  {
+    "id": "nuha",
+    "image": "assets/nuha.png",
+    "letters": [
+      "נ",
+      "ו",
+      "ח"
+    ],
+    "translit": "nuha",
+    "gloss": "rest"
+  },
+  {
+    "id": "qara",
+    "image": "assets/qara.png",
+    "letters": [
+      "ק",
+      "ר",
+      "א"
+    ],
+    "translit": "qara",
+    "gloss": "call, meet"
   }
 ]
