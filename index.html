@@ -382,11 +382,28 @@ const FULL_ALPHABET = [
   "פ", "ף", "צ", "ץ", "ק", "ר", "ש", "ת"
 ];
 
+// ---------- Queue ----------
+// The deck is a persistent queue saved in localStorage, so a student can
+// work through it in batches across sessions without repeats. A round is
+// one shuffled pass through every word; queue.order[0..pos) are done this
+// round and queue.order[pos] is the current card. A card is only done once
+// solved or revealed — "next" on an unsolved card moves it to the end of
+// the round instead, so hard words can't be dodged. When a round finishes
+// the whole deck is reshuffled for the next one.
+const STORAGE_KEY = "hebrew-word-builder:queue";
+const QUEUE_VERSION = 1;
+// Cards from the end of one round kept out of the start of the next,
+// so the same word never appears twice in a row across the boundary.
+const ROUND_GAP = 5;
+
 // ---------- State ----------
-let WORDS = [];
-let wordIndex = 0;
+let WORDS = {};        // id -> word
+let queue = null;      // { v, order: [id], pos }
+let current = null;    // id of the card on screen
+let currentDone = false;
+let cardNumber = 1;    // position of the card on screen within the round
 let assembled = [];
-let status = null; // null | "correct" | "wrong"
+let status = null; // null | "correct" | "wrong" | "revealed"
 
 function shuffle(arr) {
   const a = [...arr];
@@ -397,8 +414,61 @@ function shuffle(arr) {
   return a;
 }
 
-function newRound(index) {
-  wordIndex = index;
+function saveQueue() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(queue)); } catch (e) {}
+}
+
+function freshRound(prevOrder) {
+  const ids = Object.keys(WORDS);
+  const gap = Math.min(ROUND_GAP, Math.floor(ids.length / 2));
+  const tail = new Set(prevOrder.slice(-gap).filter(id => id in WORDS));
+  const others = shuffle(ids.filter(id => !tail.has(id)));
+  const head = others.slice(0, gap);
+  const rest = shuffle([...others.slice(gap), ...tail]);
+  return { v: QUEUE_VERSION, order: [...head, ...rest], pos: 0 };
+}
+
+// Restore the saved queue, reconciled against the current word list:
+// removed words are dropped, new words are slotted at random into the
+// not-yet-done part of the round.
+function loadQueue() {
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) {}
+  const valid = saved && saved.v === QUEUE_VERSION && Array.isArray(saved.order) &&
+    Number.isInteger(saved.pos) && saved.pos >= 0 && saved.pos <= saved.order.length;
+  if (!valid) {
+    queue = freshRound([]);
+  } else {
+    const seen = new Set();
+    const keep = id => id in WORDS && !seen.has(id) && seen.add(id);
+    const done = saved.order.slice(0, saved.pos).filter(keep);
+    const todo = saved.order.slice(saved.pos).filter(keep);
+    Object.keys(WORDS).filter(id => !seen.has(id)).forEach(id => {
+      todo.splice(Math.floor(Math.random() * (todo.length + 1)), 0, id);
+    });
+    queue = todo.length === 0
+      ? freshRound(done)
+      : { v: QUEUE_VERSION, order: [...done, ...todo], pos: done.length };
+  }
+  saveQueue();
+}
+
+function markDone() {
+  if (currentDone) return;
+  currentDone = true;
+  queue.pos++;
+  if (queue.pos >= queue.order.length) queue = freshRound(queue.order);
+  saveQueue();
+}
+
+function showFront() {
+  current = queue.order[queue.pos];
+  currentDone = false;
+  cardNumber = queue.pos + 1;
+  resetAttempt();
+}
+
+function resetAttempt() {
   assembled = [];
   status = null;
   render();
@@ -406,16 +476,17 @@ function newRound(index) {
 
 // ---------- Rendering ----------
 function render() {
-  const word = WORDS[wordIndex];
+  const word = WORDS[current];
+  const total = queue.order.length;
 
   document.getElementById("flashcard-img").src = word.image;
   document.getElementById("flashcard-img").alt = word.id;
 
   // Progress
   document.getElementById("progress-text").textContent =
-    `Card ${wordIndex + 1} of ${WORDS.length}`;
+    `Card ${cardNumber} of ${total} this round`;
   document.getElementById("progress-fill").style.width =
-    `${((wordIndex + 1) / WORDS.length) * 100}%`;
+    `${(cardNumber / total) * 100}%`;
 
   // Assembled slots (right-to-left). One span per slot so that, on a wrong
   // attempt, each letter that doesn't match the answer at that position
@@ -440,8 +511,8 @@ function render() {
   );
 
   // Prev/next navigation — always available, independent of solve status
-  document.getElementById("prev-btn").disabled = WORDS.length <= 1;
-  document.getElementById("next-btn").disabled = WORDS.length <= 1;
+  document.getElementById("prev-btn").disabled = total <= 1;
+  document.getElementById("next-btn").disabled = total <= 1;
 
   // Letter keyboard — fixed aleph-bet order, always all 27 keys,
   // never removed or reordered, so duplicate letters just work.
@@ -457,6 +528,7 @@ function render() {
       assembled.push(letter);
       if (assembled.length === word.letters.length) {
         status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
+        if (status === "correct") markDone();
       }
       render();
     };
@@ -490,13 +562,25 @@ document.getElementById("undo-btn").onclick = () => {
   render();
 };
 
-document.getElementById("reset-btn").onclick = () => newRound(wordIndex);
-document.getElementById("prev-btn").onclick = () => newRound((wordIndex - 1 + WORDS.length) % WORDS.length);
-document.getElementById("next-btn").onclick = () => newRound((wordIndex + 1) % WORDS.length);
+document.getElementById("reset-btn").onclick = resetAttempt;
+
+// Next: after a solved card, go on to the next card in the queue; on an
+// unsolved card, move it to the end of the round so it comes back later.
+document.getElementById("next-btn").onclick = () => {
+  if (!currentDone) queue.order.push(queue.order.splice(queue.pos, 1)[0]);
+  saveQueue();
+  showFront();
+};
+// Prev: bring back the card at the end of the round (the inverse of next).
+document.getElementById("prev-btn").onclick = () => {
+  queue.order.splice(queue.pos, 0, queue.order.pop());
+  saveQueue();
+  showFront();
+};
 document.getElementById("reveal-btn").onclick = () => {
-  const word = WORDS[wordIndex];
-  assembled = [...word.letters];
+  assembled = [...WORDS[current].letters];
   status = "revealed";
+  markDone();
   render();
 };
 
@@ -504,9 +588,14 @@ document.getElementById("reveal-btn").onclick = () => {
 fetch("words.json")
   .then(r => r.json())
   .then(data => {
-    // Shuffle the deck order each time the page loads.
-    WORDS = shuffle(data);
-    newRound(0);
+    WORDS = Object.create(null);
+    data.forEach(w => { WORDS[w.id] = w; });
+    loadQueue();
+    // Ask the browser not to evict the saved queue under storage pressure.
+    if (navigator.storage && navigator.storage.persist) {
+      navigator.storage.persist().catch(() => {});
+    }
+    showFront();
   })
   .catch(err => {
     document.body.innerHTML =
