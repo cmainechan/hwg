@@ -757,5 +757,82 @@
     ],
     "translit": "rakhav",
     "gloss": "ride"
+  },
+  {
+    "id": "shafat",
+    "image": "assets/shafat.png",
+    "letters": [
+      "ש",
+      "פ",
+      "ט"
+    ],
+    "translit": "shafat",
+    "gloss": "judge"
+  },
+  {
+    "id": "bo",
+    "image": "assets/bo.png",
+    "letters": [
+      "ב",
+      "ו",
+      "א"
+    ],
+    "translit": "bo",
+    "gloss": "come, enter"
+  },
+  {
+    "id": "hayah",
+    "image": "assets/hayah.png",
+    "letters": [
+      "ח",
+      "י",
+      "ה"
+    ],
+    "translit": "hayah",
+    "gloss": "be"
+  },
+  {
+    "id": "nakar",
+    "image": "assets/nakar.png",
+    "letters": [
+      "נ",
+      "כ",
+      "ר"
+    ],
+    "translit": "nakar",
+    "gloss": "recognise"
+  },
+  {
+    "id": "bahar",
+    "image": "assets/bahar.png",
+    "letters": [
+      "ב",
+      "ח",
+      "ר"
+    ],
+    "translit": "bahar",
+    "gloss": "choose"
+  },
+  {
+    "id": "hayah2",
+    "image": "assets/hayah2.png",
+    "letters": [
+      "ח",
+      "י",
+      "ה"
+    ],
+    "translit": "hayah",
+    "gloss": "live"
+  },
+  {
+    "id": "tsivah",
+    "image": "assets/tsivah.png",
+    "letters": [
+      "צ",
+      "ו",
+      "ה"
+    ],
+    "translit": "tsivah",
+    "gloss": "command"
   }
 ]
