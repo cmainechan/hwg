@@ -691,5 +691,71 @@
     ],
     "translit": "davaq",
     "gloss": "cling"
+  },
+  {
+    "id": "qalel",
+    "image": "assets/qalel.png",
+    "letters": [
+      "ק",
+      "ל",
+      "ל"
+    ],
+    "translit": "qalel",
+    "gloss": "curse"
+  },
+  {
+    "id": "sava",
+    "image": "assets/sava.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ע"
+    ],
+    "translit": "sava",
+    "gloss": "be satisfied"
+  },
+  {
+    "id": "yare",
+    "image": "assets/yare.png",
+    "letters": [
+      "י",
+      "ר",
+      "א"
+    ],
+    "translit": "yare",
+    "gloss": "fear"
+  },
+  {
+    "id": "hikah",
+    "image": "assets/hikah.png",
+    "letters": [
+      "נ",
+      "כ",
+      "ה"
+    ],
+    "translit": "hikah",
+    "gloss": "strike"
+  },
+  {
+    "id": "malakh",
+    "image": "assets/malakh.png",
+    "letters": [
+      "מ",
+      "ל",
+      "ך"
+    ],
+    "translit": "malakh",
+    "gloss": "reign"
+  },
+  {
+    "id": "rakhav",
+    "image": "assets/rakhav.png",
+    "letters": [
+      "ר",
+      "כ",
+      "ב"
+    ],
+    "translit": "rakhav",
+    "gloss": "ride"
   }
 ]
