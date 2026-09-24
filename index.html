@@ -386,10 +386,12 @@ const FULL_ALPHABET = [
 // The deck is a persistent queue saved in localStorage, so a student can
 // work through it in batches across sessions without repeats. A round is
 // one shuffled pass through every word; queue.order[0..pos) are done this
-// round and queue.order[pos] is the current card. A card is only done once
-// solved or revealed — "next" on an unsolved card moves it to the end of
-// the round instead, so hard words can't be dodged. When a round finishes
-// the whole deck is reshuffled for the next one.
+// round and queue.order[pos] is the next card to do. A card is only done
+// once solved or revealed — "next" on an unsolved card moves it to the end
+// of the round instead, so hard words can't be dodged. "Prev" steps back
+// through cards already done this round, for extra practice that doesn't
+// change progress. When a round finishes the whole deck is reshuffled for
+// the next one.
 const STORAGE_KEY = "hebrew-word-builder:queue";
 const QUEUE_VERSION = 1;
 // Cards from the end of one round kept out of the start of the next,
@@ -399,6 +401,7 @@ const ROUND_GAP = 5;
 // ---------- State ----------
 let WORDS = {};        // id -> word
 let queue = null;      // { v, order: [id], pos }
+let view = 0;          // index in queue.order of the card on screen
 let current = null;    // id of the card on screen
 let currentDone = false;
 let cardNumber = 1;    // position of the card on screen within the round
@@ -457,14 +460,18 @@ function markDone() {
   if (currentDone) return;
   currentDone = true;
   queue.pos++;
-  if (queue.pos >= queue.order.length) queue = freshRound(queue.order);
+  if (queue.pos >= queue.order.length) {
+    queue = freshRound(queue.order);
+    view = -1; // the finished card isn't part of the new round; next -> its first card
+  }
   saveQueue();
 }
 
-function showFront() {
-  current = queue.order[queue.pos];
-  currentDone = false;
-  cardNumber = queue.pos + 1;
+function showAt(i) {
+  view = i;
+  current = queue.order[i];
+  currentDone = i < queue.pos;
+  cardNumber = i + 1;
   resetAttempt();
 }
 
@@ -510,8 +517,8 @@ function render() {
     status === "wrong" ? " is-wrong" : ""
   );
 
-  // Prev/next navigation — always available, independent of solve status
-  document.getElementById("prev-btn").disabled = total <= 1;
+  // Prev is only available once there's a done card this round to go back to
+  document.getElementById("prev-btn").disabled = view <= 0;
   document.getElementById("next-btn").disabled = total <= 1;
 
   // Letter keyboard — fixed aleph-bet order, always all 27 keys,
@@ -564,18 +571,20 @@ document.getElementById("undo-btn").onclick = () => {
 
 document.getElementById("reset-btn").onclick = resetAttempt;
 
-// Next: after a solved card, go on to the next card in the queue; on an
-// unsolved card, move it to the end of the round so it comes back later.
+// Next: step forward towards the next card to do. On that card, if it's
+// unsolved, move it to the end of the round so it comes back later.
 document.getElementById("next-btn").onclick = () => {
-  if (!currentDone) queue.order.push(queue.order.splice(queue.pos, 1)[0]);
-  saveQueue();
-  showFront();
+  if (view === queue.pos && !currentDone) {
+    queue.order.push(queue.order.splice(queue.pos, 1)[0]);
+    saveQueue();
+    showAt(queue.pos);
+  } else {
+    showAt(view + 1);
+  }
 };
-// Prev: bring back the card at the end of the round (the inverse of next).
+// Prev: step back through cards already done this round.
 document.getElementById("prev-btn").onclick = () => {
-  queue.order.splice(queue.pos, 0, queue.order.pop());
-  saveQueue();
-  showFront();
+  if (view > 0) showAt(view - 1);
 };
 document.getElementById("reveal-btn").onclick = () => {
   assembled = [...WORDS[current].letters];
@@ -595,7 +604,7 @@ fetch("words.json")
     if (navigator.storage && navigator.storage.persist) {
       navigator.storage.persist().catch(() => {});
     }
-    showFront();
+    showAt(queue.pos);
   })
   .catch(err => {
     document.body.innerHTML =
