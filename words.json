@@ -614,5 +614,82 @@
     ],
     "translit": "qara",
     "gloss": "call, meet"
+  },
+  {
+    "id": "radaf",
+    "image": "assets/radaf.png",
+    "letters": [
+      "ר",
+      "ד",
+      "ף"
+    ],
+    "translit": "radaf",
+    "gloss": "pursue"
+  },
+  {
+    "id": "nafal",
+    "image": "assets/nafal.png",
+    "letters": [
+      "נ",
+      "פ",
+      "ל"
+    ],
+    "translit": "nafal",
+    "gloss": "fall"
+  },
+  {
+    "id": "bakhah",
+    "image": "assets/bakhah.png",
+    "letters": [
+      "ב",
+      "כ",
+      "ה"
+    ],
+    "translit": "bakhah",
+    "gloss": "weep"
+  },
+  {
+    "id": "palel",
+    "image": "assets/palel.png",
+    "letters": [
+      "פ",
+      "ל",
+      "ל"
+    ],
+    "translit": "palel",
+    "gloss": "pray"
+  },
+  {
+    "id": "qanah",
+    "image": "assets/qanah.png",
+    "letters": [
+      "ק",
+      "נ",
+      "ה"
+    ],
+    "translit": "qanah",
+    "gloss": "buy"
+  },
+  {
+    "id": "ruts",
+    "image": "assets/ruts.png",
+    "letters": [
+      "ר",
+      "ו",
+      "ץ"
+    ],
+    "translit": "ruts",
+    "gloss": "run"
+  },
+  {
+    "id": "davaq",
+    "image": "assets/davaq.png",
+    "letters": [
+      "ד",
+      "ב",
+      "ק"
+    ],
+    "translit": "davaq",
+    "gloss": "cling"
   }
 ]
