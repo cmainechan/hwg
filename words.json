@@ -900,5 +900,49 @@
     ],
     "translit": "panah",
     "gloss": "turn"
+  },
+  {
+    "id": "safar",
+    "image": "assets/safar.png",
+    "letters": [
+      "ס",
+      "פ",
+      "ר"
+    ],
+    "translit": "safar",
+    "gloss": "count"
+  },
+  {
+    "id": "masha",
+    "image": "assets/masha.png",
+    "letters": [
+      "מ",
+      "ש",
+      "ח"
+    ],
+    "translit": "masha",
+    "gloss": "anoint"
+  },
+  {
+    "id": "hazaq",
+    "image": "assets/hazaq.png",
+    "letters": [
+      "ח",
+      "ז",
+      "ק"
+    ],
+    "translit": "hazaq",
+    "gloss": "be strong"
+  },
+  {
+    "id": "lamad",
+    "image": "assets/lamad.png",
+    "letters": [
+      "ל",
+      "מ",
+      "ד"
+    ],
+    "translit": "lamad",
+    "gloss": "learn, teach"
   }
 ]
