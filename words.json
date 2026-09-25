@@ -999,5 +999,60 @@
     ],
     "translit": "shakam",
     "gloss": "rise early"
+  },
+  {
+    "id": "makar",
+    "image": "assets/makar.png",
+    "letters": [
+      "מ",
+      "כ",
+      "ר"
+    ],
+    "translit": "makar",
+    "gloss": "sell"
+  },
+  {
+    "id": "sheba",
+    "image": "assets/sheba.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ע"
+    ],
+    "translit": "sheba",
+    "gloss": "swear"
+  },
+  {
+    "id": "qavar",
+    "image": "assets/qavar.png",
+    "letters": [
+      "ק",
+      "ב",
+      "ר"
+    ],
+    "translit": "qavar",
+    "gloss": "bury"
+  },
+  {
+    "id": "sathar",
+    "image": "assets/sathar.png",
+    "letters": [
+      "ס",
+      "ת",
+      "ר"
+    ],
+    "translit": "sathar",
+    "gloss": "hide"
+  },
+  {
+    "id": "barak",
+    "image": "assets/barak.png",
+    "letters": [
+      "ב",
+      "ר",
+      "ך"
+    ],
+    "translit": "barak",
+    "gloss": "bless"
   }
 ]
