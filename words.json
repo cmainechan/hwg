@@ -1054,5 +1054,60 @@
     ],
     "translit": "barak",
     "gloss": "bless"
+  },
+  {
+    "id": "bosh",
+    "image": "assets/bosh.png",
+    "letters": [
+      "ב",
+      "ו",
+      "ש"
+    ],
+    "translit": "bosh",
+    "gloss": "be ashamed"
+  },
+  {
+    "id": "anah",
+    "image": "assets/anah.png",
+    "letters": [
+      "ע",
+      "נ",
+      "ה"
+    ],
+    "translit": "anah",
+    "gloss": "answer"
+  },
+  {
+    "id": "tsipah",
+    "image": "assets/tsipah.png",
+    "letters": [
+      "צ",
+      "פ",
+      "ה"
+    ],
+    "translit": "tsipah",
+    "gloss": "overlay"
+  },
+  {
+    "id": "milet",
+    "image": "assets/milet.png",
+    "letters": [
+      "מ",
+      "ל",
+      "ט"
+    ],
+    "translit": "milet",
+    "gloss": "escape"
+  },
+  {
+    "id": "gur",
+    "image": "assets/gur.png",
+    "letters": [
+      "ג",
+      "ו",
+      "ר"
+    ],
+    "translit": "gur",
+    "gloss": "sojourn"
   }
 ]
