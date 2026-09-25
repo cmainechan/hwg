@@ -878,5 +878,27 @@
     ],
     "translit": "sane",
     "gloss": "hate"
+  },
+  {
+    "id": "avad",
+    "image": "assets/avad.png",
+    "letters": [
+      "ע",
+      "ב",
+      "ד"
+    ],
+    "translit": "avad",
+    "gloss": "serve"
+  },
+  {
+    "id": "panah",
+    "image": "assets/panah.png",
+    "letters": [
+      "פ",
+      "נ",
+      "ה"
+    ],
+    "translit": "panah",
+    "gloss": "turn"
   }
 ]
