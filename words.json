@@ -944,5 +944,60 @@
     ],
     "translit": "lamad",
     "gloss": "learn, teach"
+  },
+  {
+    "id": "yatsa",
+    "image": "assets/yatsa.png",
+    "letters": [
+      "י",
+      "צ",
+      "א"
+    ],
+    "translit": "yatsa",
+    "gloss": "go out"
+  },
+  {
+    "id": "shaal",
+    "image": "assets/shaal.png",
+    "letters": [
+      "ש",
+      "א",
+      "ל"
+    ],
+    "translit": "shaal",
+    "gloss": "ask"
+  },
+  {
+    "id": "shavar",
+    "image": "assets/shavar.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ר"
+    ],
+    "translit": "shavar",
+    "gloss": "break"
+  },
+  {
+    "id": "nagash",
+    "image": "assets/nagash.png",
+    "letters": [
+      "נ",
+      "ג",
+      "ש"
+    ],
+    "translit": "nagash",
+    "gloss": "draw near"
+  },
+  {
+    "id": "shakam",
+    "image": "assets/shakam.png",
+    "letters": [
+      "ש",
+      "כ",
+      "ם"
+    ],
+    "translit": "shakam",
+    "gloss": "rise early"
   }
 ]
