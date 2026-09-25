@@ -1109,5 +1109,60 @@
     ],
     "translit": "gur",
     "gloss": "sojourn"
+  },
+  {
+    "id": "shamad",
+    "image": "assets/shamad.png",
+    "letters": [
+      "ש",
+      "מ",
+      "ד"
+    ],
+    "translit": "shamad",
+    "gloss": "destroy"
+  },
+  {
+    "id": "nata",
+    "image": "assets/nata.png",
+    "letters": [
+      "נ",
+      "ט",
+      "ע"
+    ],
+    "translit": "nata",
+    "gloss": "plant"
+  },
+  {
+    "id": "madad",
+    "image": "assets/madad.png",
+    "letters": [
+      "מ",
+      "ד",
+      "ד"
+    ],
+    "translit": "madad",
+    "gloss": "measure"
+  },
+  {
+    "id": "karat",
+    "image": "assets/karat.png",
+    "letters": [
+      "כ",
+      "ר",
+      "ת"
+    ],
+    "translit": "karat",
+    "gloss": "cut"
+  },
+  {
+    "id": "katav",
+    "image": "assets/katav.png",
+    "letters": [
+      "כ",
+      "ת",
+      "ב"
+    ],
+    "translit": "katav",
+    "gloss": "write"
   }
 ]
