@@ -1208,5 +1208,49 @@
     ],
     "translit": "kalah",
     "gloss": "finish"
+  },
+  {
+    "id": "diber",
+    "image": "assets/diber.png",
+    "letters": [
+      "ד",
+      "ב",
+      "ר"
+    ],
+    "translit": "diber",
+    "gloss": "speak"
+  },
+  {
+    "id": "samah",
+    "image": "assets/samah.png",
+    "letters": [
+      "ש",
+      "מ",
+      "ח"
+    ],
+    "translit": "samah",
+    "gloss": "rejoice"
+  },
+  {
+    "id": "yaats",
+    "image": "assets/yaats.png",
+    "letters": [
+      "י",
+      "ע",
+      "ץ"
+    ],
+    "translit": "yaats",
+    "gloss": "counsel"
+  },
+  {
+    "id": "zara",
+    "image": "assets/zara.png",
+    "letters": [
+      "ז",
+      "ר",
+      "ע"
+    ],
+    "translit": "zara",
+    "gloss": "sow"
   }
 ]
