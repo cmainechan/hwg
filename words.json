@@ -1164,5 +1164,49 @@
     ],
     "translit": "katav",
     "gloss": "write"
+  },
+  {
+    "id": "tame",
+    "image": "assets/tame.png",
+    "letters": [
+      "ט",
+      "מ",
+      "א"
+    ],
+    "translit": "tame",
+    "gloss": "be unclean"
+  },
+  {
+    "id": "rahats",
+    "image": "assets/rahats.png",
+    "letters": [
+      "ר",
+      "ח",
+      "ץ"
+    ],
+    "translit": "rahats",
+    "gloss": "wash, bathe"
+  },
+  {
+    "id": "hilel",
+    "image": "assets/hilel.png",
+    "letters": [
+      "ח",
+      "ל",
+      "ל"
+    ],
+    "translit": "hilel",
+    "gloss": "begin"
+  },
+  {
+    "id": "kalah",
+    "image": "assets/kalah.png",
+    "letters": [
+      "כ",
+      "ל",
+      "ה"
+    ],
+    "translit": "kalah",
+    "gloss": "finish"
   }
 ]
