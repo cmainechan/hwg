@@ -418,17 +418,6 @@
     "gloss": "be strong"
   },
   {
-    "id": "hikah",
-    "image": "assets/hikah.png",
-    "letters": [
-      "נ",
-      "כ",
-      "ה"
-    ],
-    "translit": "hikah",
-    "gloss": "strike"
-  },
-  {
     "id": "hilel",
     "image": "assets/hilel.png",
     "letters": [
@@ -680,6 +669,17 @@
     ],
     "translit": "nagash",
     "gloss": "draw near"
+  },
+  {
+    "id": "nakah",
+    "image": "assets/nakah.png",
+    "letters": [
+      "נ",
+      "כ",
+      "ה"
+    ],
+    "translit": "nakah",
+    "gloss": "strike"
   },
   {
     "id": "nakar",
