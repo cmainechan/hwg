@@ -2,6 +2,7 @@
 ahav,assets/ahav.png,א ה ב,ahav,love
 akhal,assets/akhal.png,א כ ל,akhal,eat
 alah,assets/alah.png,ע ל ה,alah,go up
+amad,assets/amad.png,ע מ ד,amad,stand
 aman,assets/aman.png,א מ ן,aman,believe
 amar,assets/amar.png,א מ ר,amar,say
 anah,assets/anah.png,ע נ ה,anah,answer
@@ -9,6 +10,7 @@ arak,assets/arak.png,עָ רַ ךְ,arak,arrange
 asaf,assets/asaf.png,א ס ף,asaf,gather
 asah,assets/asah.png,ע שׂ ה,asah,"do, make"
 avad,assets/avad.png,ע ב ד,avad,serve
+avad2,assets/avad2.png,א ב ד,avad,perish
 avar,assets/avar.png,ע ב ר,avar,"pass, cross"
 azar,assets/azar.png,ע ז ר,azar,help
 bahar,assets/bahar.png,ב ח ר,bahar,choose
@@ -28,6 +30,7 @@ diber,assets/diber.png,ד ב ר,diber,speak
 gadal,assets/gadal.png,ג ד ל,gadal,be great
 gur,assets/gur.png,גּ וּ ר,gur,sojourn
 hafets,assets/hafets.png,ח פ ץ,hafets,delight in
+halah,assets/halah.png,ח ל ה,halah,be sick
 halakh,assets/halakh.png,ה ל ךְ,halakh,"go, walk"
 hanah,assets/hanah.png,ח נ ה,hanah,camp
 hashav,assets/hashav.png,ח שׁ ב,hashav,consider
@@ -51,6 +54,7 @@ malakh,assets/malakh.png,מ ל ךְ,malakh,reign
 male,assets/male.png,מ ל א,male,fill
 marad,assets/marad.png,מָ רַ ד,marad,rebel
 masha,assets/masha.png,מ שׁ ח,masha,anoint
+mashal,assets/mashal.png,מ שׁ ל,mashal,rule
 matar,assets/matar.png,מָ טַ ר,matar,cause to rain
 matsa,assets/matsa.png,מ צ א,matsa,find
 milet,assets/milet.png,מ ל ט,milet,escape
@@ -73,6 +77,7 @@ qalel,assets/qalel.png,ק ל ל,qalel,curse
 qanah,assets/qanah.png,ק נ ה,qanah,buy
 qara,assets/qara.png,ק ר א,qara,"call, meet"
 qavar,assets/qavar.png,ק ב ר,qavar,bury
+qavats,assets/qavats.png,ק ב ץ,qavats,gather
 qum,assets/qum.png,ק וּ ם,qum,rise
 raa,assets/raa.png,ר ע ע,raa,do evil
 raah,assets/raah.png,ר א ה,raah,see
@@ -80,6 +85,8 @@ raah2,assets/raah2.png,ר ע ה,raah,shepherd
 rachaph,assets/rachaph.png,רָ חַ ף,rachaph,hover
 radaf,assets/radaf.png,ר ד ף,radaf,pursue
 radam,assets/radam.png,רָ דַ ם,radam,sleep deeply
+rafa,assets/rafa.png,ר פ א,rafa,heal
+rahaq,assets/rahaq.png,ר ח ק,rahaq,be far
 rahats,assets/rahats.png,ר ח ץ,rahats,"wash, bathe"
 rakhav,assets/rakhav.png,ר כ ב,rakhav,ride
 ruq,assets/ruq.png,ר ו ק,ruq,empty

@@ -33,6 +33,17 @@
     "gloss": "go up"
   },
   {
+    "id": "amad",
+    "image": "assets/amad.png",
+    "letters": [
+      "ע",
+      "מ",
+      "ד"
+    ],
+    "translit": "amad",
+    "gloss": "stand"
+  },
+  {
     "id": "aman",
     "image": "assets/aman.png",
     "letters": [
@@ -108,6 +119,17 @@
     ],
     "translit": "avad",
     "gloss": "serve"
+  },
+  {
+    "id": "avad2",
+    "image": "assets/avad2.png",
+    "letters": [
+      "א",
+      "ב",
+      "ד"
+    ],
+    "translit": "avad",
+    "gloss": "perish"
   },
   {
     "id": "avar",
@@ -317,6 +339,17 @@
     ],
     "translit": "hafets",
     "gloss": "delight in"
+  },
+  {
+    "id": "halah",
+    "image": "assets/halah.png",
+    "letters": [
+      "ח",
+      "ל",
+      "ה"
+    ],
+    "translit": "halah",
+    "gloss": "be sick"
   },
   {
     "id": "halakh",
@@ -572,6 +605,17 @@
     "gloss": "anoint"
   },
   {
+    "id": "mashal",
+    "image": "assets/mashal.png",
+    "letters": [
+      "מ",
+      "ש",
+      "ל"
+    ],
+    "translit": "mashal",
+    "gloss": "rule"
+  },
+  {
     "id": "matar",
     "image": "assets/matar.png",
     "letters": [
@@ -814,6 +858,17 @@
     "gloss": "bury"
   },
   {
+    "id": "qavats",
+    "image": "assets/qavats.png",
+    "letters": [
+      "ק",
+      "ב",
+      "ץ"
+    ],
+    "translit": "qavats",
+    "gloss": "gather"
+  },
+  {
     "id": "qum",
     "image": "assets/qum.png",
     "letters": [
@@ -889,6 +944,28 @@
     ],
     "translit": "radam",
     "gloss": "sleep deeply"
+  },
+  {
+    "id": "rafa",
+    "image": "assets/rafa.png",
+    "letters": [
+      "ר",
+      "פ",
+      "א"
+    ],
+    "translit": "rafa",
+    "gloss": "heal"
+  },
+  {
+    "id": "rahaq",
+    "image": "assets/rahaq.png",
+    "letters": [
+      "ר",
+      "ח",
+      "ק"
+    ],
+    "translit": "rahaq",
+    "gloss": "be far"
   },
   {
     "id": "rahats",
