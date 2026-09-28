@@ -1089,14 +1089,14 @@
     "gloss": "spread"
   },
   {
-    "id": "patah",
-    "image": "assets/patah.png",
+    "id": "patach",
+    "image": "assets/patach.png",
     "letters": [
       "פ",
       "ת",
       "ח"
     ],
-    "translit": "patah",
+    "translit": "patach",
     "gloss": "open"
   },
   {
@@ -1595,14 +1595,14 @@
     "gloss": "forget"
   },
   {
-    "id": "shalah",
-    "image": "assets/shalah.png",
+    "id": "shalach",
+    "image": "assets/shalach.png",
     "letters": [
       "ש",
       "ל",
       "ח"
     ],
-    "translit": "shalah",
+    "translit": "shalach",
     "gloss": "send"
   },
   {
