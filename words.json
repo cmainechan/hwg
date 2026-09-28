@@ -671,6 +671,17 @@
     "gloss": "draw near"
   },
   {
+    "id": "naham",
+    "image": "assets/naham.png",
+    "letters": [
+      "נ",
+      "ח",
+      "ם"
+    ],
+    "translit": "naham",
+    "gloss": "comfort, regret"
+  },
+  {
     "id": "nakah",
     "image": "assets/nakah.png",
     "letters": [
@@ -1166,6 +1177,17 @@
     "gloss": "lie down"
   },
   {
+    "id": "shakhah",
+    "image": "assets/shakhah.png",
+    "letters": [
+      "ש",
+      "כ",
+      "ח"
+    ],
+    "translit": "shakhah",
+    "gloss": "forget"
+  },
+  {
     "id": "shalah",
     "image": "assets/shalah.png",
     "letters": [
@@ -1417,6 +1439,17 @@
     ],
     "translit": "zaak",
     "gloss": "cry out"
+  },
+  {
+    "id": "zakhar",
+    "image": "assets/zakhar.png",
+    "letters": [
+      "ז",
+      "כ",
+      "ר"
+    ],
+    "translit": "zakhar",
+    "gloss": "remember"
   },
   {
     "id": "zara",
