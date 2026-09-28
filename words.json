@@ -242,6 +242,17 @@
     "gloss": "bless"
   },
   {
+    "id": "batach",
+    "image": "assets/batach.png",
+    "letters": [
+      "ב",
+      "ט",
+      "ח"
+    ],
+    "translit": "batach",
+    "gloss": "trust"
+  },
+  {
     "id": "bo",
     "image": "assets/bo.png",
     "letters": [
@@ -284,6 +295,28 @@
     ],
     "translit": "chalaq",
     "gloss": "divide"
+  },
+  {
+    "id": "chanan",
+    "image": "assets/chanan.png",
+    "letters": [
+      "ח",
+      "נ",
+      "ן"
+    ],
+    "translit": "chanan",
+    "gloss": "show favour"
+  },
+  {
+    "id": "charash",
+    "image": "assets/charash.png",
+    "letters": [
+      "ח",
+      "ר",
+      "ש"
+    ],
+    "translit": "charash",
+    "gloss": "be silent"
   },
   {
     "id": "chathar",
@@ -407,6 +440,17 @@
     "gloss": "camp"
   },
   {
+    "id": "harag",
+    "image": "assets/harag.png",
+    "letters": [
+      "ה",
+      "ר",
+      "ג"
+    ],
+    "translit": "harag",
+    "gloss": "kill"
+  },
+  {
     "id": "harah",
     "image": "assets/harah.png",
     "letters": [
@@ -471,6 +515,17 @@
     ],
     "translit": "hilel",
     "gloss": "begin"
+  },
+  {
+    "id": "hilel2",
+    "image": "assets/hilel2.png",
+    "letters": [
+      "ה",
+      "ל",
+      "ל"
+    ],
+    "translit": "hilel",
+    "gloss": "praise"
   },
   {
     "id": "kalah",
@@ -592,6 +647,17 @@
     ],
     "translit": "lavash",
     "gloss": "wear"
+  },
+  {
+    "id": "lin",
+    "image": "assets/lin.png",
+    "letters": [
+      "ל",
+      "י",
+      "ן"
+    ],
+    "translit": "lin",
+    "gloss": "lodge"
   },
   {
     "id": "madad",
@@ -867,6 +933,17 @@
     ],
     "translit": "natsal",
     "gloss": "deliver"
+  },
+  {
+    "id": "nava",
+    "image": "assets/nava.png",
+    "letters": [
+      "נ",
+      "ב",
+      "א"
+    ],
+    "translit": "nava",
+    "gloss": "prophesy"
   },
   {
     "id": "nuha",
@@ -1164,6 +1241,17 @@
     ],
     "translit": "rakhav",
     "gloss": "ride"
+  },
+  {
+    "id": "ravah",
+    "image": "assets/ravah.png",
+    "letters": [
+      "ר",
+      "ב",
+      "ה"
+    ],
+    "translit": "ravah",
+    "gloss": "multiply"
   },
   {
     "id": "ruq",
@@ -1573,6 +1661,17 @@
     "gloss": "hurl"
   },
   {
+    "id": "ur",
+    "image": "assets/ur.png",
+    "letters": [
+      "ע",
+      "ו",
+      "ר"
+    ],
+    "translit": "ur",
+    "gloss": "rouse"
+  },
+  {
     "id": "yaats",
     "image": "assets/yaats.png",
     "letters": [
@@ -1670,6 +1769,17 @@
     ],
     "translit": "yashav",
     "gloss": "sit"
+  },
+  {
+    "id": "yatav",
+    "image": "assets/yatav.png",
+    "letters": [
+      "י",
+      "ט",
+      "ב"
+    ],
+    "translit": "yatav",
+    "gloss": "be good"
   },
   {
     "id": "yatsa",
