@@ -308,17 +308,6 @@
     "gloss": "be ashamed"
   },
   {
-    "id": "chabar",
-    "image": "assets/chabar.png",
-    "letters": [
-      "ח",
-      "ב",
-      "ר"
-    ],
-    "translit": "chabar",
-    "gloss": "unite"
-  },
-  {
     "id": "chalaq",
     "image": "assets/chalaq.png",
     "letters": [
@@ -328,6 +317,17 @@
     ],
     "translit": "chalaq",
     "gloss": "divide"
+  },
+  {
+    "id": "chavar",
+    "image": "assets/chavar.png",
+    "letters": [
+      "ח",
+      "ב",
+      "ר"
+    ],
+    "translit": "chavar",
+    "gloss": "unite"
   },
   {
     "id": "chanan",
@@ -1023,14 +1023,14 @@
     "gloss": "prophesy"
   },
   {
-    "id": "nuha",
-    "image": "assets/nuha.png",
+    "id": "nuach",
+    "image": "assets/nuach.png",
     "letters": [
       "נ",
       "ו",
       "ח"
     ],
-    "translit": "nuha",
+    "translit": "nuach",
     "gloss": "rest"
   },
   {
@@ -2002,14 +2002,14 @@
     "gloss": "sow"
   },
   {
-    "id": "zavah",
-    "image": "assets/zavah.png",
+    "id": "zavach",
+    "image": "assets/zavach.png",
     "letters": [
       "ז",
       "ב",
       "ח"
     ],
-    "translit": "zavah",
+    "translit": "zavach",
     "gloss": "sacrifice"
   }
 ]
