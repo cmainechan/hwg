@@ -715,6 +715,17 @@
     "gloss": "lodge"
   },
   {
+    "id": "maas",
+    "image": "assets/maas.png",
+    "letters": [
+      "מ",
+      "א",
+      "ס"
+    ],
+    "translit": "maas",
+    "gloss": "reject"
+  },
+  {
     "id": "madad",
     "image": "assets/madad.png",
     "letters": [
@@ -812,6 +823,17 @@
     ],
     "translit": "matsa",
     "gloss": "find"
+  },
+  {
+    "id": "mihar",
+    "image": "assets/mihar.png",
+    "letters": [
+      "מ",
+      "ה",
+      "ר"
+    ],
+    "translit": "mihar",
+    "gloss": "hasten"
   },
   {
     "id": "milet",
@@ -1395,6 +1417,17 @@
     ],
     "translit": "safar",
     "gloss": "count"
+  },
+  {
+    "id": "sagar",
+    "image": "assets/sagar.png",
+    "letters": [
+      "ס",
+      "ג",
+      "ר"
+    ],
+    "translit": "sagar",
+    "gloss": "shut"
   },
   {
     "id": "samah",
