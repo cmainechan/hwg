@@ -858,6 +858,17 @@
     "gloss": "call, meet"
   },
   {
+    "id": "qara2",
+    "image": "assets/qara2.png",
+    "letters": [
+      "ק",
+      "ר",
+      "א"
+    ],
+    "translit": "qara",
+    "gloss": "meet"
+  },
+  {
     "id": "qavar",
     "image": "assets/qavar.png",
     "letters": [
