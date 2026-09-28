@@ -374,6 +374,17 @@
     "gloss": "camp"
   },
   {
+    "id": "harah",
+    "image": "assets/harah.png",
+    "letters": [
+      "ח",
+      "ר",
+      "ה"
+    ],
+    "translit": "harah",
+    "gloss": "be angry"
+  },
+  {
     "id": "hashav",
     "image": "assets/hashav.png",
     "letters": [
@@ -649,6 +660,17 @@
     "gloss": "fall"
   },
   {
+    "id": "naga",
+    "image": "assets/naga.png",
+    "letters": [
+      "נ",
+      "ג",
+      "ע"
+    ],
+    "translit": "naga",
+    "gloss": "touch"
+  },
+  {
     "id": "nagad",
     "image": "assets/nagad.png",
     "letters": [
@@ -759,6 +781,17 @@
     "gloss": "give, set"
   },
   {
+    "id": "natsal",
+    "image": "assets/natsal.png",
+    "letters": [
+      "נ",
+      "צ",
+      "ל"
+    ],
+    "translit": "natsal",
+    "gloss": "deliver"
+  },
+  {
     "id": "nuha",
     "image": "assets/nuha.png",
     "letters": [
@@ -867,6 +900,17 @@
     ],
     "translit": "qara",
     "gloss": "meet"
+  },
+  {
+    "id": "qarav",
+    "image": "assets/qarav.png",
+    "letters": [
+      "ק",
+      "ר",
+      "ב"
+    ],
+    "translit": "qarav",
+    "gloss": "draw near"
   },
   {
     "id": "qavar",
@@ -1142,6 +1186,17 @@
     ],
     "translit": "shabah",
     "gloss": "take captive"
+  },
+  {
+    "id": "shafakh",
+    "image": "assets/shafakh.png",
+    "letters": [
+      "ש",
+      "פ",
+      "ך"
+    ],
+    "translit": "shafakh",
+    "gloss": "pour out, spill"
   },
   {
     "id": "shafat",
