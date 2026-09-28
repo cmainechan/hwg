@@ -165,6 +165,17 @@
     "gloss": "help"
   },
   {
+    "id": "azav",
+    "image": "assets/azav.png",
+    "letters": [
+      "ע",
+      "ז",
+      "ב"
+    ],
+    "translit": "azav",
+    "gloss": "leave, forsake"
+  },
+  {
     "id": "bahar",
     "image": "assets/bahar.png",
     "letters": [
@@ -220,6 +231,17 @@
     "gloss": "seek"
   },
   {
+    "id": "bara",
+    "image": "assets/bara.png",
+    "letters": [
+      "ב",
+      "ר",
+      "א"
+    ],
+    "translit": "bara",
+    "gloss": "create"
+  },
+  {
     "id": "barach",
     "image": "assets/barach.png",
     "letters": [
@@ -251,6 +273,17 @@
     ],
     "translit": "batach",
     "gloss": "trust"
+  },
+  {
+    "id": "bier",
+    "image": "assets/bier.png",
+    "letters": [
+      "ב",
+      "ע",
+      "ר"
+    ],
+    "translit": "bier",
+    "gloss": "burn"
   },
   {
     "id": "bo",
@@ -372,6 +405,17 @@
     ],
     "translit": "diber",
     "gloss": "speak"
+  },
+  {
+    "id": "gaal",
+    "image": "assets/gaal.png",
+    "letters": [
+      "ג",
+      "א",
+      "ל"
+    ],
+    "translit": "gaal",
+    "gloss": "redeem"
   },
   {
     "id": "gadal",
@@ -592,6 +636,17 @@
     ],
     "translit": "kisah",
     "gloss": "cover"
+  },
+  {
+    "id": "kives",
+    "image": "assets/kives.png",
+    "letters": [
+      "כ",
+      "ב",
+      "ס"
+    ],
+    "translit": "kives",
+    "gloss": "wash, launder"
   },
   {
     "id": "lacham",
@@ -990,6 +1045,17 @@
     "gloss": "turn"
   },
   {
+    "id": "paqad",
+    "image": "assets/paqad.png",
+    "letters": [
+      "פ",
+      "ק",
+      "ד"
+    ],
+    "translit": "paqad",
+    "gloss": "visit"
+  },
+  {
     "id": "paras",
     "image": "assets/paras.png",
     "letters": [
@@ -1243,6 +1309,17 @@
     "gloss": "ride"
   },
   {
+    "id": "ranan",
+    "image": "assets/ranan.png",
+    "letters": [
+      "ר",
+      "נ",
+      "ן"
+    ],
+    "translit": "ranan",
+    "gloss": "sing for joy"
+  },
+  {
     "id": "ravah",
     "image": "assets/ravah.png",
     "letters": [
@@ -1252,6 +1329,28 @@
     ],
     "translit": "ravah",
     "gloss": "multiply"
+  },
+  {
+    "id": "riv",
+    "image": "assets/riv.png",
+    "letters": [
+      "ר",
+      "י",
+      "ב"
+    ],
+    "translit": "riv",
+    "gloss": "strive"
+  },
+  {
+    "id": "riv2",
+    "image": "assets/riv2.png",
+    "letters": [
+      "ר",
+      "י",
+      "ב"
+    ],
+    "translit": "riv",
+    "gloss": "strife"
   },
   {
     "id": "ruq",
@@ -1826,6 +1925,17 @@
     "gloss": "stand firm"
   },
   {
+    "id": "yavesh",
+    "image": "assets/yavesh.png",
+    "letters": [
+      "י",
+      "ב",
+      "ש"
+    ],
+    "translit": "yavesh",
+    "gloss": "dry"
+  },
+  {
     "id": "zaak",
     "image": "assets/zaak.png",
     "letters": [
@@ -1857,5 +1967,16 @@
     ],
     "translit": "zara",
     "gloss": "sow"
+  },
+  {
+    "id": "zavah",
+    "image": "assets/zavah.png",
+    "letters": [
+      "ז",
+      "ב",
+      "ח"
+    ],
+    "translit": "zavah",
+    "gloss": "sacrifice"
   }
 ]
