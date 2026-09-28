@@ -110,6 +110,17 @@
     "gloss": "do, make"
   },
   {
+    "id": "asar",
+    "image": "assets/asar.png",
+    "letters": [
+      "א",
+      "ס",
+      "ר"
+    ],
+    "translit": "asar",
+    "gloss": "bind"
+  },
+  {
     "id": "avad",
     "image": "assets/avad.png",
     "letters": [
@@ -273,6 +284,17 @@
     ],
     "translit": "chathar",
     "gloss": "dig"
+  },
+  {
+    "id": "chathath",
+    "image": "assets/chathath.png",
+    "letters": [
+      "ח",
+      "ת",
+      "ת"
+    ],
+    "translit": "chathath",
+    "gloss": "be dismayed"
   },
   {
     "id": "dasha",
@@ -460,6 +482,17 @@
     ],
     "translit": "karat",
     "gloss": "cut"
+  },
+  {
+    "id": "kashal",
+    "image": "assets/kashal.png",
+    "letters": [
+      "כ",
+      "ש",
+      "ל"
+    ],
+    "translit": "kashal",
+    "gloss": "stumble"
   },
   {
     "id": "katav",
@@ -1188,6 +1221,17 @@
     "gloss": "take captive"
   },
   {
+    "id": "shadad",
+    "image": "assets/shadad.png",
+    "letters": [
+      "ש",
+      "ד",
+      "ד"
+    ],
+    "translit": "shadad",
+    "gloss": "devastate"
+  },
+  {
     "id": "shafakh",
     "image": "assets/shafakh.png",
     "letters": [
@@ -1296,6 +1340,17 @@
     ],
     "translit": "shamar",
     "gloss": "guard"
+  },
+  {
+    "id": "shaqah",
+    "image": "assets/shaqah.png",
+    "letters": [
+      "ש",
+      "ק",
+      "ה"
+    ],
+    "translit": "shaqah",
+    "gloss": "cause to drink"
   },
   {
     "id": "shatah",
@@ -1430,6 +1485,39 @@
     "gloss": "counsel"
   },
   {
+    "id": "yada",
+    "image": "assets/yada.png",
+    "letters": [
+      "י",
+      "ד",
+      "ע"
+    ],
+    "translit": "yada",
+    "gloss": "know"
+  },
+  {
+    "id": "yakhol",
+    "image": "assets/yakhol.png",
+    "letters": [
+      "י",
+      "כ",
+      "ל"
+    ],
+    "translit": "yakhol",
+    "gloss": "be able"
+  },
+  {
+    "id": "yalad",
+    "image": "assets/yalad.png",
+    "letters": [
+      "י",
+      "ל",
+      "ד"
+    ],
+    "translit": "yalad",
+    "gloss": "give birth, beget"
+  },
+  {
     "id": "yarad",
     "image": "assets/yarad.png",
     "letters": [
@@ -1450,6 +1538,17 @@
     ],
     "translit": "yare",
     "gloss": "fear"
+  },
+  {
+    "id": "yasaf",
+    "image": "assets/yasaf.png",
+    "letters": [
+      "י",
+      "ס",
+      "ף"
+    ],
+    "translit": "yasaf",
+    "gloss": "add, do again"
   },
   {
     "id": "yasha",
@@ -1483,6 +1582,17 @@
     ],
     "translit": "yatsa",
     "gloss": "go out"
+  },
+  {
+    "id": "yatsaq",
+    "image": "assets/yatsaq.png",
+    "letters": [
+      "י",
+      "צ",
+      "ק"
+    ],
+    "translit": "yatsaq",
+    "gloss": "pour"
   },
   {
     "id": "yatsar",

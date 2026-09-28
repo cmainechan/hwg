@@ -9,6 +9,7 @@ anah,assets/anah.png,ע נ ה,anah,answer
 arak,assets/arak.png,עָ רַ ךְ,arak,arrange
 asaf,assets/asaf.png,א ס ף,asaf,gather
 asah,assets/asah.png,ע שׂ ה,asah,"do, make"
+asar,assets/asar.png,א ס ר,asar,bind
 avad,assets/avad.png,ע ב ד,avad,serve
 avad2,assets/avad2.png,א ב ד,avad,perish
 avar,assets/avar.png,ע ב ר,avar,"pass, cross"
@@ -24,6 +25,7 @@ bosh,assets/bosh.png,בּ וֹ שׁ,bosh,be ashamed
 chabar,assets/chabar.png,חָ בַ ר,chabar,unite
 chalaq,assets/chalaq.png,חָ לַ ק,chalaq,divide
 chathar,assets/chathar.png,חָ תַ ר,chathar,dig
+chathath,assets/chathath.png,חָ תַ ת,chathath,be dismayed
 dasha,assets/dasha.png,דָּ שָׁ א,dasha,sprout
 davaq,assets/davaq.png,ד ב ק,davaq,cling
 diber,assets/diber.png,ד ב ר,diber,speak
@@ -41,6 +43,7 @@ hazaq,assets/hazaq.png,ח ז ק,hazaq,be strong
 hilel,assets/hilel.png,ח ל ל,hilel,begin
 kalah,assets/kalah.png,כ ל ה,kalah,finish
 karat,assets/karat.png,כ ר ת,karat,cut
+kashal,assets/kashal.png,כ שׁ ל,kashal,stumble
 katav,assets/katav.png,כ ת ב,katav,write
 kaved,assets/kaved.png,כ ב ד,kaved,be heavy
 kisah,assets/kisah.png,כ ס ה,kisah,cover
@@ -107,6 +110,7 @@ savav,assets/savav.png,ס ב ב,savav,go around
 shaal,assets/shaal.png,שׁ א ל,shaal,ask
 shaar,assets/shaar.png,שָׁ אַ ר,shaar,remain
 shabah,assets/shabah.png,שָׁ בָ ה,shabah,take captive
+shadad,assets/shadad.png,שׁ ד ד,shadad,devastate
 shafakh,assets/shafakh.png,שׁ פ ךְ,shafakh,"pour out, spill"
 shafat,assets/shafat.png,שׁ פ ט,shafat,judge
 shakam,assets/shakam.png,שָׁ כַ ם,shakam,rise early
@@ -117,6 +121,7 @@ shalah,assets/shalah.png,שׁ ל ח,shalah,send
 shamad,assets/shamad.png,שׁ מ ד,shamad,destroy
 shamah,assets/shamah.png,שׁ מ ע,shamah,hear
 shamar,assets/shamar.png,שׁ מ ר,shamar,guard
+shaqah,assets/shaqah.png,שׁ ק ה,shaqah,cause to drink
 shatah,assets/shatah.png,שׁ ת ה,shatah,drink
 shavar,assets/shavar.png,שׁ ב ר,shavar,break
 shavat,assets/shavat.png,שׁ ב ת,shavat,rest
@@ -129,11 +134,16 @@ tsipah,assets/tsipah.png,צ פ ה,tsipah,overlay
 tsivah,assets/tsivah.png,צ ו ה,tsivah,command
 tul,assets/tul.png,ט וּ ל,tul,hurl
 yaats,assets/yaats.png,י ע ץ,yaats,counsel
+yada,assets/yada.png,י ד ע,yada,know
+yakhol,assets/yakhol.png,י כ ל,yakhol,be able
+yalad,assets/yalad.png,י ל ד,yalad,"give birth, beget"
 yarad,assets/yarad.png,י ר ד,yarad,go down
 yare,assets/yare.png,י ר א,yare,fear
+yasaf,assets/yasaf.png,י ס ף,yasaf,"add, do again"
 yasha,assets/yasha.png,יָ שַׁ ע,yasha,save
 yashav,assets/yashav.png,י שׁ ב,yashav,sit
 yatsa,assets/yatsa.png,י צ א,yatsa,go out
+yatsaq,assets/yatsaq.png,י צ ק,yatsaq,pour
 yatsar,assets/yatsar.png,יָ צַ ר,yatsar,form
 zaak,assets/zaak.png,זָ עַ ק,zaak,cry out
 zakhar,assets/zakhar.png,ז כ ר,zakhar,remember
