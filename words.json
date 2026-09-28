@@ -198,6 +198,17 @@
     "gloss": "build"
   },
   {
+    "id": "baqa",
+    "image": "assets/baqa.png",
+    "letters": [
+      "ב",
+      "ק",
+      "ע"
+    ],
+    "translit": "baqa",
+    "gloss": "split"
+  },
+  {
     "id": "baqash",
     "image": "assets/baqash.png",
     "letters": [
@@ -539,6 +550,17 @@
     "gloss": "fight"
   },
   {
+    "id": "lakhad",
+    "image": "assets/lakhad.png",
+    "letters": [
+      "ל",
+      "כ",
+      "ד"
+    ],
+    "translit": "lakhad",
+    "gloss": "capture"
+  },
+  {
     "id": "lamad",
     "image": "assets/lamad.png",
     "letters": [
@@ -682,6 +704,17 @@
     "gloss": "escape"
   },
   {
+    "id": "mut",
+    "image": "assets/mut.png",
+    "letters": [
+      "מ",
+      "ו",
+      "ת"
+    ],
+    "translit": "mut",
+    "gloss": "die"
+  },
+  {
     "id": "nafal",
     "image": "assets/nafal.png",
     "letters": [
@@ -803,6 +836,17 @@
     "gloss": "plant"
   },
   {
+    "id": "natah",
+    "image": "assets/natah.png",
+    "letters": [
+      "נ",
+      "ט",
+      "ה"
+    ],
+    "translit": "natah",
+    "gloss": "stretch out"
+  },
+  {
     "id": "natan",
     "image": "assets/natan.png",
     "letters": [
@@ -867,6 +911,17 @@
     ],
     "translit": "panah",
     "gloss": "turn"
+  },
+  {
+    "id": "paras",
+    "image": "assets/paras.png",
+    "letters": [
+      "פ",
+      "ר",
+      "ש"
+    ],
+    "translit": "paras",
+    "gloss": "spread"
   },
   {
     "id": "patah",
@@ -935,6 +990,17 @@
     "gloss": "meet"
   },
   {
+    "id": "qara3",
+    "image": "assets/qara3.png",
+    "letters": [
+      "ק",
+      "ר",
+      "ע"
+    ],
+    "translit": "qara",
+    "gloss": "tear"
+  },
+  {
     "id": "qarav",
     "image": "assets/qarav.png",
     "letters": [
@@ -944,6 +1010,17 @@
     ],
     "translit": "qarav",
     "gloss": "draw near"
+  },
+  {
+    "id": "qavah",
+    "image": "assets/qavah.png",
+    "letters": [
+      "ק",
+      "ו",
+      "ה"
+    ],
+    "translit": "qavah",
+    "gloss": "wait"
   },
   {
     "id": "qavar",
@@ -1441,6 +1518,28 @@
     "gloss": "be unclean"
   },
   {
+    "id": "taqa",
+    "image": "assets/taqa.png",
+    "letters": [
+      "ת",
+      "ק",
+      "ע"
+    ],
+    "translit": "taqa",
+    "gloss": "blow"
+  },
+  {
+    "id": "tsalach",
+    "image": "assets/tsalach.png",
+    "letters": [
+      "צ",
+      "ל",
+      "ח"
+    ],
+    "translit": "tsalach",
+    "gloss": "prosper"
+  },
+  {
     "id": "tsipah",
     "image": "assets/tsipah.png",
     "letters": [
@@ -1604,6 +1703,17 @@
     ],
     "translit": "yatsar",
     "gloss": "form"
+  },
+  {
+    "id": "yatsav",
+    "image": "assets/yatsav.png",
+    "letters": [
+      "י",
+      "צ",
+      "ב"
+    ],
+    "translit": "yatsav",
+    "gloss": "stand firm"
   },
   {
     "id": "zaak",

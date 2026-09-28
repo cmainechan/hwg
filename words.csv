@@ -17,6 +17,7 @@ azar,assets/azar.png,ע ז ר,azar,help
 bahar,assets/bahar.png,ב ח ר,bahar,choose
 bakhah,assets/bakhah.png,ב כ ה,bakhah,weep
 banah,assets/banah.png,ב נ ה,banah,build
+baqa,assets/baqa.png,ב ק ע,baqa,split
 baqash,assets/baqash.png,בָּ קַ שׁ,baqash,seek
 barach,assets/barach.png,בָּ רַ ח,barach,flee
 barak,assets/barak.png,ב ר ךְ,barak,bless
@@ -48,6 +49,7 @@ katav,assets/katav.png,כ ת ב,katav,write
 kaved,assets/kaved.png,כ ב ד,kaved,be heavy
 kisah,assets/kisah.png,כ ס ה,kisah,cover
 lacham,assets/lacham.png,לָ חַ ם,lacham,fight
+lakhad,assets/lakhad.png,ל כ ד,lakhad,capture
 lamad,assets/lamad.png,ל מ ד,lamad,"learn, teach"
 laqah,assets/laqah.png,ל ק ח,laqah,take
 lavash,assets/lavash.png,ל ב שׁ,lavash,wear
@@ -61,6 +63,7 @@ mashal,assets/mashal.png,מ שׁ ל,mashal,rule
 matar,assets/matar.png,מָ טַ ר,matar,cause to rain
 matsa,assets/matsa.png,מ צ א,matsa,find
 milet,assets/milet.png,מ ל ט,milet,escape
+mut,assets/mut.png,מ וּ ת,mut,die
 nafal,assets/nafal.png,נ פ ל,nafal,fall
 naga,assets/naga.png,נ ג ע,naga,touch
 nagad,assets/nagad.png,נ ג ד,nagad,tell
@@ -72,19 +75,23 @@ nasa,assets/nasa.png,נ שׂ א,nasa,lift
 nasa2,assets/nasa2.png,נ ס ע,nasa,set out
 nasag,assets/nasag.png,נ שׂ ג,nasag,overtake
 nata,assets/nata.png,נ ט ע,nata,plant
+natah,assets/natah.png,נ ט ה,natah,stretch out
 natan,assets/natan.png,נ ת ן,natan,"give, set"
 natsal,assets/natsal.png,נ צ ל,natsal,deliver
 nuha,assets/nuha.png,נ וּ חַ,nuha,rest
 nus,assets/nus.png,נ וּ ס,nus,flee
 palel,assets/palel.png,פ ל ל,palel,pray
 panah,assets/panah.png,פ נ ה,panah,turn
+paras,assets/paras.png,פ ר שׂ,paras,spread
 patah,assets/patah.png,פ ת ח,patah,open
 puts,assets/puts.png,פּ וּ ץ,puts,scatter
 qalel,assets/qalel.png,ק ל ל,qalel,curse
 qanah,assets/qanah.png,ק נ ה,qanah,buy
 qara,assets/qara.png,ק ר א,qara,"call, meet"
 qara2,assets/qara2.png,ק ר א,qara,meet
+qara3,assets/qara3.png,ק ר ע,qara,tear
 qarav,assets/qarav.png,ק ר ב,qarav,draw near
+qavah,assets/qavah.png,ק ו ה,qavah,wait
 qavar,assets/qavar.png,ק ב ר,qavar,bury
 qavats,assets/qavats.png,ק ב ץ,qavats,gather
 qum,assets/qum.png,ק וּ ם,qum,rise
@@ -130,6 +137,8 @@ shir,assets/shir.png,שִׁ י ר,shir,sing
 shuv,assets/shuv.png,שׁ וּ ב,shuv,"turn, return"
 sim,assets/sim.png,שִׂ י ם,sim,"put, set"
 tame,assets/tame.png,ט מ א,tame,be unclean
+taqa,assets/taqa.png,ת ק ע,taqa,blow
+tsalach,assets/tsalach.png,צָ לַ ח,tsalach,prosper
 tsipah,assets/tsipah.png,צ פ ה,tsipah,overlay
 tsivah,assets/tsivah.png,צ ו ה,tsivah,command
 tul,assets/tul.png,ט וּ ל,tul,hurl
@@ -145,6 +154,7 @@ yashav,assets/yashav.png,י שׁ ב,yashav,sit
 yatsa,assets/yatsa.png,י צ א,yatsa,go out
 yatsaq,assets/yatsaq.png,י צ ק,yatsaq,pour
 yatsar,assets/yatsar.png,יָ צַ ר,yatsar,form
+yatsav,assets/yatsav.png,יָ צַ ב,yatsav,stand firm
 zaak,assets/zaak.png,זָ עַ ק,zaak,cry out
 zakhar,assets/zakhar.png,ז כ ר,zakhar,remember
 zara,assets/zara.png,ז ר ע,zara,sow
