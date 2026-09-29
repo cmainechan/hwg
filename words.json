@@ -11,6 +11,17 @@
     "gloss": "love"
   },
   {
+    "id": "ahaz",
+    "image": "assets/ahaz.png",
+    "letters": [
+      "א",
+      "ח",
+      "ז"
+    ],
+    "translit": "ahaz",
+    "gloss": "take hold"
+  },
+  {
     "id": "akhal",
     "image": "assets/akhal.png",
     "letters": [
@@ -75,6 +86,17 @@
     ],
     "translit": "anah",
     "gloss": "answer"
+  },
+  {
+    "id": "anah2",
+    "image": "assets/anah2.png",
+    "letters": [
+      "ע",
+      "נ",
+      "ה"
+    ],
+    "translit": "anah",
+    "gloss": "afflict"
   },
   {
     "id": "arak",
@@ -143,6 +165,17 @@
     "gloss": "perish"
   },
   {
+    "id": "avah",
+    "image": "assets/avah.png",
+    "letters": [
+      "א",
+      "ב",
+      "ה"
+    ],
+    "translit": "avah",
+    "gloss": "be willing"
+  },
+  {
     "id": "avar",
     "image": "assets/avar.png",
     "letters": [
@@ -185,6 +218,17 @@
     ],
     "translit": "baar",
     "gloss": "burn"
+  },
+  {
+    "id": "bagad",
+    "image": "assets/bagad.png",
+    "letters": [
+      "ב",
+      "ג",
+      "ד"
+    ],
+    "translit": "bagad",
+    "gloss": "betray"
   },
   {
     "id": "bahar",
@@ -286,6 +330,17 @@
     "gloss": "trust"
   },
   {
+    "id": "bin",
+    "image": "assets/bin.png",
+    "letters": [
+      "ב",
+      "י",
+      "ן"
+    ],
+    "translit": "bin",
+    "gloss": "understand"
+  },
+  {
     "id": "bo",
     "image": "assets/bo.png",
     "letters": [
@@ -308,6 +363,17 @@
     "gloss": "be ashamed"
   },
   {
+    "id": "chadal",
+    "image": "assets/chadal.png",
+    "letters": [
+      "ח",
+      "ד",
+      "ל"
+    ],
+    "translit": "chadal",
+    "gloss": "cease"
+  },
+  {
     "id": "chalaq",
     "image": "assets/chalaq.png",
     "letters": [
@@ -317,17 +383,6 @@
     ],
     "translit": "chalaq",
     "gloss": "divide"
-  },
-  {
-    "id": "chavar",
-    "image": "assets/chavar.png",
-    "letters": [
-      "ח",
-      "ב",
-      "ר"
-    ],
-    "translit": "chavar",
-    "gloss": "unite"
   },
   {
     "id": "chanan",
@@ -372,6 +427,28 @@
     ],
     "translit": "chathath",
     "gloss": "be dismayed"
+  },
+  {
+    "id": "chavar",
+    "image": "assets/chavar.png",
+    "letters": [
+      "ח",
+      "ב",
+      "ר"
+    ],
+    "translit": "chavar",
+    "gloss": "unite"
+  },
+  {
+    "id": "darakh",
+    "image": "assets/darakh.png",
+    "letters": [
+      "ד",
+      "ר",
+      "ך"
+    ],
+    "translit": "darakh",
+    "gloss": "tread"
   },
   {
     "id": "dasha",
@@ -427,6 +504,28 @@
     ],
     "translit": "gadal",
     "gloss": "be great"
+  },
+  {
+    "id": "galah",
+    "image": "assets/galah.png",
+    "letters": [
+      "ג",
+      "ל",
+      "ה"
+    ],
+    "translit": "galah",
+    "gloss": "uncover"
+  },
+  {
+    "id": "galah2",
+    "image": "assets/galah2.png",
+    "letters": [
+      "ג",
+      "ל",
+      "ה"
+    ],
+    "translit": "galah",
+    "gloss": "go into exile"
   },
   {
     "id": "gur",
@@ -517,6 +616,17 @@
     "gloss": "consider"
   },
   {
+    "id": "hata",
+    "image": "assets/hata.png",
+    "letters": [
+      "ח",
+      "ט",
+      "א"
+    ],
+    "translit": "hata",
+    "gloss": "sin"
+  },
+  {
     "id": "hayah",
     "image": "assets/hayah.png",
     "letters": [
@@ -570,6 +680,17 @@
     ],
     "translit": "hilel",
     "gloss": "praise"
+  },
+  {
+    "id": "kaas",
+    "image": "assets/kaas.png",
+    "letters": [
+      "כ",
+      "ע",
+      "ס"
+    ],
+    "translit": "kaas",
+    "gloss": "provoke"
   },
   {
     "id": "kalah",
@@ -858,6 +979,17 @@
     "gloss": "die"
   },
   {
+    "id": "nachal",
+    "image": "assets/nachal.png",
+    "letters": [
+      "נ",
+      "ח",
+      "ל"
+    ],
+    "translit": "nachal",
+    "gloss": "inherit"
+  },
+  {
     "id": "nafal",
     "image": "assets/nafal.png",
     "letters": [
@@ -889,6 +1021,17 @@
     ],
     "translit": "nagad",
     "gloss": "tell"
+  },
+  {
+    "id": "nagaph",
+    "image": "assets/nagaph.png",
+    "letters": [
+      "נ",
+      "ג",
+      "ף"
+    ],
+    "translit": "nagaph",
+    "gloss": "smite"
   },
   {
     "id": "nagash",
@@ -1043,6 +1186,17 @@
     ],
     "translit": "nus",
     "gloss": "flee"
+  },
+  {
+    "id": "oyev",
+    "image": "assets/oyev.png",
+    "letters": [
+      "א",
+      "י",
+      "ב"
+    ],
+    "translit": "oyev",
+    "gloss": "be an enemy"
   },
   {
     "id": "palel",
@@ -1342,6 +1496,28 @@
     "gloss": "sing for joy"
   },
   {
+    "id": "ratsah",
+    "image": "assets/ratsah.png",
+    "letters": [
+      "ר",
+      "צ",
+      "ח"
+    ],
+    "translit": "ratsah",
+    "gloss": "murder"
+  },
+  {
+    "id": "ratsah2",
+    "image": "assets/ratsah2.png",
+    "letters": [
+      "ר",
+      "צ",
+      "ה"
+    ],
+    "translit": "ratsah",
+    "gloss": "accept"
+  },
+  {
     "id": "ravah",
     "image": "assets/ravah.png",
     "letters": [
@@ -1606,6 +1782,17 @@
     "gloss": "send"
   },
   {
+    "id": "shalam",
+    "image": "assets/shalam.png",
+    "letters": [
+      "ש",
+      "ל",
+      "ם"
+    ],
+    "translit": "shalam",
+    "gloss": "repay"
+  },
+  {
     "id": "shamad",
     "image": "assets/shamad.png",
     "letters": [
@@ -1694,6 +1881,17 @@
     "gloss": "swear"
   },
   {
+    "id": "sheret",
+    "image": "assets/sheret.png",
+    "letters": [
+      "ש",
+      "ר",
+      "ת"
+    ],
+    "translit": "sheret",
+    "gloss": "minister"
+  },
+  {
     "id": "shir",
     "image": "assets/shir.png",
     "letters": [
@@ -1703,6 +1901,17 @@
     ],
     "translit": "shir",
     "gloss": "sing"
+  },
+  {
+    "id": "shit",
+    "image": "assets/shit.png",
+    "letters": [
+      "ש",
+      "י",
+      "ת"
+    ],
+    "translit": "shit",
+    "gloss": "put, set"
   },
   {
     "id": "shuv",
@@ -1725,6 +1934,39 @@
     ],
     "translit": "sim",
     "gloss": "put, set"
+  },
+  {
+    "id": "taah",
+    "image": "assets/taah.png",
+    "letters": [
+      "ת",
+      "ע",
+      "ה"
+    ],
+    "translit": "taah",
+    "gloss": "stray"
+  },
+  {
+    "id": "tafas",
+    "image": "assets/tafas.png",
+    "letters": [
+      "ת",
+      "פ",
+      "ש"
+    ],
+    "translit": "tafas",
+    "gloss": "seize"
+  },
+  {
+    "id": "tamam",
+    "image": "assets/tamam.png",
+    "letters": [
+      "ת",
+      "מ",
+      "ם"
+    ],
+    "translit": "tamam",
+    "gloss": "be complete"
   },
   {
     "id": "tame",
@@ -1824,6 +2066,17 @@
     ],
     "translit": "yada",
     "gloss": "know"
+  },
+  {
+    "id": "yakach",
+    "image": "assets/yakach.png",
+    "letters": [
+      "י",
+      "כ",
+      "ח"
+    ],
+    "translit": "yakach",
+    "gloss": "reprove"
   },
   {
     "id": "yakhol",

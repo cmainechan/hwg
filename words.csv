@@ -1,20 +1,25 @@
 ﻿id,image,letters,translit,gloss
 ahav,assets/ahav.png,א ה ב,ahav,love
+ahaz,assets/ahaz.png,א ח ז,ahaz,take hold
 akhal,assets/akhal.png,א כ ל,akhal,eat
 alah,assets/alah.png,ע ל ה,alah,go up
 amad,assets/amad.png,ע מ ד,amad,stand
 aman,assets/aman.png,א מ ן,aman,believe
 amar,assets/amar.png,א מ ר,amar,say
 anah,assets/anah.png,ע נ ה,anah,answer
+anah2,assets/anah2.png,ע נ ה,anah,afflict
 arak,assets/arak.png,עָ רַ ךְ,arak,arrange
 asaf,assets/asaf.png,א ס ף,asaf,gather
 asah,assets/asah.png,ע שׂ ה,asah,"do, make"
 asar,assets/asar.png,א ס ר,asar,bind
 avad,assets/avad.png,ע ב ד,avad,serve
 avad2,assets/avad2.png,א ב ד,avad,perish
+avah,assets/avah.png,א ב ה,avah,be willing
 avar,assets/avar.png,ע ב ר,avar,"pass, cross"
 azar,assets/azar.png,ע ז ר,azar,help
 azav,assets/azav.png,ע ז ב,azav,"leave, forsake"
+baar,assets/baar.png,ב ע ר,baar,burn
+bagad,assets/bagad.png,ב ג ד,bagad,betray
 bahar,assets/bahar.png,ב ח ר,bahar,choose
 bakhah,assets/bakhah.png,ב כ ה,bakhah,weep
 banah,assets/banah.png,ב נ ה,banah,build
@@ -24,20 +29,24 @@ bara,assets/bara.png,ב ר א,bara,create
 barach,assets/barach.png,בָּ רַ ח,barach,flee
 barak,assets/barak.png,ב ר ךְ,barak,bless
 batach,assets/batach.png,ב ט ח,batach,trust
-bier,assets/bier.png,ב ע ר,bier,burn
+bin,assets/bin.png,בִּ י ן,bin,understand
 bo,assets/bo.png,בּ וֹ א,bo,"come, enter"
 bosh,assets/bosh.png,בּ וֹ שׁ,bosh,be ashamed
+chadal,assets/chadal.png,ח ד ל,chadal,cease
 chalaq,assets/chalaq.png,חָ לַ ק,chalaq,divide
-chavar,assets/chavar.png,חָ בַ ר,chavar,unite
 chanan,assets/chanan.png,ח נ ן,chanan,show favour
 charash,assets/charash.png,ח ר שׁ,charash,be silent
 chathar,assets/chathar.png,חָ תַ ר,chathar,dig
 chathath,assets/chathath.png,חָ תַ ת,chathath,be dismayed
+chavar,assets/chavar.png,חָ בַ ר,chavar,unite
+darakh,assets/darakh.png,ד ר ךְ,darakh,tread
 dasha,assets/dasha.png,דָּ שָׁ א,dasha,sprout
 davaq,assets/davaq.png,ד ב ק,davaq,cling
 diber,assets/diber.png,ד ב ר,diber,speak
 gaal,assets/gaal.png,ג א ל,gaal,redeem
 gadal,assets/gadal.png,ג ד ל,gadal,be great
+galah,assets/galah.png,ג ל ה,galah,uncover
+galah2,assets/galah2.png,ג ל ה,galah,go into exile
 gur,assets/gur.png,גּ וּ ר,gur,sojourn
 hafets,assets/hafets.png,ח פ ץ,hafets,delight in
 halah,assets/halah.png,ח ל ה,halah,be sick
@@ -46,11 +55,13 @@ hanah,assets/hanah.png,ח נ ה,hanah,camp
 harag,assets/harag.png,ה ר ג,harag,kill
 harah,assets/harah.png,ח ר ה,harah,be angry
 hashav,assets/hashav.png,ח שׁ ב,hashav,consider
+hata,assets/hata.png,ח ט א,hata,sin
 hayah,assets/hayah.png,ח י ה,hayah,be
 hayah2,assets/hayah2.png,ח י ה,hayah,live
 hazaq,assets/hazaq.png,ח ז ק,hazaq,be strong
 hilel,assets/hilel.png,ח ל ל,hilel,begin
 hilel2,assets/hilel2.png,ה ל ל,hilel,praise
+kaas,assets/kaas.png,כ ע ס,kaas,provoke
 kalah,assets/kalah.png,כ ל ה,kalah,finish
 karat,assets/karat.png,כ ר ת,karat,cut
 kashal,assets/kashal.png,כ שׁ ל,kashal,stumble
@@ -77,9 +88,11 @@ matsa,assets/matsa.png,מ צ א,matsa,find
 mihar,assets/mihar.png,מ ה ר,mihar,hasten
 milet,assets/milet.png,מ ל ט,milet,escape
 mut,assets/mut.png,מ וּ ת,mut,die
+nachal,assets/nachal.png,נ ח ל,nachal,inherit
 nafal,assets/nafal.png,נ פ ל,nafal,fall
 naga,assets/naga.png,נ ג ע,naga,touch
 nagad,assets/nagad.png,נ ג ד,nagad,tell
+nagaph,assets/nagaph.png,נ ג ף,nagaph,smite
 nagash,assets/nagash.png,נָ גַ שׁ,nagash,draw near
 naham,assets/naham.png,נ ח ם,naham,"comfort, regret"
 nakah,assets/nakah.png,נ כ ה,nakah,strike
@@ -94,6 +107,7 @@ natsal,assets/natsal.png,נ צ ל,natsal,deliver
 nava,assets/nava.png,נ ב א,nava,prophesy
 nuach,assets/nuach.png,נ וּ חַ,nuach,rest
 nus,assets/nus.png,נ וּ ס,nus,flee
+oyev,assets/oyev.png,אָ יַ ב,oyev,be an enemy
 palel,assets/palel.png,פ ל ל,palel,pray
 panah,assets/panah.png,פ נ ה,panah,turn
 paqad,assets/paqad.png,פ ק ד,paqad,visit
@@ -121,6 +135,8 @@ rahaq,assets/rahaq.png,ר ח ק,rahaq,be far
 rahats,assets/rahats.png,ר ח ץ,rahats,"wash, bathe"
 rakhav,assets/rakhav.png,ר כ ב,rakhav,ride
 ranan,assets/ranan.png,ר נ ן,ranan,sing for joy
+ratsah,assets/ratsah.png,ר צ ח,ratsah,murder
+ratsah2,assets/ratsah2.png,ר צ ה,ratsah,accept
 ravah,assets/ravah.png,ר ב ה,ravah,multiply
 riv,assets/riv.png,רִ י ב,riv,strive
 riv2,assets/riv2.png,רִ י ב,riv,strife
@@ -145,6 +161,7 @@ shakan,assets/shakan.png,שָׁ כַ ן,shakan,dwell
 shakav,assets/shakav.png,שׁ כ ב,shakav,lie down
 shakhah,assets/shakhah.png,שׁ כ ח,shakhah,forget
 shalach,assets/shalach.png,שׁ ל ח,shalach,send
+shalam,assets/shalam.png,שָׁ לַ ם,shalam,repay
 shamad,assets/shamad.png,שׁ מ ד,shamad,destroy
 shamah,assets/shamah.png,שׁ מ ע,shamah,hear
 shamar,assets/shamar.png,שׁ מ ר,shamar,guard
@@ -153,9 +170,14 @@ shatah,assets/shatah.png,שׁ ת ה,shatah,drink
 shavar,assets/shavar.png,שׁ ב ר,shavar,break
 shavat,assets/shavat.png,שׁ ב ת,shavat,rest
 sheba,assets/sheba.png,שׁ ב ע,sheba,swear
+sheret,assets/sheret.png,שׁ ר ת,sheret,minister
 shir,assets/shir.png,שִׁ י ר,shir,sing
+shit,assets/shit.png,שִׁ י ת,shit,"put, set"
 shuv,assets/shuv.png,שׁ וּ ב,shuv,"turn, return"
 sim,assets/sim.png,שִׂ י ם,sim,"put, set"
+taah,assets/taah.png,ת ע ה,taah,stray
+tafas,assets/tafas.png,ת פ שׂ,tafas,seize
+tamam,assets/tamam.png,ת מ ם,tamam,be complete
 tame,assets/tame.png,ט מ א,tame,be unclean
 taqa,assets/taqa.png,ת ק ע,taqa,blow
 tsalach,assets/tsalach.png,צָ לַ ח,tsalach,prosper
@@ -165,6 +187,7 @@ tul,assets/tul.png,ט וּ ל,tul,hurl
 ur,assets/ur.png,ע וּ ר,ur,rouse
 yaats,assets/yaats.png,י ע ץ,yaats,counsel
 yada,assets/yada.png,י ד ע,yada,know
+yakach,assets/yakach.png,יָ כַ ח,yakach,reprove
 yakhol,assets/yakhol.png,י כ ל,yakhol,be able
 yalad,assets/yalad.png,י ל ד,yalad,"give birth, beget"
 yarad,assets/yarad.png,י ר ד,yarad,go down
