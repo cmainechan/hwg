@@ -220,6 +220,17 @@
     "gloss": "burn"
   },
   {
+    "id": "bachar",
+    "image": "assets/bachar.png",
+    "letters": [
+      "ב",
+      "ח",
+      "ר"
+    ],
+    "translit": "bachar",
+    "gloss": "choose"
+  },
+  {
     "id": "bagad",
     "image": "assets/bagad.png",
     "letters": [
@@ -229,17 +240,6 @@
     ],
     "translit": "bagad",
     "gloss": "betray"
-  },
-  {
-    "id": "bahar",
-    "image": "assets/bahar.png",
-    "letters": [
-      "ב",
-      "ח",
-      "ר"
-    ],
-    "translit": "bahar",
-    "gloss": "choose"
   },
   {
     "id": "bakhah",
@@ -803,14 +803,14 @@
     "gloss": "learn, teach"
   },
   {
-    "id": "laqah",
-    "image": "assets/laqah.png",
+    "id": "laqach",
+    "image": "assets/laqach.png",
     "letters": [
       "ל",
       "ק",
       "ח"
     ],
-    "translit": "laqah",
+    "translit": "laqach",
     "gloss": "take"
   },
   {
@@ -902,14 +902,14 @@
     "gloss": "rebel"
   },
   {
-    "id": "masha",
-    "image": "assets/masha.png",
+    "id": "mashach",
+    "image": "assets/mashach.png",
     "letters": [
       "מ",
       "ש",
       "ח"
     ],
-    "translit": "masha",
+    "translit": "mashach",
     "gloss": "anoint"
   },
   {
@@ -990,6 +990,17 @@
     "gloss": "inherit"
   },
   {
+    "id": "nacham",
+    "image": "assets/nacham.png",
+    "letters": [
+      "נ",
+      "ח",
+      "ם"
+    ],
+    "translit": "nacham",
+    "gloss": "comfort, regret"
+  },
+  {
     "id": "nafal",
     "image": "assets/nafal.png",
     "letters": [
@@ -1043,17 +1054,6 @@
     ],
     "translit": "nagash",
     "gloss": "draw near"
-  },
-  {
-    "id": "naham",
-    "image": "assets/naham.png",
-    "letters": [
-      "נ",
-      "ח",
-      "ם"
-    ],
-    "translit": "naham",
-    "gloss": "comfort, regret"
   },
   {
     "id": "nakah",
@@ -1419,6 +1419,28 @@
     "gloss": "hover"
   },
   {
+    "id": "rachaq",
+    "image": "assets/rachaq.png",
+    "letters": [
+      "ר",
+      "ח",
+      "ק"
+    ],
+    "translit": "rachaq",
+    "gloss": "be far"
+  },
+  {
+    "id": "rachats",
+    "image": "assets/rachats.png",
+    "letters": [
+      "ר",
+      "ח",
+      "ץ"
+    ],
+    "translit": "rachats",
+    "gloss": "wash, bathe"
+  },
+  {
     "id": "radaf",
     "image": "assets/radaf.png",
     "letters": [
@@ -1450,28 +1472,6 @@
     ],
     "translit": "rafa",
     "gloss": "heal"
-  },
-  {
-    "id": "rahaq",
-    "image": "assets/rahaq.png",
-    "letters": [
-      "ר",
-      "ח",
-      "ק"
-    ],
-    "translit": "rahaq",
-    "gloss": "be far"
-  },
-  {
-    "id": "rahats",
-    "image": "assets/rahats.png",
-    "letters": [
-      "ר",
-      "ח",
-      "ץ"
-    ],
-    "translit": "rahats",
-    "gloss": "wash, bathe"
   },
   {
     "id": "rakhav",
@@ -1606,14 +1606,14 @@
     "gloss": "shut"
   },
   {
-    "id": "samah",
-    "image": "assets/samah.png",
+    "id": "samach",
+    "image": "assets/samach.png",
     "letters": [
       "ש",
       "מ",
       "ח"
     ],
-    "translit": "samah",
+    "translit": "samach",
     "gloss": "rejoice"
   },
   {
@@ -1716,6 +1716,17 @@
     "gloss": "judge"
   },
   {
+    "id": "shakach",
+    "image": "assets/shakach.png",
+    "letters": [
+      "ש",
+      "כ",
+      "ח"
+    ],
+    "translit": "shakach",
+    "gloss": "forget"
+  },
+  {
     "id": "shakam",
     "image": "assets/shakam.png",
     "letters": [
@@ -1747,17 +1758,6 @@
     ],
     "translit": "shakav",
     "gloss": "lie down"
-  },
-  {
-    "id": "shakhah",
-    "image": "assets/shakhah.png",
-    "letters": [
-      "ש",
-      "כ",
-      "ח"
-    ],
-    "translit": "shakhah",
-    "gloss": "forget"
   },
   {
     "id": "shalach",
