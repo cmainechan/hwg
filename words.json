@@ -1,5 +1,16 @@
 [
   {
+    "id": "achaz",
+    "image": "assets/achaz.png",
+    "letters": [
+      "א",
+      "ח",
+      "ז"
+    ],
+    "translit": "achaz",
+    "gloss": "take hold"
+  },
+  {
     "id": "ahav",
     "image": "assets/ahav.png",
     "letters": [
@@ -9,17 +20,6 @@
     ],
     "translit": "ahav",
     "gloss": "love"
-  },
-  {
-    "id": "ahaz",
-    "image": "assets/ahaz.png",
-    "letters": [
-      "א",
-      "ח",
-      "ז"
-    ],
-    "translit": "ahaz",
-    "gloss": "take hold"
   },
   {
     "id": "akhal",
@@ -1496,19 +1496,19 @@
     "gloss": "sing for joy"
   },
   {
-    "id": "ratsah",
-    "image": "assets/ratsah.png",
+    "id": "ratsach",
+    "image": "assets/ratsach.png",
     "letters": [
       "ר",
       "צ",
       "ח"
     ],
-    "translit": "ratsah",
+    "translit": "ratsach",
     "gloss": "murder"
   },
   {
-    "id": "ratsah2",
-    "image": "assets/ratsah2.png",
+    "id": "ratsah",
+    "image": "assets/ratsah.png",
     "letters": [
       "ר",
       "צ",

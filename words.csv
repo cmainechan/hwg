@@ -1,6 +1,6 @@
 ﻿id,image,letters,translit,gloss
+achaz,assets/achaz.png,א ח ז,achaz,take hold
 ahav,assets/ahav.png,א ה ב,ahav,love
-ahaz,assets/ahaz.png,א ח ז,ahaz,take hold
 akhal,assets/akhal.png,א כ ל,akhal,eat
 alah,assets/alah.png,ע ל ה,alah,go up
 amad,assets/amad.png,ע מ ד,amad,stand
@@ -135,8 +135,8 @@ rahaq,assets/rahaq.png,ר ח ק,rahaq,be far
 rahats,assets/rahats.png,ר ח ץ,rahats,"wash, bathe"
 rakhav,assets/rakhav.png,ר כ ב,rakhav,ride
 ranan,assets/ranan.png,ר נ ן,ranan,sing for joy
-ratsah,assets/ratsah.png,ר צ ח,ratsah,murder
-ratsah2,assets/ratsah2.png,ר צ ה,ratsah,accept
+ratsach,assets/ratsach.png,ר צ ח,ratsach,murder
+ratsah,assets/ratsah.png,ר צ ה,ratsah,accept
 ravah,assets/ravah.png,ר ב ה,ravah,multiply
 riv,assets/riv.png,רִ י ב,riv,strive
 riv2,assets/riv2.png,רִ י ב,riv,strife
