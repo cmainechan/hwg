@@ -176,6 +176,17 @@
     "gloss": "leave, forsake"
   },
   {
+    "id": "baar",
+    "image": "assets/baar.png",
+    "letters": [
+      "ב",
+      "ע",
+      "ר"
+    ],
+    "translit": "baar",
+    "gloss": "burn"
+  },
+  {
     "id": "bahar",
     "image": "assets/bahar.png",
     "letters": [
@@ -273,17 +284,6 @@
     ],
     "translit": "batach",
     "gloss": "trust"
-  },
-  {
-    "id": "bier",
-    "image": "assets/bier.png",
-    "letters": [
-      "ב",
-      "ע",
-      "ר"
-    ],
-    "translit": "bier",
-    "gloss": "burn"
   },
   {
     "id": "bo",
