@@ -39,6 +39,7 @@ charash,assets/charash.png,ח ר שׁ,charash,be silent
 chathar,assets/chathar.png,חָ תַ ר,chathar,dig
 chathat,assets/chathat.png,חָ תַ ת,chathat,be dismayed
 chavar,assets/chavar.png,חָ בַ ר,chavar,unite
+chazaq,assets/chazaq.png,ח ז ק,chazaq,be strong
 darakh,assets/darakh.png,ד ר ךְ,darakh,tread
 dasha,assets/dasha.png,דָּ שָׁ א,dasha,sprout
 davaq,assets/davaq.png,ד ב ק,davaq,cling
@@ -58,7 +59,6 @@ hashav,assets/hashav.png,ח שׁ ב,hashav,consider
 hata,assets/hata.png,ח ט א,hata,sin
 hayah,assets/hayah.png,ח י ה,hayah,be
 hayah2,assets/hayah2.png,ח י ה,hayah,live
-hazaq,assets/hazaq.png,ח ז ק,hazaq,be strong
 hilel,assets/hilel.png,ח ל ל,hilel,begin
 hilel2,assets/hilel2.png,ה ל ל,hilel,praise
 kaas,assets/kaas.png,כ ע ס,kaas,provoke
@@ -152,7 +152,6 @@ sava,assets/sava.png,שׂ ב ע,sava,be satisfied
 savav,assets/savav.png,ס ב ב,savav,go around
 shaal,assets/shaal.png,שׁ א ל,shaal,ask
 shaar,assets/shaar.png,שָׁ אַ ר,shaar,remain
-shabah,assets/shabah.png,שָׁ בָ ה,shabah,take captive
 shadad,assets/shadad.png,שׁ ד ד,shadad,devastate
 shafakh,assets/shafakh.png,שׁ פ ךְ,shafakh,"pour out, spill"
 shafat,assets/shafat.png,שׁ פ ט,shafat,judge
@@ -167,6 +166,7 @@ shamah,assets/shamah.png,שׁ מ ע,shamah,hear
 shamar,assets/shamar.png,שׁ מ ר,shamar,guard
 shaqah,assets/shaqah.png,שׁ ק ה,shaqah,cause to drink
 shatah,assets/shatah.png,שׁ ת ה,shatah,drink
+shavah,assets/shavah.png,שָׁ בָ ה,shavah,take captive
 shavar,assets/shavar.png,שׁ ב ר,shavar,break
 shavat,assets/shavat.png,שׁ ב ת,shavat,rest
 sheba,assets/sheba.png,שׁ ב ע,sheba,swear
@@ -196,6 +196,7 @@ yasaf,assets/yasaf.png,י ס ף,yasaf,"add, do again"
 yasha,assets/yasha.png,יָ שַׁ ע,yasha,save
 yashav,assets/yashav.png,י שׁ ב,yashav,sit
 yatav,assets/yatav.png,י ט ב,yatav,be good
+yathar,assets/yathar.png,י ת ר,yathar,remain
 yatsa,assets/yatsa.png,י צ א,yatsa,go out
 yatsaq,assets/yatsaq.png,י צ ק,yatsaq,pour
 yatsar,assets/yatsar.png,יָ צַ ר,yatsar,form

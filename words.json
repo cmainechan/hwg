@@ -440,6 +440,17 @@
     "gloss": "unite"
   },
   {
+    "id": "chazaq",
+    "image": "assets/chazaq.png",
+    "letters": [
+      "ח",
+      "ז",
+      "ק"
+    ],
+    "translit": "chazaq",
+    "gloss": "be strong"
+  },
+  {
     "id": "darakh",
     "image": "assets/darakh.png",
     "letters": [
@@ -647,17 +658,6 @@
     ],
     "translit": "hayah",
     "gloss": "live"
-  },
-  {
-    "id": "hazaq",
-    "image": "assets/hazaq.png",
-    "letters": [
-      "ח",
-      "ז",
-      "ק"
-    ],
-    "translit": "hazaq",
-    "gloss": "be strong"
   },
   {
     "id": "hilel",
@@ -1683,17 +1683,6 @@
     "gloss": "remain"
   },
   {
-    "id": "shabah",
-    "image": "assets/shabah.png",
-    "letters": [
-      "ש",
-      "ב",
-      "ה"
-    ],
-    "translit": "shabah",
-    "gloss": "take captive"
-  },
-  {
     "id": "shadad",
     "image": "assets/shadad.png",
     "letters": [
@@ -1846,6 +1835,17 @@
     ],
     "translit": "shatah",
     "gloss": "drink"
+  },
+  {
+    "id": "shavah",
+    "image": "assets/shavah.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ה"
+    ],
+    "translit": "shavah",
+    "gloss": "take captive"
   },
   {
     "id": "shavar",
@@ -2165,6 +2165,17 @@
     ],
     "translit": "yatav",
     "gloss": "be good"
+  },
+  {
+    "id": "yathar",
+    "image": "assets/yathar.png",
+    "letters": [
+      "י",
+      "ת",
+      "ר"
+    ],
+    "translit": "yathar",
+    "gloss": "remain"
   },
   {
     "id": "yatsa",
