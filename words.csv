@@ -33,12 +33,20 @@ bin,assets/bin.png,בִּ י ן,bin,understand
 bo,assets/bo.png,בּ וֹ א,bo,"come, enter"
 bosh,assets/bosh.png,בּ וֹ שׁ,bosh,be ashamed
 chadal,assets/chadal.png,ח ד ל,chadal,cease
+chafets,assets/chafets.png,ח פ ץ,chafets,delight in
+chalah,assets/chalah.png,ח ל ה,chalah,be sick
 chalaq,assets/chalaq.png,חָ לַ ק,chalaq,divide
+chalel,assets/chalel.png,ח ל ל,chalel,begin
+chanah,assets/chanah.png,ח נ ה,chanah,camp
 chanan,assets/chanan.png,ח נ ן,chanan,show favour
+charah,assets/charah.png,ח ר ה,charah,be angry
 charash,assets/charash.png,ח ר שׁ,charash,be silent
+chashav,assets/chashav.png,ח שׁ ב,chashav,consider
+chata,assets/chata.png,ח ט א,chata,sin
 chathar,assets/chathar.png,חָ תַ ר,chathar,dig
 chathat,assets/chathat.png,חָ תַ ת,chathat,be dismayed
 chavar,assets/chavar.png,חָ בַ ר,chavar,unite
+chayah,assets/chayah.png,ח י ה,chayah,live
 chazaq,assets/chazaq.png,ח ז ק,chazaq,be strong
 darakh,assets/darakh.png,ד ר ךְ,darakh,tread
 dasha,assets/dasha.png,דָּ שָׁ א,dasha,sprout
@@ -49,18 +57,10 @@ gadal,assets/gadal.png,ג ד ל,gadal,be great
 galah,assets/galah.png,ג ל ה,galah,uncover
 galah2,assets/galah2.png,ג ל ה,galah,go into exile
 gur,assets/gur.png,גּ וּ ר,gur,sojourn
-hafets,assets/hafets.png,ח פ ץ,hafets,delight in
-halah,assets/halah.png,ח ל ה,halah,be sick
 halakh,assets/halakh.png,ה ל ךְ,halakh,"go, walk"
-hanah,assets/hanah.png,ח נ ה,hanah,camp
+halel,assets/halel.png,ה ל ל,halel,praise
 harag,assets/harag.png,ה ר ג,harag,kill
-harah,assets/harah.png,ח ר ה,harah,be angry
-hashav,assets/hashav.png,ח שׁ ב,hashav,consider
-hata,assets/hata.png,ח ט א,hata,sin
-hayah,assets/hayah.png,ח י ה,hayah,be
-hayah2,assets/hayah2.png,ח י ה,hayah,live
-hilel,assets/hilel.png,ח ל ל,hilel,begin
-hilel2,assets/hilel2.png,ה ל ל,hilel,praise
+hayah,assets/hayah.png,הָ י ה,hayah,be
 kaas,assets/kaas.png,כ ע ס,kaas,provoke
 kalah,assets/kalah.png,כ ל ה,kalah,finish
 karat,assets/karat.png,כ ר ת,karat,cut

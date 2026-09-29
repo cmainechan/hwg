@@ -374,6 +374,28 @@
     "gloss": "cease"
   },
   {
+    "id": "chafets",
+    "image": "assets/chafets.png",
+    "letters": [
+      "ח",
+      "פ",
+      "ץ"
+    ],
+    "translit": "chafets",
+    "gloss": "delight in"
+  },
+  {
+    "id": "chalah",
+    "image": "assets/chalah.png",
+    "letters": [
+      "ח",
+      "ל",
+      "ה"
+    ],
+    "translit": "chalah",
+    "gloss": "be sick"
+  },
+  {
     "id": "chalaq",
     "image": "assets/chalaq.png",
     "letters": [
@@ -383,6 +405,28 @@
     ],
     "translit": "chalaq",
     "gloss": "divide"
+  },
+  {
+    "id": "chalel",
+    "image": "assets/chalel.png",
+    "letters": [
+      "ח",
+      "ל",
+      "ל"
+    ],
+    "translit": "chalel",
+    "gloss": "begin"
+  },
+  {
+    "id": "chanah",
+    "image": "assets/chanah.png",
+    "letters": [
+      "ח",
+      "נ",
+      "ה"
+    ],
+    "translit": "chanah",
+    "gloss": "camp"
   },
   {
     "id": "chanan",
@@ -396,6 +440,17 @@
     "gloss": "show favour"
   },
   {
+    "id": "charah",
+    "image": "assets/charah.png",
+    "letters": [
+      "ח",
+      "ר",
+      "ה"
+    ],
+    "translit": "charah",
+    "gloss": "be angry"
+  },
+  {
     "id": "charash",
     "image": "assets/charash.png",
     "letters": [
@@ -405,6 +460,28 @@
     ],
     "translit": "charash",
     "gloss": "be silent"
+  },
+  {
+    "id": "chashav",
+    "image": "assets/chashav.png",
+    "letters": [
+      "ח",
+      "ש",
+      "ב"
+    ],
+    "translit": "chashav",
+    "gloss": "consider"
+  },
+  {
+    "id": "chata",
+    "image": "assets/chata.png",
+    "letters": [
+      "ח",
+      "ט",
+      "א"
+    ],
+    "translit": "chata",
+    "gloss": "sin"
   },
   {
     "id": "chathar",
@@ -438,6 +515,17 @@
     ],
     "translit": "chavar",
     "gloss": "unite"
+  },
+  {
+    "id": "chayah",
+    "image": "assets/chayah.png",
+    "letters": [
+      "ח",
+      "י",
+      "ה"
+    ],
+    "translit": "chayah",
+    "gloss": "live"
   },
   {
     "id": "chazaq",
@@ -550,28 +638,6 @@
     "gloss": "sojourn"
   },
   {
-    "id": "hafets",
-    "image": "assets/hafets.png",
-    "letters": [
-      "ח",
-      "פ",
-      "ץ"
-    ],
-    "translit": "hafets",
-    "gloss": "delight in"
-  },
-  {
-    "id": "halah",
-    "image": "assets/halah.png",
-    "letters": [
-      "ח",
-      "ל",
-      "ה"
-    ],
-    "translit": "halah",
-    "gloss": "be sick"
-  },
-  {
     "id": "halakh",
     "image": "assets/halakh.png",
     "letters": [
@@ -583,15 +649,15 @@
     "gloss": "go, walk"
   },
   {
-    "id": "hanah",
-    "image": "assets/hanah.png",
+    "id": "halel",
+    "image": "assets/halel.png",
     "letters": [
-      "ח",
-      "נ",
-      "ה"
+      "ה",
+      "ל",
+      "ל"
     ],
-    "translit": "hanah",
-    "gloss": "camp"
+    "translit": "halel",
+    "gloss": "praise"
   },
   {
     "id": "harag",
@@ -605,81 +671,15 @@
     "gloss": "kill"
   },
   {
-    "id": "harah",
-    "image": "assets/harah.png",
-    "letters": [
-      "ח",
-      "ר",
-      "ה"
-    ],
-    "translit": "harah",
-    "gloss": "be angry"
-  },
-  {
-    "id": "hashav",
-    "image": "assets/hashav.png",
-    "letters": [
-      "ח",
-      "ש",
-      "ב"
-    ],
-    "translit": "hashav",
-    "gloss": "consider"
-  },
-  {
-    "id": "hata",
-    "image": "assets/hata.png",
-    "letters": [
-      "ח",
-      "ט",
-      "א"
-    ],
-    "translit": "hata",
-    "gloss": "sin"
-  },
-  {
     "id": "hayah",
     "image": "assets/hayah.png",
     "letters": [
-      "ח",
+      "ה",
       "י",
       "ה"
     ],
     "translit": "hayah",
     "gloss": "be"
-  },
-  {
-    "id": "hayah2",
-    "image": "assets/hayah2.png",
-    "letters": [
-      "ח",
-      "י",
-      "ה"
-    ],
-    "translit": "hayah",
-    "gloss": "live"
-  },
-  {
-    "id": "hilel",
-    "image": "assets/hilel.png",
-    "letters": [
-      "ח",
-      "ל",
-      "ל"
-    ],
-    "translit": "hilel",
-    "gloss": "begin"
-  },
-  {
-    "id": "hilel2",
-    "image": "assets/hilel2.png",
-    "letters": [
-      "ה",
-      "ל",
-      "ל"
-    ],
-    "translit": "hilel",
-    "gloss": "praise"
   },
   {
     "id": "kaas",
