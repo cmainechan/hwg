@@ -561,6 +561,17 @@
     "gloss": "tread"
   },
   {
+    "id": "darash",
+    "image": "assets/darash.png",
+    "letters": [
+      "ד",
+      "ר",
+      "ש"
+    ],
+    "translit": "darash",
+    "gloss": "inquire"
+  },
+  {
     "id": "dasha",
     "image": "assets/dasha.png",
     "letters": [
@@ -779,6 +790,17 @@
     ],
     "translit": "kives",
     "gloss": "wash, launder"
+  },
+  {
+    "id": "kun",
+    "image": "assets/kun.png",
+    "letters": [
+      "כ",
+      "ו",
+      "ן"
+    ],
+    "translit": "kun",
+    "gloss": "establish"
   },
   {
     "id": "lacham",
@@ -1175,6 +1197,17 @@
     ],
     "translit": "natsar",
     "gloss": "keep"
+  },
+  {
+    "id": "natsav",
+    "image": "assets/natsav.png",
+    "letters": [
+      "נ",
+      "צ",
+      "ב"
+    ],
+    "translit": "natsav",
+    "gloss": "stand"
   },
   {
     "id": "nava",
@@ -1738,6 +1771,17 @@
     "gloss": "bow down"
   },
   {
+    "id": "shachat",
+    "image": "assets/shachat.png",
+    "letters": [
+      "ש",
+      "ח",
+      "ת"
+    ],
+    "translit": "shachat",
+    "gloss": "destroy"
+  },
+  {
     "id": "shadad",
     "image": "assets/shadad.png",
     "letters": [
@@ -1868,6 +1912,17 @@
     ],
     "translit": "shamar",
     "gloss": "guard"
+  },
+  {
+    "id": "shamem",
+    "image": "assets/shamem.png",
+    "letters": [
+      "ש",
+      "מ",
+      "ם"
+    ],
+    "translit": "shamem",
+    "gloss": "be desolate"
   },
   {
     "id": "shaqah",
