@@ -528,6 +528,17 @@
     "gloss": "live"
   },
   {
+    "id": "chazah",
+    "image": "assets/chazah.png",
+    "letters": [
+      "ח",
+      "ז",
+      "ה"
+    ],
+    "translit": "chazah",
+    "gloss": "behold"
+  },
+  {
     "id": "chazaq",
     "image": "assets/chazaq.png",
     "letters": [
@@ -1155,6 +1166,17 @@
     "gloss": "deliver"
   },
   {
+    "id": "natsar",
+    "image": "assets/natsar.png",
+    "letters": [
+      "נ",
+      "צ",
+      "ר"
+    ],
+    "translit": "natsar",
+    "gloss": "keep"
+  },
+  {
     "id": "nava",
     "image": "assets/nava.png",
     "letters": [
@@ -1164,6 +1186,17 @@
     ],
     "translit": "nava",
     "gloss": "prophesy"
+  },
+  {
+    "id": "navat",
+    "image": "assets/navat.png",
+    "letters": [
+      "נ",
+      "ב",
+      "ט"
+    ],
+    "translit": "navat",
+    "gloss": "look"
   },
   {
     "id": "nuach",
@@ -1197,6 +1230,17 @@
     ],
     "translit": "oyev",
     "gloss": "be an enemy"
+  },
+  {
+    "id": "paal",
+    "image": "assets/paal.png",
+    "letters": [
+      "פ",
+      "ע",
+      "ל"
+    ],
+    "translit": "paal",
+    "gloss": "accomplish"
   },
   {
     "id": "palel",
@@ -1681,6 +1725,17 @@
     ],
     "translit": "shaar",
     "gloss": "remain"
+  },
+  {
+    "id": "shachah",
+    "image": "assets/shachah.png",
+    "letters": [
+      "ש",
+      "ח",
+      "ה"
+    ],
+    "translit": "shachah",
+    "gloss": "bow down"
   },
   {
     "id": "shadad",
