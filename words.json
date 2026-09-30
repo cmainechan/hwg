@@ -1980,14 +1980,14 @@
     "gloss": "rest"
   },
   {
-    "id": "sheba",
-    "image": "assets/sheba.png",
+    "id": "sheva",
+    "image": "assets/sheva.png",
     "letters": [
       "ש",
       "ב",
       "ע"
     ],
-    "translit": "sheba",
+    "translit": "sheva",
     "gloss": "swear"
   },
   {
