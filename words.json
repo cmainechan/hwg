@@ -583,14 +583,14 @@
     "gloss": "speak"
   },
   {
-    "id": "gaal",
-    "image": "assets/gaal.png",
+    "id": "padah",
+    "image": "assets/padah.png",
     "letters": [
-      "ג",
-      "א",
-      "ל"
+      "פ",
+      "ד",
+      "ה"
     ],
-    "translit": "gaal",
+    "translit": "padah",
     "gloss": "redeem"
   },
   {
