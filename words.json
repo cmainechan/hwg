@@ -2385,5 +2385,93 @@
     ],
     "translit": "zavach",
     "gloss": "sacrifice"
+  },
+  {
+    "id": "yarash",
+    "image": "assets/yarash.png",
+    "letters": [
+      "י",
+      "ר",
+      "ש"
+    ],
+    "translit": "yarash",
+    "gloss": "take possession"
+  },
+  {
+    "id": "sur",
+    "image": "assets/sur.png",
+    "letters": [
+      "ס",
+      "ו",
+      "ר"
+    ],
+    "translit": "sur",
+    "gloss": "turn aside"
+  },
+  {
+    "id": "makah",
+    "image": "assets/makah.png",
+    "letters": [
+      "מ",
+      "כ",
+      "ה"
+    ],
+    "translit": "makah",
+    "gloss": "wound"
+  },
+  {
+    "id": "yadah",
+    "image": "assets/yadah.png",
+    "letters": [
+      "י",
+      "ד",
+      "ה"
+    ],
+    "translit": "yadah",
+    "gloss": "give thanks"
+  },
+  {
+    "id": "rum",
+    "image": "assets/rum.png",
+    "letters": [
+      "ר",
+      "ו",
+      "ם"
+    ],
+    "translit": "rum",
+    "gloss": "exalt, lift"
+  },
+  {
+    "id": "haphak",
+    "image": "assets/haphak.png",
+    "letters": [
+      "ה",
+      "פ",
+      "ך"
+    ],
+    "translit": "haphak",
+    "gloss": "turn, overturn"
+  },
+  {
+    "id": "tsarar",
+    "image": "assets/tsarar.png",
+    "letters": [
+      "צ",
+      "ר",
+      "ר"
+    ],
+    "translit": "tsarar",
+    "gloss": "be hemmed in"
+  },
+  {
+    "id": "gaal",
+    "image": "assets/gaal.png",
+    "letters": [
+      "ג",
+      "א",
+      "ל"
+    ],
+    "translit": "gaal",
+    "gloss": "redeem"
   }
 ]
