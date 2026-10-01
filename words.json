@@ -1870,6 +1870,17 @@
     "gloss": "send"
   },
   {
+    "id": "shalak",
+    "image": "assets/shalak.png",
+    "letters": [
+      "ש",
+      "ל",
+      "ך"
+    ],
+    "translit": "shalak",
+    "gloss": "throw"
+  },
+  {
     "id": "shalam",
     "image": "assets/shalam.png",
     "letters": [
