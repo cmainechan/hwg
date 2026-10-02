@@ -8,6 +8,7 @@ aman,assets/aman.png,א מ ן,aman,believe
 amar,assets/amar.png,א מ ר,amar,say
 anah,assets/anah.png,ע נ ה,anah,answer
 anah2,assets/anah2.png,ע נ ה,anah,afflict
+arar,assets/arar.png,א ר ר,arar,curse
 arak,assets/arak.png,עָ רַ ךְ,arak,arrange
 asaf,assets/asaf.png,א ס ף,asaf,gather
 asah,assets/asah.png,ע שׂ ה,asah,"do, make"
@@ -65,6 +66,7 @@ harag,assets/harag.png,ה ר ג,harag,kill
 hayah,assets/hayah.png,הָ י ה,hayah,be
 kaas,assets/kaas.png,כ ע ס,kaas,provoke
 kalah,assets/kalah.png,כ ל ה,kalah,finish
+kaphar,assets/kaphar.png,כָּ פַ ר,kaphar,atone
 karat,assets/karat.png,כ ר ת,karat,cut
 kashal,assets/kashal.png,כ שׁ ל,kashal,stumble
 katav,assets/katav.png,כ ת ב,katav,write
@@ -116,9 +118,11 @@ nuach,assets/nuach.png,נ וּ חַ,nuach,rest
 nus,assets/nus.png,נ וּ ס,nus,flee
 oyev,assets/oyev.png,אָ יַ ב,oyev,be an enemy
 paal,assets/paal.png,פ ע ל,paal,accomplish
+pala,assets/pala.png,פָ לָ א,pala,be wonderful
 palel,assets/palel.png,פ ל ל,palel,pray
 panah,assets/panah.png,פ נ ה,panah,turn
 paqad,assets/paqad.png,פ ק ד,paqad,visit
+parar,assets/parar.png,פָ רַ ר,parar,break (covenant)
 paras,assets/paras.png,פ ר שׂ,paras,spread
 patach,assets/patach.png,פ ת ח,patach,open
 puts,assets/puts.png,פּ וּ ץ,puts,scatter
@@ -128,6 +132,7 @@ qara,assets/qara.png,ק ר א,qara,"call, meet"
 qara2,assets/qara2.png,ק ר א,qara,meet
 qara3,assets/qara3.png,ק ר ע,qara,tear
 qarav,assets/qarav.png,ק ר ב,qarav,draw near
+qatar,assets/qatar.png,קָ טַ ר,qatar,offer in smoke
 qavah,assets/qavah.png,ק ו ה,qavah,wait
 qavar,assets/qavar.png,ק ב ר,qavar,bury
 qavats,assets/qavats.png,ק ב ץ,qavats,gather

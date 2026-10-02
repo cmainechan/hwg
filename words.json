@@ -99,6 +99,17 @@
     "gloss": "afflict"
   },
   {
+    "id": "arar",
+    "image": "assets/arar.png",
+    "letters": [
+      "א",
+      "ר",
+      "ר"
+    ],
+    "translit": "arar",
+    "gloss": "curse"
+  },
+  {
     "id": "arak",
     "image": "assets/arak.png",
     "letters": [
@@ -726,6 +737,17 @@
     "gloss": "finish"
   },
   {
+    "id": "kaphar",
+    "image": "assets/kaphar.png",
+    "letters": [
+      "כ",
+      "פ",
+      "ר"
+    ],
+    "translit": "kaphar",
+    "gloss": "atone"
+  },
+  {
     "id": "karat",
     "image": "assets/karat.png",
     "letters": [
@@ -1287,6 +1309,17 @@
     "gloss": "accomplish"
   },
   {
+    "id": "pala",
+    "image": "assets/pala.png",
+    "letters": [
+      "פ",
+      "ל",
+      "א"
+    ],
+    "translit": "pala",
+    "gloss": "be wonderful"
+  },
+  {
     "id": "palel",
     "image": "assets/palel.png",
     "letters": [
@@ -1318,6 +1351,17 @@
     ],
     "translit": "paqad",
     "gloss": "visit"
+  },
+  {
+    "id": "parar",
+    "image": "assets/parar.png",
+    "letters": [
+      "פ",
+      "ר",
+      "ר"
+    ],
+    "translit": "parar",
+    "gloss": "break (covenant)"
   },
   {
     "id": "paras",
@@ -1417,6 +1461,17 @@
     ],
     "translit": "qarav",
     "gloss": "draw near"
+  },
+  {
+    "id": "qatar",
+    "image": "assets/qatar.png",
+    "letters": [
+      "ק",
+      "ט",
+      "ר"
+    ],
+    "translit": "qatar",
+    "gloss": "offer in smoke"
   },
   {
     "id": "qavah",
