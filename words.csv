@@ -93,6 +93,7 @@ milet,assets/milet.png,מ ל ט,milet,escape
 mut,assets/mut.png,מ וּ ת,mut,die
 nachal,assets/nachal.png,נ ח ל,nachal,inherit
 nacham,assets/nacham.png,נ ח ם,nacham,"comfort, regret"
+nadah,assets/nadah.png,נ ד ח,nadah,banish
 nafal,assets/nafal.png,נ פ ל,nafal,fall
 naga,assets/naga.png,נ ג ע,naga,touch
 nagad,assets/nagad.png,נ ג ד,nagad,tell
@@ -152,8 +153,11 @@ ruts,assets/ruts.png,ר וּ ץ,ruts,run
 saar,assets/saar.png,סָ עַ ר,saar,storm
 safar,assets/safar.png,ס פ ר,safar,count
 sagar,assets/sagar.png,ס ג ר,sagar,shut
+sakal,assets/sakal.png,שָׂ כַ ל,sakal,be wise
 samach,assets/samach.png,שׂ מ ח,samach,rejoice
+samakh,assets/samakh.png,ס מ ךְ,samakh,lay hands
 sane,assets/sane.png,שָׂ נֵ א,sane,hate
+saraf,assets/saraf.png,שׂ ר ף,saraf,burn
 sathar,assets/sathar.png,סָ תַ ר,sathar,hide
 sava,assets/sava.png,שׂ ב ע,sava,be satisfied
 savav,assets/savav.png,ס ב ב,savav,go around
@@ -188,6 +192,7 @@ shuv,assets/shuv.png,שׁ וּ ב,shuv,"turn, return"
 sim,assets/sim.png,שִׂ י ם,sim,"put, set"
 taah,assets/taah.png,ת ע ה,taah,stray
 tafas,assets/tafas.png,ת פ שׂ,tafas,seize
+taher,assets/taher.png,ט ה ר,taher,be clean
 tamam,assets/tamam.png,ת מ ם,tamam,be complete
 tame,assets/tame.png,ט מ א,tame,be unclean
 taqa,assets/taqa.png,ת ק ע,taqa,blow
@@ -223,5 +228,5 @@ makah,assets/makah.png,מַ כָּ ה,makah,wound
 yadah,assets/yadah.png,י ד ה,yadah,give thanks
 rum,assets/rum.png,ר וּ ם,rum,"exalt, lift"
 haphak,assets/haphak.png,הָ פַ ךְ,haphak,"turn, overturn"
-tsarar,assets/tsarar.png,צָ רַ ר,tsarar,"be hemmed in"
+tsarar,assets/tsarar.png,צָ רַ ר,tsarar,be hemmed in
 gaal,assets/gaal.png,ג א ל,gaal,redeem

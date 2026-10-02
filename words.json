@@ -1034,6 +1034,17 @@
     "gloss": "comfort, regret"
   },
   {
+    "id": "nadah",
+    "image": "assets/nadah.png",
+    "letters": [
+      "נ",
+      "ד",
+      "ח"
+    ],
+    "translit": "nadah",
+    "gloss": "banish"
+  },
+  {
     "id": "nafal",
     "image": "assets/nafal.png",
     "letters": [
@@ -1683,6 +1694,17 @@
     "gloss": "shut"
   },
   {
+    "id": "sakal",
+    "image": "assets/sakal.png",
+    "letters": [
+      "ש",
+      "כ",
+      "ל"
+    ],
+    "translit": "sakal",
+    "gloss": "be wise"
+  },
+  {
     "id": "samach",
     "image": "assets/samach.png",
     "letters": [
@@ -1694,6 +1716,17 @@
     "gloss": "rejoice"
   },
   {
+    "id": "samakh",
+    "image": "assets/samakh.png",
+    "letters": [
+      "ס",
+      "מ",
+      "ך"
+    ],
+    "translit": "samakh",
+    "gloss": "lay hands"
+  },
+  {
     "id": "sane",
     "image": "assets/sane.png",
     "letters": [
@@ -1703,6 +1736,17 @@
     ],
     "translit": "sane",
     "gloss": "hate"
+  },
+  {
+    "id": "saraf",
+    "image": "assets/saraf.png",
+    "letters": [
+      "ש",
+      "ר",
+      "ף"
+    ],
+    "translit": "saraf",
+    "gloss": "burn"
   },
   {
     "id": "sathar",
@@ -2077,6 +2121,17 @@
     ],
     "translit": "tafas",
     "gloss": "seize"
+  },
+  {
+    "id": "taher",
+    "image": "assets/taher.png",
+    "letters": [
+      "ט",
+      "ה",
+      "ר"
+    ],
+    "translit": "taher",
+    "gloss": "be clean"
   },
   {
     "id": "tamam",
