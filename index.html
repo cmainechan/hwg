@@ -301,6 +301,53 @@
     color: var(--ink);
   }
 
+  /* ---------- Fish (shared with the yard) ---------- */
+  .fish-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .fish-link:hover { background: var(--accent-light); }
+  .fish-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .fish-link.bump { transform: scale(1.18); }
+  .fish-link .to-yard { font-weight: 400; opacity: 0.8; font-size: 0.8rem; }
+
+  .assembly { position: relative; }
+  .fish-pop {
+    position: absolute;
+    left: 50%;
+    top: 0.4rem;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+    animation: fishpop 1.4s ease-out forwards;
+  }
+  @keyframes fishpop {
+    0% { opacity: 0; transform: translate(-50%, 8px) scale(0.8); }
+    15% { opacity: 1; transform: translate(-50%, 0) scale(1.05); }
+    70% { opacity: 1; transform: translate(-50%, -18px) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -30px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .fish-pop { animation-duration: 1.6s; animation-name: fishfade; }
+    @keyframes fishfade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+    .fish-link { transition: none; }
+  }
+
   @media (max-width: 640px) {
     .shell { padding: 1.4rem 1.1rem 1.8rem; }
     .assembled { font-size: 2.2rem; }
@@ -320,6 +367,9 @@
 
   <div class="progress-row">
     <span id="progress-text">Card 1 of 1</span>
+    <a href="../yard/" class="fish-link" id="fish-link" title="Spend your fish in the yard">
+      <span id="fish-count">🐟 0</span><span class="to-yard">Yard</span>
+    </a>
   </div>
   <div class="progress-track">
     <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
@@ -407,6 +457,46 @@ let currentDone = false;
 let cardNumber = 1;    // position of the card on screen within the round
 let assembled = [];
 let status = null; // null | "correct" | "wrong" | "revealed"
+let hadWrong = false;  // any wrong attempt on the card on screen (Reset doesn't clear it)
+
+// ---------- Fish ----------
+// Shared wallet with the yard (cmainechan.github.io/yard/). Every page on
+// the site reads and writes the same "fish" key in localStorage.
+// Rewards are only for new cards this round: first try = 2, after a
+// mistake = 1, Show answer or re-practicing a done card = 0.
+const FISH_KEY = "fish";
+const FISH_FIRST_TRY = 2;
+const FISH_AFTER_MISTAKE = 1;
+
+function getFish() {
+  let n = 0;
+  try { n = parseInt(localStorage.getItem(FISH_KEY) || "0", 10); } catch (e) {}
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+
+function renderFish(bump) {
+  const link = document.getElementById("fish-link");
+  document.getElementById("fish-count").textContent = `🐟 ${getFish()}`;
+  if (bump) {
+    link.classList.add("bump");
+    setTimeout(() => link.classList.remove("bump"), 220);
+  }
+}
+
+function addFish(amount) {
+  if (amount <= 0) return;
+  try { localStorage.setItem(FISH_KEY, String(getFish() + amount)); } catch (e) {}
+  renderFish(true);
+  const pop = document.createElement("div");
+  pop.className = "fish-pop";
+  pop.textContent = `+${amount} 🐟`;
+  document.querySelector(".assembly").appendChild(pop);
+  setTimeout(() => pop.remove(), 1500);
+}
+
+// Keep the count right if the yard is open in another tab.
+window.addEventListener("storage", e => { if (e.key === FISH_KEY) renderFish(true); });
+renderFish();
 
 function shuffle(arr) {
   const a = [...arr];
@@ -472,6 +562,7 @@ function showAt(i) {
   current = queue.order[i];
   currentDone = i < queue.pos;
   cardNumber = i + 1;
+  hadWrong = false;
   resetAttempt();
 }
 
@@ -535,7 +626,12 @@ function render() {
       assembled.push(letter);
       if (assembled.length === word.letters.length) {
         status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
-        if (status === "correct") markDone();
+        if (status === "wrong") hadWrong = true;
+        if (status === "correct") {
+          const isNew = !currentDone; // false when re-practicing via Prev
+          markDone();
+          if (isNew) addFish(hadWrong ? FISH_AFTER_MISTAKE : FISH_FIRST_TRY);
+        }
       }
       render();
     };
