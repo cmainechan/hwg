@@ -1,4 +1,4 @@
-﻿id,image,letters,translit,gloss
+id,image,letters,translit,gloss
 achaz,assets/achaz.png,א ח ז,achaz,take hold
 ahav,assets/ahav.png,א ה ב,ahav,love
 akhal,assets/akhal.png,א כ ל,akhal,eat
@@ -95,7 +95,7 @@ milet,assets/milet.png,מ ל ט,milet,escape
 mut,assets/mut.png,מ וּ ת,mut,die
 nachal,assets/nachal.png,נ ח ל,nachal,inherit
 nacham,assets/nacham.png,נ ח ם,nacham,"comfort, regret"
-nadah,assets/nadah.png,נ ד ח,nadach,banish
+nadach,assets/nadach.png,נ ד ח,nadach,banish
 nafal,assets/nafal.png,נ פ ל,nafal,fall
 naga,assets/naga.png,נ ג ע,naga,touch
 nagad,assets/nagad.png,נ ג ד,nagad,tell
