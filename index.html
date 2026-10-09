@@ -726,9 +726,11 @@ document.getElementById("prev-btn").onclick = () => {
   if (view > 0) showAt(view - 1);
 };
 document.getElementById("reveal-btn").onclick = () => {
-  assembled = [...WORDS[current].letters];
+  const word = WORDS[current];
+  assembled = [...word.letters];
   status = "revealed";
   markDone();
+  copyForRevision(word);
   render();
 };
 
