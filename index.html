@@ -342,10 +342,35 @@
     70% { opacity: 1; transform: translate(-50%, -18px) scale(1); }
     100% { opacity: 0; transform: translate(-50%, -30px); }
   }
+  /* Toast confirming a missed word's Hebrew + translit + gloss was
+     copied to the clipboard for revision elsewhere. */
+  .copy-pop {
+    position: absolute;
+    left: 50%;
+    bottom: 0.4rem;
+    transform: translateX(-50%);
+    background: var(--bad);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+    animation: copypop 1.6s ease-out forwards;
+  }
+  @keyframes copypop {
+    0% { opacity: 0; transform: translate(-50%, -6px) scale(0.85); }
+    15% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    75% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -8px); }
+  }
   @media (prefers-reduced-motion: reduce) {
     .fish-pop { animation-duration: 1.6s; animation-name: fishfade; }
     @keyframes fishfade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
     .fish-link { transition: none; }
+    .copy-pop { animation-duration: 1.6s; animation-name: fishfade; }
   }
 
   @media (max-width: 640px) {
@@ -626,7 +651,10 @@ function render() {
       assembled.push(letter);
       if (assembled.length === word.letters.length) {
         status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
-        if (status === "wrong") hadWrong = true;
+        if (status === "wrong") {
+          hadWrong = true;
+          copyForRevision(word);
+        }
         if (status === "correct") {
           const isNew = !currentDone; // false when re-practicing via Prev
           markDone();
@@ -656,6 +684,21 @@ function render() {
 
 function arraysEqual(a, b) {
   return a.length === b.length && a.every((v, i) => v === b[i]);
+}
+
+// ---------- Revision clipboard ----------
+// On a wrong attempt, copy the Hebrew word + transliteration + gloss so it
+// can be pasted straight into a revision list elsewhere.
+function copyForRevision(word) {
+  const text = `${word.letters.join("")}\t/${word.translit}/\t${word.gloss}`;
+  if (!navigator.clipboard || !navigator.clipboard.writeText) return;
+  navigator.clipboard.writeText(text).then(() => {
+    const pop = document.createElement("div");
+    pop.className = "copy-pop";
+    pop.textContent = "📋 Copied for revision";
+    document.querySelector(".assembly").appendChild(pop);
+    setTimeout(() => pop.remove(), 1600);
+  }).catch(() => {});
 }
 
 document.getElementById("undo-btn").onclick = () => {
