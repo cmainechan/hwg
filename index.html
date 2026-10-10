@@ -731,6 +731,38 @@ document.getElementById("reveal-btn").onclick = () => {
   render();
 };
 
+// ---------- Physical keyboard ----------
+// Lets a student type the letter bank with the keyboard instead of
+// clicking. Works whether the OS input is already set to Hebrew (e.key is
+// then the Hebrew character itself) or still on English QWERTY, by mapping
+// each English key to the Hebrew letter at the same physical position on
+// the standard Hebrew (SI 1452) keyboard layout.
+const QWERTY_TO_HEBREW = {
+  e: "ק", r: "ר", t: "א", y: "ט", u: "ו", i: "ן", o: "ם", p: "פ",
+  a: "ש", s: "ד", d: "ג", f: "כ", g: "ע", h: "י", j: "ח", k: "ל", l: "ך", ";": "ף",
+  z: "ז", x: "ס", c: "ב", v: "ה", b: "נ", n: "מ", m: "צ", ",": "ת", ".": "ץ"
+};
+
+document.addEventListener("keydown", e => {
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+  if (e.key === "Backspace") {
+    const undoBtn = document.getElementById("undo-btn");
+    if (!undoBtn.disabled) { e.preventDefault(); undoBtn.click(); }
+    return;
+  }
+
+  const letter = FULL_ALPHABET.includes(e.key) ? e.key : QWERTY_TO_HEBREW[e.key.toLowerCase()];
+  if (!letter || !FULL_ALPHABET.includes(letter)) return;
+
+  const btn = Array.from(document.getElementById("bank").children)
+    .find(b => b.textContent === letter);
+  if (btn && !btn.disabled) {
+    e.preventDefault();
+    btn.click();
+  }
+});
+
 // ---------- Boot ----------
 fetch("words.json")
   .then(r => r.json())
