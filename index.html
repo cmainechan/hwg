@@ -757,6 +757,12 @@ document.addEventListener("keydown", e => {
     return;
   }
 
+  if (e.key === "Enter") {
+    const nextBtn = document.getElementById("next-btn");
+    if (!nextBtn.disabled) { e.preventDefault(); nextBtn.click(); }
+    return;
+  }
+
   const key = e.key.toLowerCase();
   const letter = FULL_ALPHABET.includes(e.key)
     ? e.key
