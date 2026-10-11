@@ -99,17 +99,6 @@
     "gloss": "afflict"
   },
   {
-    "id": "arar",
-    "image": "assets/arar.png",
-    "letters": [
-      "א",
-      "ר",
-      "ר"
-    ],
-    "translit": "arar",
-    "gloss": "curse"
-  },
-  {
     "id": "arak",
     "image": "assets/arak.png",
     "letters": [
@@ -119,6 +108,17 @@
     ],
     "translit": "arak",
     "gloss": "arrange"
+  },
+  {
+    "id": "arar",
+    "image": "assets/arar.png",
+    "letters": [
+      "א",
+      "ר",
+      "ר"
+    ],
+    "translit": "arar",
+    "gloss": "curse"
   },
   {
     "id": "asaf",
@@ -473,6 +473,17 @@
     "gloss": "be silent"
   },
   {
+    "id": "chaser",
+    "image": "assets/chaser.png",
+    "letters": [
+      "ח",
+      "ס",
+      "ר"
+    ],
+    "translit": "chaser",
+    "gloss": "lack, decrease"
+  },
+  {
     "id": "chashav",
     "image": "assets/chashav.png",
     "letters": [
@@ -616,14 +627,14 @@
     "gloss": "speak"
   },
   {
-    "id": "padah",
-    "image": "assets/padah.png",
+    "id": "gaal",
+    "image": "assets/gaal.png",
     "letters": [
-      "פ",
-      "ד",
-      "ה"
+      "ג",
+      "א",
+      "ל"
     ],
-    "translit": "padah",
+    "translit": "gaal",
     "gloss": "redeem"
   },
   {
@@ -693,6 +704,17 @@
     "gloss": "praise"
   },
   {
+    "id": "haphak",
+    "image": "assets/haphak.png",
+    "letters": [
+      "ה",
+      "פ",
+      "ך"
+    ],
+    "translit": "haphak",
+    "gloss": "turn, overturn"
+  },
+  {
     "id": "harag",
     "image": "assets/harag.png",
     "letters": [
@@ -724,6 +746,17 @@
     ],
     "translit": "kaas",
     "gloss": "provoke"
+  },
+  {
+    "id": "kachash",
+    "image": "assets/kachash.png",
+    "letters": [
+      "כ",
+      "ח",
+      "ש"
+    ],
+    "translit": "kachash",
+    "gloss": "lie, deny"
   },
   {
     "id": "kalah",
@@ -911,6 +944,17 @@
     ],
     "translit": "madad",
     "gloss": "measure"
+  },
+  {
+    "id": "makah",
+    "image": "assets/makah.png",
+    "letters": [
+      "מ",
+      "כ",
+      "ה"
+    ],
+    "translit": "makah",
+    "gloss": "wound"
   },
   {
     "id": "makar",
@@ -1309,6 +1353,17 @@
     "gloss": "accomplish"
   },
   {
+    "id": "padah",
+    "image": "assets/padah.png",
+    "letters": [
+      "פ",
+      "ד",
+      "ה"
+    ],
+    "translit": "padah",
+    "gloss": "redeem"
+  },
+  {
     "id": "pala",
     "image": "assets/pala.png",
     "letters": [
@@ -1694,6 +1749,17 @@
     "gloss": "strife"
   },
   {
+    "id": "rum",
+    "image": "assets/rum.png",
+    "letters": [
+      "ר",
+      "ו",
+      "ם"
+    ],
+    "translit": "rum",
+    "gloss": "exalt, lift"
+  },
+  {
     "id": "ruq",
     "image": "assets/ruq.png",
     "letters": [
@@ -1714,6 +1780,17 @@
     ],
     "translit": "ruts",
     "gloss": "run"
+  },
+  {
+    "id": "saad",
+    "image": "assets/saad.png",
+    "letters": [
+      "ס",
+      "ע",
+      "ד"
+    ],
+    "translit": "saad",
+    "gloss": "support, sustain"
   },
   {
     "id": "saar",
@@ -1846,6 +1923,17 @@
     ],
     "translit": "shaal",
     "gloss": "ask"
+  },
+  {
+    "id": "shaan",
+    "image": "assets/shaan.png",
+    "letters": [
+      "ש",
+      "ע",
+      "ן"
+    ],
+    "translit": "shaan",
+    "gloss": "lean"
   },
   {
     "id": "shaar",
@@ -2046,6 +2134,17 @@
     "gloss": "cause to drink"
   },
   {
+    "id": "shaqaph",
+    "image": "assets/shaqaph.png",
+    "letters": [
+      "ש",
+      "ק",
+      "ף"
+    ],
+    "translit": "shaqaph",
+    "gloss": "look down"
+  },
+  {
     "id": "shatah",
     "image": "assets/shatah.png",
     "letters": [
@@ -2090,17 +2189,6 @@
     "gloss": "rest"
   },
   {
-    "id": "sheva",
-    "image": "assets/sheva.png",
-    "letters": [
-      "ש",
-      "ב",
-      "ע"
-    ],
-    "translit": "sheva",
-    "gloss": "swear"
-  },
-  {
     "id": "sheret",
     "image": "assets/sheret.png",
     "letters": [
@@ -2110,6 +2198,17 @@
     ],
     "translit": "sheret",
     "gloss": "minister"
+  },
+  {
+    "id": "sheva",
+    "image": "assets/sheva.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ע"
+    ],
+    "translit": "sheva",
+    "gloss": "swear"
   },
   {
     "id": "shir",
@@ -2154,6 +2253,17 @@
     ],
     "translit": "sim",
     "gloss": "put, set"
+  },
+  {
+    "id": "sur",
+    "image": "assets/sur.png",
+    "letters": [
+      "ס",
+      "ו",
+      "ר"
+    ],
+    "translit": "sur",
+    "gloss": "turn aside"
   },
   {
     "id": "taah",
@@ -2233,6 +2343,17 @@
     "gloss": "prosper"
   },
   {
+    "id": "tsarar",
+    "image": "assets/tsarar.png",
+    "letters": [
+      "צ",
+      "ר",
+      "ר"
+    ],
+    "translit": "tsarar",
+    "gloss": "be hemmed in"
+  },
+  {
     "id": "tsipah",
     "image": "assets/tsipah.png",
     "letters": [
@@ -2299,6 +2420,17 @@
     "gloss": "know"
   },
   {
+    "id": "yadah",
+    "image": "assets/yadah.png",
+    "letters": [
+      "י",
+      "ד",
+      "ה"
+    ],
+    "translit": "yadah",
+    "gloss": "give thanks"
+  },
+  {
     "id": "yakach",
     "image": "assets/yakach.png",
     "letters": [
@@ -2341,6 +2473,17 @@
     ],
     "translit": "yarad",
     "gloss": "go down"
+  },
+  {
+    "id": "yarash",
+    "image": "assets/yarash.png",
+    "letters": [
+      "י",
+      "ר",
+      "ש"
+    ],
+    "translit": "yarash",
+    "gloss": "take possession"
   },
   {
     "id": "yare",
@@ -2506,93 +2649,5 @@
     ],
     "translit": "zavach",
     "gloss": "sacrifice"
-  },
-  {
-    "id": "yarash",
-    "image": "assets/yarash.png",
-    "letters": [
-      "י",
-      "ר",
-      "ש"
-    ],
-    "translit": "yarash",
-    "gloss": "take possession"
-  },
-  {
-    "id": "sur",
-    "image": "assets/sur.png",
-    "letters": [
-      "ס",
-      "ו",
-      "ר"
-    ],
-    "translit": "sur",
-    "gloss": "turn aside"
-  },
-  {
-    "id": "makah",
-    "image": "assets/makah.png",
-    "letters": [
-      "מ",
-      "כ",
-      "ה"
-    ],
-    "translit": "makah",
-    "gloss": "wound"
-  },
-  {
-    "id": "yadah",
-    "image": "assets/yadah.png",
-    "letters": [
-      "י",
-      "ד",
-      "ה"
-    ],
-    "translit": "yadah",
-    "gloss": "give thanks"
-  },
-  {
-    "id": "rum",
-    "image": "assets/rum.png",
-    "letters": [
-      "ר",
-      "ו",
-      "ם"
-    ],
-    "translit": "rum",
-    "gloss": "exalt, lift"
-  },
-  {
-    "id": "haphak",
-    "image": "assets/haphak.png",
-    "letters": [
-      "ה",
-      "פ",
-      "ך"
-    ],
-    "translit": "haphak",
-    "gloss": "turn, overturn"
-  },
-  {
-    "id": "tsarar",
-    "image": "assets/tsarar.png",
-    "letters": [
-      "צ",
-      "ר",
-      "ר"
-    ],
-    "translit": "tsarar",
-    "gloss": "be hemmed in"
-  },
-  {
-    "id": "gaal",
-    "image": "assets/gaal.png",
-    "letters": [
-      "ג",
-      "א",
-      "ל"
-    ],
-    "translit": "gaal",
-    "gloss": "redeem"
   }
 ]
