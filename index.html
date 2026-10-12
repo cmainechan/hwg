@@ -465,21 +465,33 @@ const FULL_ALPHABET = [
 // once solved or revealed — "next" on an unsolved card moves it to the end
 // of the round instead, so hard words can't be dodged. "Prev" steps back
 // through cards already done this round, for extra practice that doesn't
-// change progress. When a round finishes the whole deck is reshuffled for
-// the next one.
+// change progress. When a round finishes, any cards revealed via "Show
+// answer" this round (queue.corrections) are collected into a correction
+// round — a shuffled pass through just those words, with queue.phase
+// switched to "correction" so the progress line says "Correction" instead
+// of "Card". A card revealed again during a correction round queues up for
+// another one afterwards, so it keeps cycling until solved by typing. Once
+// there are no pending corrections, a fresh full round begins.
 const STORAGE_KEY = "hebrew-word-builder:queue";
-const QUEUE_VERSION = 1;
+const QUEUE_VERSION = 2;
 // Cards from the end of one round kept out of the start of the next,
 // so the same word never appears twice in a row across the boundary.
 const ROUND_GAP = 5;
 
 // ---------- State ----------
 let WORDS = {};        // id -> word
-let queue = null;      // { v, order: [id], pos }
+let queue = null;      // { v, order: [id], pos, corrections: [id], phase: "main"|"correction" }
 let view = 0;          // index in queue.order of the card on screen
 let current = null;    // id of the card on screen
 let currentDone = false;
 let cardNumber = 1;    // position of the card on screen within the round
+// Length of the round the card on screen belongs to, captured alongside
+// cardNumber. Needed because a reveal or correct answer on the round's
+// last card can swap queue.order for the next round's (a different
+// length) before the student clicks Next — reading queue.order.length
+// live at that point would pair the old cardNumber with a mismatched
+// total, e.g. "Correction 2 of 1".
+let roundTotal = 1;
 let assembled = [];
 let status = null; // null | "correct" | "wrong" | "revealed"
 let hadWrong = false;  // any wrong attempt on the card on screen (Reset doesn't clear it)
@@ -543,7 +555,28 @@ function freshRound(prevOrder) {
   const others = shuffle(ids.filter(id => !tail.has(id)));
   const head = others.slice(0, gap);
   const rest = shuffle([...others.slice(gap), ...tail]);
-  return { v: QUEUE_VERSION, order: [...head, ...rest], pos: 0 };
+  return { v: QUEUE_VERSION, order: [...head, ...rest], pos: 0, corrections: [], phase: "main" };
+}
+
+// Start a correction round in place: a shuffled pass through just the
+// cards revealed via "Show answer" this round.
+function startCorrectionRound() {
+  const ids = Array.from(new Set(queue.corrections));
+  queue.corrections = [];
+  queue.phase = "correction";
+  queue.order = shuffle(ids);
+  queue.pos = 0;
+}
+
+// Called once the current round (main or correction) is fully done: either
+// hands off to a correction round for cards revealed this round, or starts
+// a fresh full round if there are none pending.
+function advanceRound() {
+  if (queue.corrections.length > 0) {
+    startCorrectionRound();
+  } else {
+    queue = freshRound(queue.order);
+  }
 }
 
 // Restore the saved queue, reconciled against the current word list:
@@ -552,8 +585,13 @@ function freshRound(prevOrder) {
 function loadQueue() {
   let saved = null;
   try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY)); } catch (e) {}
+  // Migrate a v1 queue (no corrections/phase) forward in place.
+  if (saved && saved.v === 1 && Array.isArray(saved.order) && Number.isInteger(saved.pos)) {
+    saved = { v: QUEUE_VERSION, order: saved.order, pos: saved.pos, corrections: [], phase: "main" };
+  }
   const valid = saved && saved.v === QUEUE_VERSION && Array.isArray(saved.order) &&
-    Number.isInteger(saved.pos) && saved.pos >= 0 && saved.pos <= saved.order.length;
+    Number.isInteger(saved.pos) && saved.pos >= 0 && saved.pos <= saved.order.length &&
+    Array.isArray(saved.corrections) && (saved.phase === "main" || saved.phase === "correction");
   if (!valid) {
     queue = freshRound([]);
   } else {
@@ -561,12 +599,17 @@ function loadQueue() {
     const keep = id => id in WORDS && !seen.has(id) && seen.add(id);
     const done = saved.order.slice(0, saved.pos).filter(keep);
     const todo = saved.order.slice(saved.pos).filter(keep);
-    Object.keys(WORDS).filter(id => !seen.has(id)).forEach(id => {
-      todo.splice(Math.floor(Math.random() * (todo.length + 1)), 0, id);
-    });
-    queue = todo.length === 0
-      ? freshRound(done)
-      : { v: QUEUE_VERSION, order: [...done, ...todo], pos: done.length };
+    // Only slot brand-new words into an in-progress main round. A correction
+    // round only ever contains cards revealed this round — new words wait
+    // for the next full round, where freshRound() picks up everyone anyway.
+    if (saved.phase === "main") {
+      Object.keys(WORDS).filter(id => !seen.has(id)).forEach(id => {
+        todo.splice(Math.floor(Math.random() * (todo.length + 1)), 0, id);
+      });
+    }
+    const corrections = saved.corrections.filter(id => id in WORDS);
+    queue = { v: QUEUE_VERSION, order: [...done, ...todo], pos: done.length, corrections, phase: saved.phase };
+    if (todo.length === 0) advanceRound();
   }
   saveQueue();
 }
@@ -576,7 +619,7 @@ function markDone() {
   currentDone = true;
   queue.pos++;
   if (queue.pos >= queue.order.length) {
-    queue = freshRound(queue.order);
+    advanceRound();
     view = -1; // the finished card isn't part of the new round; next -> its first card
   }
   saveQueue();
@@ -587,6 +630,7 @@ function showAt(i) {
   current = queue.order[i];
   currentDone = i < queue.pos;
   cardNumber = i + 1;
+  roundTotal = queue.order.length;
   hadWrong = false;
   resetAttempt();
 }
@@ -607,9 +651,9 @@ function render() {
 
   // Progress
   document.getElementById("progress-text").textContent =
-    `Card ${cardNumber} of ${total} this round`;
+    `${queue.phase === "correction" ? "Correction" : "Card"} ${cardNumber} of ${roundTotal} this round`;
   document.getElementById("progress-fill").style.width =
-    `${(cardNumber / total) * 100}%`;
+    `${(cardNumber / roundTotal) * 100}%`;
 
   // Assembled slots (right-to-left). One span per slot so that, on a wrong
   // attempt, each letter that doesn't match the answer at that position
@@ -726,6 +770,9 @@ document.getElementById("reveal-btn").onclick = () => {
   const word = WORDS[current];
   assembled = [...word.letters];
   status = "revealed";
+  // Only queue a correction for a genuinely new reveal this round, not
+  // when re-practicing an already-done card via Prev.
+  if (!currentDone) queue.corrections.push(current);
   markDone();
   copyForRevision(word);
   render();
