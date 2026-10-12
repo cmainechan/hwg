@@ -799,8 +799,11 @@ document.addEventListener("keydown", e => {
   if (e.ctrlKey || e.metaKey || e.altKey) return;
 
   if (e.key === "Backspace") {
+    // Always suppress the browser's own default (e.g. navigating back in
+    // history), even when there's nothing to undo yet.
+    e.preventDefault();
     const undoBtn = document.getElementById("undo-btn");
-    if (!undoBtn.disabled) { e.preventDefault(); undoBtn.click(); }
+    if (!undoBtn.disabled) undoBtn.click();
     return;
   }
 
