@@ -4,59 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hebrew Word Builder</title>
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#141311" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f2e8" media="(prefers-color-scheme: light)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e3b45f'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%231a1408' font-family='serif'%3E%D7%90%3C/text%3E%3C/svg%3E">
 <style>
+  /* Latin fonts self-hosted from the hub (cmainechan.github.io/heb), so
+     this tool's chrome matches the rest of the site. The Hebrew consonant
+     font stays Times New Roman -- a deliberate legibility choice for this
+     app -- left as-is throughout. */
+  @font-face{font-family:"Fraunces";font-style:normal;font-weight:400 700;font-display:swap;src:url("https://cmainechan.github.io/heb/fonts/fraunces-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+  @font-face{font-family:"Figtree";font-style:normal;font-weight:300 900;font-display:swap;src:url("https://cmainechan.github.io/heb/fonts/figtree-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
   :root {
-    --bg: #f6f1e6;
-    --card-bg: #fffdf8;
-    --ink: #2b2420;
-    --ink-soft: #6b5f52;
-    --border: #e3d7c0;
-    --accent: #1e3a5f;
-    --accent-light: #2d5580;
-    --gold: #b8860b;
-    --gold-soft: #f3e6c8;
-    --good: #2f7a4f;
-    --good-bg: #e6f4ea;
-    --bad: #b3261e;
-    --bad-bg: #fbe9e7;
-    --accent-bg: #eaf0f6;
+    color-scheme: dark light;
+    --bg: #141311;
+    --card: #1e1c19;
+    --line: #34312b;
+    --tx: #efe9dc;
+    --mu: #a09a8c;
+    --ac: #e3b45f;
+    --on: #1a1408;
+    --good: #5fb37f;
+    --good-bg: rgba(47, 122, 79, 0.22);
+    --bad: #e2726a;
+    --bad-bg: rgba(179, 38, 30, 0.2);
+    --info: #85a9cf;
+    --info-bg: rgba(133, 169, 207, 0.18);
+    --serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --sans: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f2e8;
+      --card: #fffdf8;
+      --line: #ddd4c2;
+      --tx: #24211b;
+      --mu: #6f6858;
+      --ac: #86590a;
+      --on: #fffdf8;
+      --good: #2f7a4f;
+      --good-bg: #e6f4ea;
+      --bad: #b3261e;
+      --bad-bg: #fbe9e7;
+      --info: #1e3a5f;
+      --info-bg: #eaf0f6;
+    }
   }
 
   * { box-sizing: border-box; }
 
   body {
-    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: var(--sans);
     background: var(--bg);
-    color: var(--ink);
+    color: var(--tx);
     margin: 0;
     padding: 2rem 1rem;
   }
 
+  /* ---------- Site brand (links back to the hub) ---------- */
+  .site-brand {
+    max-width: 880px;
+    margin: 0 auto 1.2rem;
+    text-align: left;
+  }
+  .brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .brand-link .mark {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--ac);
+    color: var(--on);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 17px;
+    line-height: 1;
+  }
+  .brand-link .name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--mu);
+    transition: color 0.2s ease;
+  }
+  .brand-link:hover .name { color: var(--ac); }
+  .brand-link:focus-visible { outline: 2px solid var(--ac); outline-offset: 3px; border-radius: 6px; }
+
   .shell {
     max-width: 880px;
     margin: 0 auto;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--card);
+    border: 1px solid var(--line);
     border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(43, 36, 32, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
     padding: 2rem 2rem 2.5rem;
   }
 
   header { text-align: center; margin-bottom: 0.5rem; }
   h1 {
-    font-size: 1.6rem;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.7rem;
     margin: 0 0 0.3rem;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.01em;
   }
   header .subtitle {
-    color: var(--ink-soft);
+    color: var(--mu);
     font-size: 0.95rem;
     margin: 0;
   }
   header .rule {
     width: 60px;
     height: 3px;
-    background: var(--gold);
+    background: var(--ac);
     border-radius: 2px;
     margin: 0.9rem auto 1.6rem;
   }
@@ -66,20 +132,20 @@
     justify-content: space-between;
     align-items: center;
     font-size: 0.85rem;
-    color: var(--ink-soft);
+    color: var(--mu);
     margin-bottom: 0.4rem;
   }
   .progress-track {
     width: 100%;
     height: 6px;
-    background: var(--border);
+    background: var(--line);
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 1.8rem;
   }
   .progress-fill {
     height: 100%;
-    background: var(--gold);
+    background: var(--ac);
     border-radius: 4px;
     transition: width 0.3s ease;
   }
@@ -88,25 +154,25 @@
   .flashcard, .assembly { flex: 1 1 320px; }
 
   .flashcard-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
+    background: var(--card);
+    border: 1px solid var(--line);
     border-radius: 14px;
     padding: 1rem;
-    box-shadow: 0 4px 14px rgba(43, 36, 32, 0.06);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   }
   .image-wrap {
     position: relative;
     aspect-ratio: 1 / 1;
     border-radius: 10px;
     overflow: hidden;
-    background: #faf7f0;
+    background: var(--line);
   }
   .image-wrap img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
-    background: #faf7f0;
+    background: var(--line);
   }
 
   .card-banner {
@@ -170,8 +236,8 @@
     font-size: 3rem;
     letter-spacing: 0.3rem;
     text-align: center;
-    border: 2px solid var(--gold-soft);
-    background: #fffefb;
+    border: 2px solid var(--line);
+    background: var(--card);
     border-radius: 14px;
     padding: 1rem;
     margin-bottom: 1.2rem;
@@ -183,8 +249,8 @@
     background: var(--good-bg);
   }
   .assembled.is-revealed {
-    border-color: var(--accent);
-    background: var(--accent-bg);
+    border-color: var(--info);
+    background: var(--info-bg);
   }
   .assembled.is-wrong {
     border-color: var(--bad);
@@ -209,8 +275,8 @@
     justify-content: center;
     margin-bottom: 1.2rem;
     padding: 0.9rem;
-    background: #faf7ef;
-    border: 1px solid var(--border);
+    background: var(--card);
+    border: 1px solid var(--line);
     border-radius: 14px;
   }
   .bank button {
@@ -221,20 +287,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border);
+    border: 1px solid var(--line);
     border-radius: 8px;
-    background: white;
-    color: var(--ink);
+    background: var(--card);
+    color: var(--tx);
     cursor: pointer;
-    box-shadow: 0 2px 0 var(--border);
-    transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease;
+    box-shadow: 0 2px 0 var(--line);
+    transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease, border-color 0.15s ease;
   }
   .bank button:hover:not(:disabled) {
-    background: var(--gold-soft);
+    border-color: var(--ac);
+    background: var(--bg);
   }
   .bank button:active:not(:disabled) {
     transform: translateY(2px);
-    box-shadow: 0 0 0 var(--border);
+    box-shadow: 0 0 0 var(--line);
   }
   .bank button:disabled {
     opacity: 0.35;
@@ -254,15 +321,15 @@
     align-items: center;
     gap: 0.3rem;
     padding: 0.7rem 0.4rem 0.6rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--line);
     border-radius: 12px;
-    background: white;
-    color: var(--ink-soft);
+    background: var(--card);
+    color: var(--mu);
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.01em;
     cursor: pointer;
-    box-shadow: 0 1px 0 rgba(43, 36, 32, 0.04);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
     transition: transform 0.15s ease, box-shadow 0.15s ease,
                 border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
   }
@@ -273,11 +340,11 @@
   }
   .control-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(43, 36, 32, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   }
   .control-btn:active:not(:disabled) {
     transform: translateY(0);
-    box-shadow: 0 1px 0 rgba(43, 36, 32, 0.04);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   }
   .control-btn:disabled {
     opacity: 0.4;
@@ -286,19 +353,19 @@
     box-shadow: none;
   }
   .control-btn.reveal:hover:not(:disabled) {
-    border-color: var(--gold);
-    background: var(--gold-soft);
-    color: #8a6a08;
+    border-color: var(--ac);
+    background: var(--bg);
+    color: var(--ac);
   }
   .control-btn.reset:hover:not(:disabled) {
-    border-color: var(--accent-light);
-    background: var(--accent-bg);
-    color: var(--accent);
+    border-color: var(--info);
+    background: var(--bg);
+    color: var(--info);
   }
   .control-btn.undo:hover:not(:disabled) {
-    border-color: var(--ink-soft);
-    background: #f4f0e8;
-    color: var(--ink);
+    border-color: var(--mu);
+    background: var(--bg);
+    color: var(--tx);
   }
 
   /* ---------- Fish (shared with the yard) ---------- */
@@ -308,15 +375,15 @@
     gap: 0.35rem;
     padding: 0.25rem 0.75rem;
     border-radius: 999px;
-    background: var(--accent);
-    color: #fff;
+    background: var(--ac);
+    color: var(--on);
     font-weight: 600;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
-  .fish-link:hover { background: var(--accent-light); }
-  .fish-link:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  .fish-link:hover { opacity: 0.85; }
+  .fish-link:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
   .fish-link.bump { transform: scale(1.18); }
   .fish-link .to-yard { font-weight: 400; opacity: 0.8; font-size: 0.8rem; }
 
@@ -326,8 +393,8 @@
     left: 50%;
     top: 0.4rem;
     transform: translateX(-50%);
-    background: var(--accent);
-    color: #fff;
+    background: var(--ac);
+    color: var(--on);
     font-weight: 700;
     padding: 0.3rem 0.8rem;
     border-radius: 999px;
@@ -373,6 +440,19 @@
     .copy-pop { animation-duration: 1.6s; animation-name: fishfade; }
   }
 
+  /* ---------- Site footer (links back to the hub) ---------- */
+  .site-foot {
+    max-width: 880px;
+    margin: 1.6rem auto 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+    color: var(--mu);
+    font-size: 0.85rem;
+  }
+  .site-foot p { margin: 0 0 0.3rem; }
+  .site-foot a { color: var(--ac); text-decoration: none; }
+  .site-foot a:hover { text-decoration: underline; }
+
   @media (max-width: 640px) {
     .shell { padding: 1.4rem 1.1rem 1.8rem; }
     .assembled { font-size: 2.2rem; }
@@ -382,6 +462,13 @@
 </style>
 </head>
 <body>
+
+<header class="site-brand">
+  <a href="https://cmainechan.github.io/heb/" class="brand-link">
+    <span class="mark" aria-hidden="true" lang="he">א</span>
+    <span class="name">Biblical Hebrew Practice</span>
+  </a>
+</header>
 
 <div class="shell">
   <header>
@@ -442,6 +529,10 @@
     </div>
   </div>
 </div>
+
+<footer class="site-foot">
+  <p><a href="https://cmainechan.github.io/heb/">&larr; All tools</a></p>
+</footer>
 
 <script>
 // ---------- Config ----------
