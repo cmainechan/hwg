@@ -858,6 +858,17 @@
     "gloss": "establish"
   },
   {
+    "id": "laah",
+    "image": "assets/laah.png",
+    "letters": [
+      "ל",
+      "א",
+      "ה"
+    ],
+    "translit": "laah",
+    "gloss": "be weary"
+  },
+  {
     "id": "lacham",
     "image": "assets/lacham.png",
     "letters": [
