@@ -644,13 +644,18 @@ renderFish();
 
 // ---------- Streak ----------
 // Local to this tool (not shared with the inn like fish is). Counts
-// consecutive first-try-correct answers. Once it reaches STREAK_THRESHOLD,
-// first-try rewards double going forward -- the 5th correct-in-a-row still
-// earns the base amount, the 6th earns double -- until a wrong attempt or
-// a reveal breaks the streak and it has to build back up from zero.
+// consecutive first-try-correct answers. Each tier below, once reached,
+// raises the first-try reward going forward -- the Nth correct-in-a-row
+// still earns the previous tier's amount, the (N+1)th earns the new one --
+// until a wrong attempt or a reveal breaks the streak and it has to build
+// back up from zero.
 const STREAK_KEY = "hebrew-word-builder:streak";
-const STREAK_THRESHOLD = 5;
-const STREAK_MULTIPLIER = 2;
+const STREAK_TIERS = [
+  { streak: 5, reward: 4 },
+  { streak: 10, reward: 8 },
+  { streak: 15, reward: 12 },
+  { streak: 20, reward: 16 },
+];
 
 function getStreak() {
   let n = 0;
@@ -663,16 +668,31 @@ function setStreak(n) {
   renderStreak();
 }
 
+// The highest-reward tier this streak qualifies for, or the plain
+// first-try reward if it hasn't reached the first tier yet.
+function firstTryReward(streak) {
+  let reward = FISH_FIRST_TRY;
+  for (const tier of STREAK_TIERS) {
+    if (streak >= tier.streak) reward = tier.reward;
+  }
+  return reward;
+}
+
+function nextStreakTier(streak) {
+  return STREAK_TIERS.find(tier => streak < tier.streak) || null;
+}
+
 function renderStreak() {
   const streak = getStreak();
   const badge = document.getElementById("streak-badge");
-  const boosted = streak >= STREAK_THRESHOLD;
+  const boosted = streak >= STREAK_TIERS[0].streak;
   badge.textContent = `🔥 ${streak}`;
   badge.style.display = streak > 0 ? "inline" : "none";
   badge.classList.toggle("boosted", boosted);
-  badge.title = boosted
-    ? "Streak bonus active: first-try fish doubled"
-    : `${STREAK_THRESHOLD - streak} more first-try answers in a row to double fish`;
+  const next = nextStreakTier(streak);
+  badge.title = next
+    ? `${next.streak - streak} more first-try answer${next.streak - streak === 1 ? "" : "s"} in a row for ${next.reward} fish each`
+    : `Max streak bonus active: ${firstTryReward(streak)} fish per first-try answer`;
 }
 
 renderStreak();
@@ -848,8 +868,7 @@ function render() {
             if (hadWrong) {
               addFish(FISH_AFTER_MISTAKE);
             } else {
-              const boosted = getStreak() >= STREAK_THRESHOLD;
-              addFish(boosted ? FISH_FIRST_TRY * STREAK_MULTIPLIER : FISH_FIRST_TRY);
+              addFish(firstTryReward(getStreak()));
               setStreak(getStreak() + 1);
             }
           }
