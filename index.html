@@ -128,6 +128,7 @@
   }
 
   .progress-row {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,9 +145,28 @@
     display: none;
     font-weight: 600;
     color: var(--mu);
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
   }
   .streak-badge.boosted { color: var(--ac); }
+  .streak-badge.bump { transform: scale(1.3); }
+  /* Toast shown once, the moment the streak crosses a new tier. */
+  .streak-pop {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: 0.4rem;
+    transform: translateX(-50%);
+    background: var(--ac);
+    color: var(--on);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+    animation: copypop 1.6s ease-out forwards;
+  }
   .progress-track {
     width: 100%;
     height: 6px;
@@ -450,6 +470,8 @@
     @keyframes fishfade { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
     .fish-link { transition: none; }
     .copy-pop { animation-duration: 1.6s; animation-name: fishfade; }
+    .streak-pop { animation-duration: 1.6s; animation-name: fishfade; }
+    .streak-badge { transition: none; }
   }
 
   /* ---------- Site footer (links back to the hub) ---------- */
@@ -664,8 +686,24 @@ function getStreak() {
 }
 
 function setStreak(n) {
+  const prev = getStreak();
   try { localStorage.setItem(STREAK_KEY, String(n)); } catch (e) {}
   renderStreak();
+  if (STREAK_TIERS.some(tier => prev < tier.streak && n >= tier.streak)) {
+    streakBonusPop();
+  }
+}
+
+// A one-off pulse + toast the moment the streak crosses into a new tier.
+function streakBonusPop() {
+  const badge = document.getElementById("streak-badge");
+  badge.classList.add("bump");
+  setTimeout(() => badge.classList.remove("bump"), 220);
+  const pop = document.createElement("div");
+  pop.className = "streak-pop";
+  pop.textContent = "🔥 Streak bonus!";
+  document.querySelector(".progress-row").appendChild(pop);
+  setTimeout(() => pop.remove(), 1600);
 }
 
 // The highest-reward tier this streak qualifies for, or the plain
