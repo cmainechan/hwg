@@ -135,6 +135,18 @@
     color: var(--mu);
     margin-bottom: 0.4rem;
   }
+  .progress-row-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .streak-badge {
+    display: none;
+    font-weight: 600;
+    color: var(--mu);
+    transition: color 0.2s ease;
+  }
+  .streak-badge.boosted { color: var(--ac); }
   .progress-track {
     width: 100%;
     height: 6px;
@@ -479,9 +491,12 @@
 
   <div class="progress-row">
     <span id="progress-text">Card 1 of 1</span>
-    <a href="../inn/" class="fish-link" id="fish-link" title="Spend your fish in the inn">
-  <span id="fish-count">🐟 0</span><span class="to-yard">Inn</span>
-</a>
+    <span class="progress-row-right">
+      <span id="streak-badge" class="streak-badge"></span>
+      <a href="../inn/" class="fish-link" id="fish-link" title="Spend your fish in the inn">
+        <span id="fish-count">🐟 0</span><span class="to-yard">Inn</span>
+      </a>
+    </span>
   </div>
   <div class="progress-track">
     <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
@@ -590,8 +605,9 @@ let hadWrong = false;  // any wrong attempt on the card on screen (Reset doesn't
 // ---------- Fish ----------
 // Shared wallet with the inn (cmainechan.github.io/inn/). Every page on
 // the site reads and writes the same "fish" key in localStorage.
-// Rewards are only for new cards this round: first try = 2, after a
-// mistake = 1, Show answer or re-practicing a done card = 0.
+// Rewards are only for new cards this round: first try = 2 (doubled to 4
+// once a streak bonus is active, see below), after a mistake = 1, Show
+// answer or re-practicing a done card = 0.
 const FISH_KEY = "fish";
 const FISH_FIRST_TRY = 2;
 const FISH_AFTER_MISTAKE = 1;
@@ -625,6 +641,41 @@ function addFish(amount) {
 // Keep the count right if the yard is open in another tab.
 window.addEventListener("storage", e => { if (e.key === FISH_KEY) renderFish(true); });
 renderFish();
+
+// ---------- Streak ----------
+// Local to this tool (not shared with the inn like fish is). Counts
+// consecutive first-try-correct answers. Once it reaches STREAK_THRESHOLD,
+// first-try rewards double going forward -- the 5th correct-in-a-row still
+// earns the base amount, the 6th earns double -- until a wrong attempt or
+// a reveal breaks the streak and it has to build back up from zero.
+const STREAK_KEY = "hebrew-word-builder:streak";
+const STREAK_THRESHOLD = 5;
+const STREAK_MULTIPLIER = 2;
+
+function getStreak() {
+  let n = 0;
+  try { n = parseInt(localStorage.getItem(STREAK_KEY) || "0", 10); } catch (e) {}
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+
+function setStreak(n) {
+  try { localStorage.setItem(STREAK_KEY, String(n)); } catch (e) {}
+  renderStreak();
+}
+
+function renderStreak() {
+  const streak = getStreak();
+  const badge = document.getElementById("streak-badge");
+  const boosted = streak >= STREAK_THRESHOLD;
+  badge.textContent = `🔥 ${streak}`;
+  badge.style.display = streak > 0 ? "inline" : "none";
+  badge.classList.toggle("boosted", boosted);
+  badge.title = boosted
+    ? "Streak bonus active: first-try fish doubled"
+    : `${STREAK_THRESHOLD - streak} more first-try answers in a row to double fish`;
+}
+
+renderStreak();
 
 function shuffle(arr) {
   const a = [...arr];
@@ -786,11 +837,22 @@ function render() {
       assembled.push(letter);
       if (assembled.length === word.letters.length) {
         status = arraysEqual(assembled, word.letters) ? "correct" : "wrong";
-        if (status === "wrong") hadWrong = true;
+        if (status === "wrong") {
+          hadWrong = true;
+          setStreak(0);
+        }
         if (status === "correct") {
           const isNew = !currentDone; // false when re-practicing via Prev
           markDone();
-          if (isNew) addFish(hadWrong ? FISH_AFTER_MISTAKE : FISH_FIRST_TRY);
+          if (isNew) {
+            if (hadWrong) {
+              addFish(FISH_AFTER_MISTAKE);
+            } else {
+              const boosted = getStreak() >= STREAK_THRESHOLD;
+              addFish(boosted ? FISH_FIRST_TRY * STREAK_MULTIPLIER : FISH_FIRST_TRY);
+              setStreak(getStreak() + 1);
+            }
+          }
         }
       }
       render();
@@ -861,9 +923,13 @@ document.getElementById("reveal-btn").onclick = () => {
   const word = WORDS[current];
   assembled = [...word.letters];
   status = "revealed";
-  // Only queue a correction for a genuinely new reveal this round, not
-  // when re-practicing an already-done card via Prev.
-  if (!currentDone) queue.corrections.push(current);
+  // Only queue a correction, and only break the streak, for a genuinely
+  // new reveal this round -- not when re-practicing an already-done card
+  // via Prev.
+  if (!currentDone) {
+    queue.corrections.push(current);
+    setStreak(0);
+  }
   markDone();
   copyForRevision(word);
   render();
