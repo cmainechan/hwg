@@ -946,6 +946,17 @@
     "gloss": "reject"
   },
   {
+    "id": "machah",
+    "image": "assets/machah.png",
+    "letters": [
+      "מ",
+      "ח",
+      "ה"
+    ],
+    "translit": "machah",
+    "gloss": "blot out"
+  },
+  {
     "id": "madad",
     "image": "assets/madad.png",
     "letters": [
@@ -1956,6 +1967,17 @@
     ],
     "translit": "shaar",
     "gloss": "remain"
+  },
+  {
+    "id": "shabar",
+    "image": "assets/shabar.png",
+    "letters": [
+      "ש",
+      "ב",
+      "ר"
+    ],
+    "translit": "shabar",
+    "gloss": "shatter"
   },
   {
     "id": "shachah",
