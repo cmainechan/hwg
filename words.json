@@ -473,6 +473,17 @@
     "gloss": "be silent"
   },
   {
+    "id": "chasak",
+    "image": "assets/chasaq.png",
+    "letters": [
+      "ח",
+      "ש",
+      "ך"
+    ],
+    "translit": "chasak",
+    "gloss": "withhold"
+  },
+  {
     "id": "chaser",
     "image": "assets/chaser.png",
     "letters": [
@@ -1241,6 +1252,17 @@
     ],
     "translit": "nasag",
     "gloss": "overtake"
+  },
+  {
+    "id": "nasah",
+    "image": "assets/nasah.png",
+    "letters": [
+      "נ",
+      "ס",
+      "ה"
+    ],
+    "translit": "nasah",
+    "gloss": "test"
   },
   {
     "id": "nata",
@@ -2165,6 +2187,17 @@
     ],
     "translit": "shaqah",
     "gloss": "cause to drink"
+  },
+  {
+    "id": "shaqal",
+    "image": "assets/shaqal.png",
+    "letters": [
+      "ש",
+      "ק",
+      "ל"
+    ],
+    "translit": "shaqal",
+    "gloss": "weigh out"
   },
   {
     "id": "shaqaph",
