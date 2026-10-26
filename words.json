@@ -1111,6 +1111,17 @@
     "gloss": "die"
   },
   {
+    "id": "nachah",
+    "image": "assets/nachah.png",
+    "letters": [
+      "נ",
+      "ח",
+      "ה"
+    ],
+    "translit": "nachah",
+    "gloss": "lead"
+  },
+  {
     "id": "nachal",
     "image": "assets/nachal.png",
     "letters": [
@@ -1494,6 +1505,17 @@
     ],
     "translit": "puts",
     "gloss": "scatter"
+  },
+  {
+    "id": "qadad",
+    "image": "assets/qadad.png",
+    "letters": [
+      "ק",
+      "ד",
+      "ד"
+    ],
+    "translit": "qadad",
+    "gloss": "bow down"
   },
   {
     "id": "qalel",
