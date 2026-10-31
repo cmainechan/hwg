@@ -451,6 +451,17 @@
     "gloss": "show favour"
   },
   {
+    "id": "chaphar",
+    "image": "assets/chaphar.png",
+    "letters": [
+      "ח",
+      "פ",
+      "ר"
+    ],
+    "translit": "chaphar",
+    "gloss": "dig"
+  },
+  {
     "id": "charah",
     "image": "assets/charah.png",
     "letters": [
@@ -515,17 +526,6 @@
     ],
     "translit": "chata",
     "gloss": "sin"
-  },
-  {
-    "id": "chathar",
-    "image": "assets/chathar.png",
-    "letters": [
-      "ח",
-      "ת",
-      "ר"
-    ],
-    "translit": "chathar",
-    "gloss": "dig"
   },
   {
     "id": "chathat",
@@ -1958,6 +1958,17 @@
     "gloss": "hide"
   },
   {
+    "id": "satham",
+    "image": "assets/satham.png",
+    "letters": [
+      "ס",
+      "ת",
+      "ם"
+    ],
+    "translit": "satham",
+    "gloss": "stop up"
+  },
+  {
     "id": "sava",
     "image": "assets/sava.png",
     "letters": [
@@ -2011,17 +2022,6 @@
     ],
     "translit": "shaar",
     "gloss": "remain"
-  },
-  {
-    "id": "shabar",
-    "image": "assets/shabar.png",
-    "letters": [
-      "ש",
-      "ב",
-      "ר"
-    ],
-    "translit": "shabar",
-    "gloss": "shatter"
   },
   {
     "id": "shachah",
