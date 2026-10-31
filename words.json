@@ -528,6 +528,17 @@
     "gloss": "sin"
   },
   {
+    "id": "chathar",
+    "image": "assets/chathar.png",
+    "letters": [
+      "ח",
+      "ת",
+      "ר"
+    ],
+    "translit": "chathar",
+    "gloss": "dig (through)"
+  },
+  {
     "id": "chathat",
     "image": "assets/chathat.png",
     "letters": [
@@ -1947,17 +1958,6 @@
     "gloss": "burn"
   },
   {
-    "id": "sathar",
-    "image": "assets/sathar.png",
-    "letters": [
-      "ס",
-      "ת",
-      "ר"
-    ],
-    "translit": "sathar",
-    "gloss": "hide"
-  },
-  {
     "id": "satham",
     "image": "assets/satham.png",
     "letters": [
@@ -1967,6 +1967,17 @@
     ],
     "translit": "satham",
     "gloss": "stop up"
+  },
+  {
+    "id": "sathar",
+    "image": "assets/sathar.png",
+    "letters": [
+      "ס",
+      "ת",
+      "ר"
+    ],
+    "translit": "sathar",
+    "gloss": "hide"
   },
   {
     "id": "sava",
