@@ -147,6 +147,17 @@
     color: var(--mu);
     transition: color 0.2s ease, transform 0.2s ease;
   }
+  .best-btn {
+    font: inherit;
+    font-weight: 600;
+    color: var(--mu);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .best-btn:hover { color: var(--ac); }
+  .best-btn:focus-visible { outline: 2px solid var(--ac); outline-offset: 2px; }
   .streak-badge.boosted { color: var(--ac); }
   .streak-badge.bump { transform: scale(1.3); }
   /* Toast shown once, the moment the streak crosses a new tier. */
@@ -515,6 +526,7 @@
     <span id="progress-text">Card 1 of 1</span>
     <span class="progress-row-right">
       <span id="streak-badge" class="streak-badge"></span>
+      <button id="best-btn" class="best-btn" type="button" title="Best streak"></button>
       <a href="../inn/" class="fish-link" id="fish-link" title="Spend your fish in the inn">
         <span id="fish-count">🐟 0</span><span class="to-yard">Inn</span>
       </a>
@@ -698,6 +710,17 @@ const STREAK_TIERS = [
   { streak: 30, reward: 25 },
   { streak: 35, reward: 30 },
 ];
+// From 40 on: every 5 in a row adds 5 fish, up to 100 in a row (95 fish).
+for (let n = 40; n <= 100; n += 5) STREAK_TIERS.push({ streak: n, reward: n - 5 });
+
+// Best streak ever reached, kept across breaks.
+const BEST_STREAK_KEY = "hebrew-word-builder:best-streak";
+function getBestStreak() {
+  let n = 0;
+  try { n = parseInt(localStorage.getItem(BEST_STREAK_KEY) || "0", 10); } catch (e) {}
+  // A streak already in progress counts even if it predates this key.
+  return Math.max(Number.isFinite(n) && n > 0 ? n : 0, getStreak());
+}
 
 function getStreak() {
   let n = 0;
@@ -708,6 +731,9 @@ function getStreak() {
 function setStreak(n) {
   const prev = getStreak();
   try { localStorage.setItem(STREAK_KEY, String(n)); } catch (e) {}
+  if (n > getBestStreak()) {
+    try { localStorage.setItem(BEST_STREAK_KEY, String(n)); } catch (e) {}
+  }
   renderStreak();
   if (STREAK_TIERS.some(tier => prev < tier.streak && n >= tier.streak)) {
     streakBonusPop();
@@ -747,6 +773,7 @@ function renderStreak() {
   badge.textContent = `🔥 ${streak}`;
   badge.style.display = streak > 0 ? "inline" : "none";
   badge.classList.toggle("boosted", boosted);
+  document.getElementById("best-btn").textContent = `🏆 ${getBestStreak()}`;
   const next = nextStreakTier(streak);
   badge.title = next
     ? `${next.streak - streak} more first-try answer${next.streak - streak === 1 ? "" : "s"} in a row for ${next.reward} fish each`
@@ -754,6 +781,15 @@ function renderStreak() {
 }
 
 renderStreak();
+
+document.getElementById("best-btn").addEventListener("click", () => {
+  const best = getBestStreak();
+  const pop = document.createElement("div");
+  pop.className = "streak-pop";
+  pop.textContent = `🏆 Best streak: ${best}`;
+  document.querySelector(".progress-row").appendChild(pop);
+  setTimeout(() => pop.remove(), 1600);
+});
 
 function shuffle(arr) {
   const a = [...arr];
