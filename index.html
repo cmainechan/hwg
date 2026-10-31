@@ -715,11 +715,14 @@ for (let n = 40; n <= 100; n += 5) STREAK_TIERS.push({ streak: n, reward: n - 5 
 
 // Best streak ever reached, kept across breaks.
 const BEST_STREAK_KEY = "hebrew-word-builder:best-streak";
-function getBestStreak() {
+function getStoredBest() {
   let n = 0;
   try { n = parseInt(localStorage.getItem(BEST_STREAK_KEY) || "0", 10); } catch (e) {}
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+function getBestStreak() {
   // A streak already in progress counts even if it predates this key.
-  return Math.max(Number.isFinite(n) && n > 0 ? n : 0, getStreak());
+  return Math.max(getStoredBest(), getStreak());
 }
 
 function getStreak() {
@@ -731,7 +734,7 @@ function getStreak() {
 function setStreak(n) {
   const prev = getStreak();
   try { localStorage.setItem(STREAK_KEY, String(n)); } catch (e) {}
-  if (n > getBestStreak()) {
+  if (n > getStoredBest()) {
     try { localStorage.setItem(BEST_STREAK_KEY, String(n)); } catch (e) {}
   }
   renderStreak();
